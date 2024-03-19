@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Podcast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/Mypodcast.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1><i style="color: hsl(307, 64%, 78%); font-size: 2.5rem;">HealSoul</i></h1>   
+        <a href="home.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="discovery.html"><i class="fa-solid fa-compass"></i>Discover</a>
+        <a href="MyPodcast.html"><i class="fa-solid fa-podcast"></i>My Podcasts</a>
+        <a href="queue.html"><i class="fa-solid fa-boxes-stacked"></i>My Queue</a>
+        <a href="Recent.html"><i class="fas fa-clock"></i>Recently</a>
+    </div>
+    <header>
+    <div class="top-bar">
+        <div class="top-bar-list top-bar-search">
+            <input type="text" placeholder="Search podcasts...">
+            <button>Search</button>
+        </div>
+        <div class="top-bar-list top-bar-login-signup">
+          <a href="login.html"><button type="button" style="margin-right: 16px; padding: 7px 14px;">Log in</button></a>
+          <a href="signup.html"><button type="button">Sign up</button></a>
+        </div>
+    </div>
+    </header>
+  <div id="content" style="padding-bottom: 130px;"  class="jscontent">
+    <div class="recent">
+      <div class="list_contain">
+        <div class="recent_title">
+          <div class="titlelist" style="color:aliceblue;">My Podcasts</div>
+          <div class="subtitle" style="color: beige;">Sorted by most recently updated.</div>
+        <div class="listwrapp">
+          <div class="listlistwrapp" style="height: 255.1px;">
+            <div class="decorlist">
+              <div class="inlinelist" style="height: 100%;width: 421.2px;">
+                <div class="previewlist" style="position: absolute;left:20px;top: 15px;width: calc(183.9px);">
+                  <div draggable="true" class="artpod" style="width: 183.1px; position: relative;">
+                    <a class="jsx" href="#">
+                      <div class="art-wrapper">
+                        <img height="400" width="400" src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" loading="lazy" alt="Three" class="artreal">
+                      </div>
+                    </a>
+                  
+                  </div>
+                    <div class="textforart"  >
+                      <div class="textinner" style="flex: 1 1 auto;">
+                        <a aria-label="Three" class="arttitle" style="color: rgb(235, 218, 89);" href="playlist.html">Three</a>
+                        <div class="authorofart" style="color: rgb(51, 212, 174);">Wavland</div>
+
+                      </div>
+
+                    </div>
+                
+                </div>
+                <div class="previewlist" style="position: absolute;left:218.9px;top: 15px;width: calc(183.9px);">
+                  <div draggable="true" class="artpod" style="width: 183.1px; position: relative;">
+                    <a class="jsx" href="#">
+                      <div class="art-wrapper">
+                        <img height="400" width="400" src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL21lZ2FwaG9uZS5pbWdpeC5uZXQvcG9kY2FzdHMvOGU1YmNlYmMtY2ExNi0xMWVlLTg5ZjAtMGZhMGI5YmRmYzdjL2ltYWdlL2FiNjc2NTYzMDAwMGJhOGFmMjA2ODM5Mzg0MTkzMTk1MDIzN2RiZTQuanBlZz9peGxpYj1yYWlscy00LjMuMSZtYXgtdz0zMDAwJm1heC1oPTMwMDAmZml0PWNyb3AmYXV0bz1mb3JtYXQsY29tcHJlc3MiLCJmYWxsYmFjayI6Imh0dHBzOi8vaXMzLXNzbC5tenN0YXRpYy5jb20vaW1hZ2UvdGh1bWIvUG9kY2FzdHMxMTQvdjQvY2IvZjMvMTkvY2JmMzE5OTItY2IzZC1mMDIyLTA2NjEtM2Y1MGVlZjFlZDAyL216YV8xMTQ2MjU0MjUxMjM2MTAwMjk0LmpwZy82MDB4NjAwYmIuanBnIn0.T4J1T4C9rgcVs1VWLVGMvOzAF-nOWpD9et7qvQ2S05o.jpg?width=400&height=400" loading="lazy" alt="Three" class="artreal">
+                      </div>
+                    </a>
+                  
+                  </div>
+                    <div class="textforart"  >
+                      <div class="textinner" style="flex: 1 1 auto;">
+                        <a aria-label="Three" class="arttitle" style="color: rgb(235, 218, 89);" href="#">The Joe Rogan Experience</a>
+                        <div class="authorofart" style="color: rgb(51, 212, 174);">Joe Rogan</div>
+
+                      </div>
+
+                    </div>
+                </div>
+                <div class="previewlist" style="position: absolute;left:417.8px;top: 15px;width: calc(183.9px);">
+                  <div draggable="true" class="artpod" style="width: 183.1px; position: relative;">
+                    <a class="jsx" href="#">
+                      <div class="art-wrapper">
+                        <img height="400" width="400" src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hZTE4M2ZlMi1jNjM0LTQ1OGEtOTNkZC01NzcwZjA2NzZmNzcvYjAxMDgwOWEtYzMxMS00MjVjLTkzMjUtMjIzNWMyMWU2OTM5LzMwMDB4MzAwMC83ZjA0MjFmNzNkMmNlMGNhMjcyZTM5MmM5MzdlMWEzMDEyODVkNDRmZTdjNmQ3MTBjMjg0NGQ4MGMwYzdiYjFhM2U5ODM4YWMwM2VlODBmYzY0MTk5ODkxY2I5ZDVjNmU5ZDQ0OTBmNTA4MWZiMzc5YzBhYjIzMTdmMmNhZGYxNC5qcGVnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczItc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czExNS92NC84Yy8wMC83YS84YzAwN2E0Mi1lNTUwLTAyMTQtZDRjYi1iNTljZDdlZGYxOTQvbXphXzUzMDU2NjQwODM5MzU2NzQ0NzIuanBlZy82MDB4NjAwYmIuanBnIn0.nBBGVWz0HB_RircLD9FjbwScdSgDS6xpSrCEG9p9fCU.jpg?width=400&height=400" loading="lazy" alt="Three" class="artreal">
+                      </div>
+                    </a>
+                  
+                  </div>
+                    <div class="textforart"  >
+                      <div class="textinner" style="flex: 1 1 auto;">
+                        <a aria-label="Three" class="arttitle" style="color: rgb(235, 218, 89);" href="#">Dateline</a>
+                        <div class="authorofart" style="color: rgb(51, 212, 174);">NBC</div>
+    
+                </div>
+              
+              
+              </div>
+            
+            </div>
+            <div class="previewlist" style="position: absolute;left:616.7px;top: 15px;width: calc(183.9px);">
+              <div draggable="true" class="artpod" style="width: 183.1px; position: relative;">
+                <a class="jsx" href="#">
+                  <div class="art-wrapper">
+                    <img height="400" width="400" src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvYWU0MmQ1MWItZGY5OS00YjE5LWJiM2YtMDlmMjU1OThiY2RkLzMwMDB4MzAwMC9jcmltZWp1bmtpZS1sb2dvLXJlZ2lzdGVyZWQuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczUtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC9jYi85Ni83NC9jYjk2NzQwZi01NWVkLTQxOTktM2E5Ny0wMjlkMzAzY2RhNjYvbXphXzcxNDc3MDY4MTcxMjE4NDkxNTkuanBnLzYwMHg2MDBiYi5qcGcifQ.wj5O6LFn25SgniGouuz6G-Wxhu0AToXMa6VrJe82ITA.jpg?width=400&height=400" loading="lazy" alt="Three" class="artreal">
+                  </div>
+                </a>
+              
+              </div>
+                <div class="textforart"  >
+                  <div class="textinner" style="flex: 1 1 auto;">
+                    <a aria-label="Three" class="arttitle" style="color: rgb(235, 218, 89);" href="#">Crime Junkie</a>
+                    <div class="authorofart" style="color: rgb(51, 212, 174);">audiochuck</div>
+
+                  </div>
+
+                </div>
+            </div>
+            
+          </div>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    <footer>
+        <div>
+             <div class="audio-player">
+            <audio controls>
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+              <button title="Play">⏯</button>
+              <button title="Pause">⏸</button>
+              <button title="Stop">⏹</button>
+            </div>
+            <div class="song-info">
+              <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" alt="Song Image">
+              <h3>Three</h3>
+            </div>
+          </div>
+        
+          <script>
+            const audioPlayer = document.querySelector('.audio-player');
+            const navbar = document.querySelector('.navbar');
+        
+            window.addEventListener('scroll', () => {
+              if (window.scrollY > 0) {
+                audioPlayer.classList.add('visible');
+              } else {
+                audioPlayer.classList.remove('visible');
+              }
+            });
+          </script>
+    </footer>   
+</body> 
+</html>

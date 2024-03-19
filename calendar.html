@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/calendar.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1><i style="color: hsl(307, 64%, 78%); font-size: 2.5rem;">HealSoul</i></h1>   
+        <a href="home.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="discovery.html"><i class="fa-solid fa-compass"></i>Discover</a>
+        <a href="MyPodcast.html"><i class="fa-solid fa-podcast"></i>My Podcasts</a>
+        <a href="queue.html"><i class="fa-solid fa-boxes-stacked"></i>My Queue</a>
+        <a href="Recent.html"><i class="fa-solid fa-clock"></i>Recently</a>
+    </div>
+    <header>
+    <div class="top-bar">
+        <div class="top-bar-list top-bar-search">
+            <input type="text" placeholder="Search podcasts...">
+            <button>Search</button>
+        </div>
+        <div class="top-bar-list top-bar-login-signup">
+          <a href="login.html"><button type="button" style="margin-right: 16px; padding: 7px 14px;">Log in</button></a>
+          <a href="signup.html"><button type="button">Sign up</button></a>
+        </div>
+    </div>
+    </header>
+    <div class="container">
+        <div class="container_sidebar">
+          <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" alt="">
+          <p style="font-size: 18px; font-weight: 600; color: aliceblue;">Three</p>
+          <p style="color: #4DAEE8;">Wavland</p>
+          <button class="container_button"><span style="font-weight: 600;">+</span> Add to My Podcasts</button>
+          <div class="container_sidebar-text">
+            <details>
+              <summary> After midnight on July 6th, 2012, three teenage girls walked into the thick Appalachian woods somewhere along the Mason-Dixon county line. Hours later, under the glow of a nearly full moon, only two walked out. </summary>
+              <span>The very last time Dave and Mary Neese saw their only child Skylar was in a grainy black-and-white video. In it, she's sneaking out of her ground-floor bedroom in the middle of the night, her purse over her shoulder, her brown hair swinging as she hurries across the small parking lot to a waiting car. 
+                What happened to Skylar Neese has become gothic American lore: the odd girl out in a vicious teenage triangle. But in the ten years since that fateful night beneath the West Virginia stars, a fuller portrait of what happened has emerged. From award-winning journalists Justine Harman and Holly Millea comes a gripping 10-part series featuring Skylar's family, closest friends, and law enforcement who lived the case—and are still living it.</span>
+            </details>
+          </div>  
+          <p style="color: rgb(153, 153, 153); font-weight: 700;font-size: 12px;letter-spacing: 0.5px; margin-bottom: 5px; margin-left: 5px;">SHARE</p>
+          <div class="container_sidebar-socialIcons">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="container_sidebar-footertext">
+            <p style="margin-bottom: 10px;">&copy 2024 Wavland</p>
+            <p>All content for Three is the property of Wavland and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
+          </div>
+        </div>
+
+        <div class="container_headbar">
+            <ul class="container_headbar-list">
+              <a href="esposide.html"><li class="container_headbar-item">Episodes</li></a>
+              <a href="about.html"><li class="container_headbar-item">About</li></a>  
+              <a href="review.html"><li class="container_headbar-item">Reviews</li></a>
+              <a href="calendar.html"><li class="container_headbar-item"   style="border: 1px solid #333; background-color: #333;">Calendar</li></a>
+              <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
+            </ul>
+        </div>
+        <div class="calendar">
+            <div class="month">
+              <div class="month-header">Available Podcasts in March 2024</div>
+              <div class="days-of-week">
+                <span>Sunday</span>
+                <span>Monday</span>
+                <span>Tuesday</span>
+                <span>Wednesday</span>
+                <span>Thursday</span>
+                <span>Friday</span>
+                <span>Saturday</span>
+              </div>
+              <div class="days">
+                <div class="week">
+                  <div class="day"> 
+                    <a href="#" class ="blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class ="blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class ="blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class ="blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class ="blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">1</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class= "unavailable">
+                      <div class="day-number">2</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <!-- Add more days with total number of podcasts as needed -->
+                </div>
+                <div class="week">
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">3</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">4</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">5</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class= "unavailable">
+                      <div class="day-number">6</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">7</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">8</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">9</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <!-- Add more days with total number of podcasts as needed -->
+                </div>
+                <div class="week">
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">10</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">11</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">12</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">13</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">14</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">15</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">16</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <!-- Add more days with total number of podcasts as needed -->
+                </div>
+                <div class="week">
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">17</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "unavailable">
+                      <div class="day-number">18</div>
+                      <div class="podcast-count">Unavailable</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">19</div>
+                      <div class="podcast-count">(10 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">20</div>
+                      <div class="podcast-count">(11 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">21</div>
+                      <div class="podcast-count">(9 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">22</div>
+                      <div class="podcast-count">(10 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">23</div>
+                      <div class="podcast-count">(8 podcasts)</div>
+                    </a>
+                  </div>
+                  <!-- Add more days with total number of podcasts as needed -->
+                </div>
+                <!-- Add more weeks with days as needed -->
+                <div class="week">
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">24</div>
+                      <div class="podcast-count">(10 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">25</div>
+                      <div class="podcast-count">(13 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">26</div>
+                      <div class="podcast-count">(10 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">27</div>
+                      <div class="podcast-count">(7 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">28</div>
+                      <div class="podcast-count">(15 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">29</div>
+                      <div class="podcast-count">(9 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">30</div>
+                      <div class="podcast-count">(18 podcasts)</div>
+                    </a>
+                  </div>
+                  <!-- Add more days with total number of podcasts as needed -->
+                </div>
+                <div class="week">
+                  <div class="day">
+                    <a href="#">
+                      <div class="day-number">31</div>
+                      <div class="podcast-count">(20 podcasts)</div>
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "blank">
+                    </a>
+                  </div>
+                  <div class="day">
+                    <a href="#" class = "blank">
+                    </a>
+                  </div>
+                  <!-- Add more days with total number of podcasts as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>

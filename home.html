@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealSoul</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1><i style="color: hsl(307, 64%, 78%); font-size: 2.5rem;">HealSoul</i></h1>   
+        <a href="home.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="discovery.html"><i class="fa-solid fa-compass"></i>Discover</a>
+        <a href="MyPodcast.html"><i class="fa-solid fa-podcast"></i>My Podcasts</a>
+        <a href="queue.html"><i class="fa-solid fa-boxes-stacked"></i>My Queue</a>
+        <a href="Recent.html"><i class="fa-solid fa-clock"></i>Recently</a>
+    </div>
+    <header>
+        <div class="top-bar">
+            <div class="top-bar-list top-bar-search">
+                <input type="text" placeholder="Search podcasts...">
+                <button>Search</button>
+            </div>
+            <div class="top-bar-list top-bar-login-signup">
+              <a href="login.html"><button type="button" style="margin-right: 16px; padding: 7px 14px;">Log in</button></a>
+            <a href="signup.html"><button type="button">Sign up</button></a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1 style="font-size: medium"><a href="#" class="trending" style="color: hsl(307, 64%, 78%);">Trending Categories</a></h1>
+        <p style="color:beige;font-size: small;">The most popular podcasts overall now. Last updated an hour ago.</p>
+        <hr>
+        <div class="podcast-container">
+          <a href="">
+            <div class="podcast-item">
+                <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy8wM2Q4YjQ5My04N2ZjLTRiZDEtOTMxZi04YThlOWI5NDVkOGEvMmNjZTU2NTktZjY0Ny00MzY2LWIzMTgtNDZlNGI2N2FmY2ZhLzMwMDB4MzAwMC9jODE5MzZmNTM4MTA2NTUwYjgwNGU3ZTRmZTJjMjM2MzE5YmFiN2ZiYTM3OTQxYTZlOGY3ZTVjM2QzMDQ4Yjg4ZmM1YjIxODJmYjc5MGY3ZDQ0NmJkYzgyMDQwNjQ1NmM5NDI4N2YyNDVkYjg5ZDg2NTZjMTA1ZDU1MTFlYzNkZS5qcGVnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czExNS92NC8xYy9hYy8wNC8xY2FjMDQyMS00NDgzLWZmMDktNGY4MC0xOTcxMGQ5ZmVkYTQvbXphXzEyNDIxMzcxNjkyMTU4NTE2ODkxLmpwZWcvNjAweDYwMGJiLmpwZyJ9.lrjqdIr_wLJW3F9-FnrODEZ-dAee-u3QT0JVJQEg7AI.jpg?width=400&height=400" alt="Podcast 1" class="podcast-image">
+                <p class="podcast-description">Daily</p>
+              </div>
+          </a>
+          <a href="playlist.html">
+            <div class="podcast-item">
+                <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" alt="Podcast 2" class="podcast-image">
+                <p class="podcast-description">Friendship</p>
+              </div>
+          </a>
+          <a href="">
+            <div class="podcast-item">
+                <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9iMmY1MWQyOC1iM2M3LTRmZDktOTQ0Ny1hYmZkMDJiMTE0MTgvZWRhYTI5ZDUtMDc4ZC00MTRjLWFiZGMtN2YzN2NhMzk3MTk3LzMwMDB4MzAwMC9iYjItbG9nb2ZpbmFsLmpwZz9haWQ9cnNzX2ZlZWQiLCJmYWxsYmFjayI6Imh0dHBzOi8vaXMxLXNzbC5tenN0YXRpYy5jb20vaW1hZ2UvdGh1bWIvUG9kY2FzdHMxMjYvdjQvMDQvYzMvNTEvMDRjMzUxNmYtOTcyMy1jYWFhLWY1ZWMtZDcxY2I5NTlhYzY2L216YV80ODQzODkyNzY5Njk2MjQyMDEwLmpwZy82MDB4NjAwYmIuanBnIn0.mLjCC6GAbTfW1tlY1WqD_bgq3zaZlcbI72xcf-Vak6c.jpg?width=400&height=400" alt="Podcast 3" class="podcast-image">
+                <p class="podcast-description">Mystery</p>
+              </div>
+          </a>
+          <a href="">
+            <div class="podcast-item">
+                <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3d3dy5vbW55Y29udGVudC5jb20vZC9wbGF5bGlzdC9lZTZiZGE5NS03OWY2LTQyYTQtOWI5MC1hYzFiMDE1MjgwMjYvOTUzYTQ0M2MtNjdmYy00ZTY3LTg5OTUtYWMxYzAxNDVmZmFmL2QzNjM4Nzc5LWE3NzctNDNmOC05NzI2LWFjMWMwMTQ1ZmZiZC9pbWFnZS5qcGc_dD0xNjU0MjU1NjIzJnNpemU9TGFyZ2UiLCJmYWxsYmFjayI6Imh0dHBzOi8vaXMzLXNzbC5tenN0YXRpYy5jb20vaW1hZ2UvdGh1bWIvUG9kY2FzdHMxMTQvdjQvMTIvMWUvZmMvMTIxZWZjZjktZDQ2MC1kOGEwLTc5NWMtOWY4Zjc3MTIyZjI3L216YV84MTE1NzM3NzI0NjM0MjU5OTMwLmpwZy82MDB4NjAwYmIuanBnIn0.gwsL5KpdJebDn-nMCDxnxwpxaj_8YJsMu1eFoOrHzAo.jpg?width=400&height=400" alt="Podcast 3" class="podcast-image">
+                <p class="podcast-description">Inspiration</p>
+            </div>
+          </a>
+          <a href="">
+            <div class="podcast-item">
+                <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3N0b3JhZ2UuYnV6enNwcm91dC5jb20vdmFyaWFudHMvNGsyeXQ3enVmZ2lucWR5ZTlwNndzOTZzeDhnai81Y2ZlYzAxYjQ0ZjNlMjlmYWUxZmI4OGFkZTkzZmM0YWVjZDA1YjE5MmZiZmJjMmMyZjFkYWE0MTJiN2MxOTIxLmpwZyIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczMtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czExNC92NC9kNC8xNC81Ny9kNDE0NTcyNy1lNjhjLTdmZWItOTA4Mi00N2NmNDc2NGNlNjEvbXphXzI3NDM0MDkyODA1NTUxNzY1MjcuanBnLzYwMHg2MDBiYi5qcGcifQ.uDeXHxXQWkioHq_tpdQJbq0HK8YqaZPYHXd3iDtGovo.jpg?width=400&height=400" alt="Podcast 3" class="podcast-image">
+                <p class="podcast-description">Nutrition</p>
+            </div>
+          </a>
+          <br>
+        </div>
+      <div>
+          <h1 style="font-size: medium"><a href="#" class="trending" style="color: hsl(307, 64%, 78%);">Popular Author</a></h1>
+          <p style="color:beige;font-size: small;">People who inspire through their confessions</p>
+          <hr>
+          <div class="podcast-container">
+            <a href="">
+                <div class="podcast-item">
+                    <img src="https://i.scdn.co/image/ab6765630000ba8aeddef33cb61887e516a21049" alt="Podcast 1" class="podcast-image">
+                    <p class="podcast-description">Nguyen Huu Tri</p>
+                  </div>
+            </a>
+            <a href="">
+                <div class="podcast-item">
+                    <img src="https://i.scdn.co/image/ab6765630000ba8abf3a9d6ad2060e298b138553" alt="Podcast 2" class="podcast-image">
+                    <p class="podcast-description">Thich Minh Niem</p>
+                  </div>
+            </a>
+            <a href="">
+                <div class="podcast-item">
+                    <img src="https://i.scdn.co/image/ab6765630000ba8a2d3b10640e6108df833cd6ca" alt="Podcast 3" class="podcast-image">
+                    <p class="podcast-description">Phan Dang</p>
+                </div>
+            </a>
+            <a href="">
+                <div class="podcast-item">
+                    <img src="https://www.fptbinhthuan.vn/wp-content/uploads/2021/04/166280794_255876026256163_7799556059094366113_n.jpg" alt="Podcast 3" class="podcast-image">
+                    <p class="podcast-description">Hieu PC</p>
+                </div>
+            </a>
+              <br>
+              <br>
+              <br>
+            </div>
+            <br>
+            <a href="" style="text-decoration: none;"><p style="color:aquamarine;font-size: smaller;">Listen Recently</p></a>
+            <hr>
+            <div class="podcast-container">
+              <a href="">
+                <div class="podcast-item">
+                    <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL21lZGlhLm5wci5vcmcvYXNzZXRzL2ltZy8yMDI0LzAzLzA4L1VwRmlyc3RfTmV3X0xvZ29fTlBSX1NtYWxsX3NxLTdkNGQ4MjY3MDE2OTkyMjQyMGM1ODBlZWExODdkMTY5YmMyNWVlN2UucG5nP3M9MTkwMCZjPTY2JmY9cG5nIiwiZmFsbGJhY2siOiJodHRwczovL2lzMi1zc2wubXpzdGF0aWMuY29tL2ltYWdlL3RodW1iL1BvZGNhc3RzMTEzL3Y0LzNhL2I2LzI3LzNhYjYyNzRkLTU5YTYtMGFjNy1jNTk2LWI5MDdiNmVmNzkzOC9temFfMTYyOTM3NDQwMzMyODQ1NDI1NjUucG5nLzYwMHg2MDBiYi5qcGcifQ.ZpQW0Ekdk0EZFS_Q5RtOxnIyBHUOdrOZGo5yeAHNZBU.jpg?width=200&height=200" alt="Podcast 1" class="podcast-image">
+                    <p class="podcast-description">Up First 40%</p>
+                  </div>
+              </a>
+              <a href="">
+                <div class="podcast-item">
+                    <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL21lZ2FwaG9uZS5pbWdpeC5uZXQvcG9kY2FzdHMvY2EwNDc0NzAtNzgxYS0xMWVhLTlhMTAtY2ZhMDVhNWVlYjNiL2ltYWdlL2JpbGwtc2ltbW9ucy1wb2RjYXN0LUZELXVwZGF0ZWQuanBnP2l4bGliPXJhaWxzLTQuMy4xJm1heC13PTMwMDAmbWF4LWg9MzAwMCZmaXQ9Y3JvcCZhdXRvPWZvcm1hdCxjb21wcmVzcyIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczItc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyMi92NC9hMS9lYy82YS9hMWVjNmE1Ny0zZDUyLTQ3ZTMtMjMyNS01YTkzNTZlNjNjY2EvbXphXzIzMDczNDExMDU3MzY5MTk4NjUuanBnLzYwMHg2MDBiYi5qcGcifQ.NGKt-0npLVlMsgmmG8vALirTPUFOy9cQnZNZXgrjxxU.jpg?width=200&height=200" alt="Podcast 2" class="podcast-image">
+                    <p class="podcast-description">Bill Simmon 27%</p>
+                  </div>
+              </a>
+              <a href="">
+                <div class="podcast-item">
+                    <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9iMmY1MWQyOC1iM2M3LTRmZDktOTQ0Ny1hYmZkMDJiMTE0MTgvZWRhYTI5ZDUtMDc4ZC00MTRjLWFiZGMtN2YzN2NhMzk3MTk3LzMwMDB4MzAwMC9iYjItbG9nb2ZpbmFsLmpwZz9haWQ9cnNzX2ZlZWQiLCJmYWxsYmFjayI6Imh0dHBzOi8vaXMxLXNzbC5tenN0YXRpYy5jb20vaW1hZ2UvdGh1bWIvUG9kY2FzdHMxMjYvdjQvMDQvYzMvNTEvMDRjMzUxNmYtOTcyMy1jYWFhLWY1ZWMtZDcxY2I5NTlhYzY2L216YV80ODQzODkyNzY5Njk2MjQyMDEwLmpwZy82MDB4NjAwYmIuanBnIn0.mLjCC6GAbTfW1tlY1WqD_bgq3zaZlcbI72xcf-Vak6c.jpg?width=400&height=400" alt="Podcast 3" class="podcast-image">
+                    <p class="podcast-description">Bear Brook 15%</p>
+                  </div>
+              </a>
+              <a href="">
+                <div class="podcast-item">
+                    <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL21lZ2FwaG9uZS5pbWdpeC5uZXQvcG9kY2FzdHMvNWFmZDI1MDgtMjk4MC0xMWVkLTk3YWItYmY0ZmI4NTg0MzZhL2ltYWdlL05IX0V4cGVyaWFuX1BvZEFydC5wbmc_aXhsaWI9cmFpbHMtNC4zLjEmbWF4LXc9MzAwMCZtYXgtaD0zMDAwJmZpdD1jcm9wJmF1dG89Zm9ybWF0LGNvbXByZXNzIiwiZmFsbGJhY2siOiJodHRwczovL2lzMS1zc2wubXpzdGF0aWMuY29tL2ltYWdlL3RodW1iL1BvZGNhc3RzMTI2L3Y0L2UxLzVlLzQ3L2UxNWU0NzRjLTFmYjUtNThlNi05N2Y1LTMzMzVhMjhmN2JjZi9temFfMjYxNjg1OTM2NDk0NjQ5OTYzLmpwZWcvNjAweDYwMGJiLmpwZyJ9.wNFqLtGRhXaHrwosZ9UMIS4BZIW-WotKoLbOu5oqXf4.jpg?width=200&height=200" alt="Podcast 3" class="podcast-image">
+                    <p class="podcast-description">New Height 99%</p>
+                </div>
+              </a>
+              <a href="">
+                <div class="podcast-item">
+                    <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL3N0b3JhZ2UuYnV6enNwcm91dC5jb20vdmFyaWFudHMvNGsyeXQ3enVmZ2lucWR5ZTlwNndzOTZzeDhnai81Y2ZlYzAxYjQ0ZjNlMjlmYWUxZmI4OGFkZTkzZmM0YWVjZDA1YjE5MmZiZmJjMmMyZjFkYWE0MTJiN2MxOTIxLmpwZyIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczMtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czExNC92NC9kNC8xNC81Ny9kNDE0NTcyNy1lNjhjLTdmZWItOTA4Mi00N2NmNDc2NGNlNjEvbXphXzI3NDM0MDkyODA1NTUxNzY1MjcuanBnLzYwMHg2MDBiYi5qcGcifQ.uDeXHxXQWkioHq_tpdQJbq0HK8YqaZPYHXd3iDtGovo.jpg?width=400&height=400" alt="Podcast 3" class="podcast-image">
+                    <p class="podcast-description">Maintenance Phase 50%</p>
+                </div>
+              </a>
+              <a href="">
+                <div class="podcast-item">
+                    <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy8wMGM4MWU2MC00NWY5LTQ2NDMtOWZlZC0yMTg0YjJiNmEzZDMvMzJjMWYwMmMtY2U0ZC00MjUxLWJhZTMtNzI4ZDQxZWNiZjQ0LzMwMDB4MzAwMC9zdGl0Y2hlci1jb3Zlci1tZWxyb2JiaW5zLTMwMDB4MzAwMC13aGl0ZS1maW5hbC5qcGc_YWlkPXJzc19mZWVkIiwiZmFsbGJhY2siOiJodHRwczovL2lzMi1zc2wubXpzdGF0aWMuY29tL2ltYWdlL3RodW1iL1BvZGNhc3RzMTEyL3Y0L2JlLzczLzllL2JlNzM5ZTA1LWZiMTEtNDAzZC1kOGI1LWNjZGE3MmQ1MDc4NS9temFfMTIxNjgyOTA1MDQzNDUzMDc3NjYuanBnLzYwMHg2MDBiYi5qcGcifQ.3NuFR8MDScKRQfQNO8HssLXKeU2APepVUwAmsqOjeYA.jpg?width=200&height=200" alt="Podcast 3" class="podcast-image">
+                    <p class="podcast-description">Mell Robbin 56%</p>
+                </div>
+              </a>
+              <br>
+            </div>
+         
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footerContainer">
+          <div class="socialIcons">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="footerNav">
+            <ul>
+              Company
+              <li><a href="https://www.spotify.com/hk-zh/about-us/contact/">About</a></li>
+              <li><a href="https://www.lifeatspotify.com/">Jobs</a></li>
+              <li><a href="https://newsroom.spotify.com/">For the Records</a></li>
+            </ul>
+            <ul>Communites
+              <li><a href="https://artists.spotify.com/home">For Artists</a></li>
+              <li><a href="https://developer.spotify.com/">Developers</a></li>
+              <li><a href="https://ads.spotify.com/en-US/">Advertising</a></li>
+              <li><a href="https://investors.spotify.com/home/default.aspx">Investors</a></li>
+              <li><a href="https://spotifyforvendors.com/">Vendors</a></li>
+            </ul>
+            <ul>Useful links
+              <li><a href="https://support.spotify.com/hk-zh/">Supports</a></li>
+              <li><a href="https://support.spotify.com/hk-zh/">Free Mobile App</a></li>
+            </ul>
+            
+          </div>
+          <hr>
+          <div class="footerBottom">
+            <p>Copyright &copy 2024, Designed by <span class="designer"> đồ án nhóm 13 </span></p>
+          </div>
+        </div>
+      </footer>
+</body>
