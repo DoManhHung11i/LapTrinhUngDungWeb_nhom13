@@ -155,11 +155,10 @@
           <div>
                <div class="audio-player">
               <audio controls>
-                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
               <div class="controls">
-                <button title="Play">⏯</button>
+                <button title="Play" data-song-id="3">⏯</button>
                 <button title="Pause">⏸</button>
                 <button title="Stop">⏹</button>
               </div>
@@ -168,7 +167,8 @@
                 <h3>The Daily</h3>
               </div>
             </div>
-          
+            
+            <script src="./javaScript/song_play.js"></script>
             <script>
               const audioPlayer = document.querySelector('.audio-player');
               const navbar = document.querySelector('.navbar');
