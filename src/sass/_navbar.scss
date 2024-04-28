@@ -1,0 +1,31 @@
+/* Navbar */
+.navbar {
+    background: linear-gradient(to bottom, rgb(4, 1, 51) 70%, rgb(23, 43, 39) 90%);
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 2px solid rgb(60, 58, 57);
+}
+  
+.navbar h1 {
+    padding: 1rem 0;
+    margin-left: 5%;
+}
+  
+.navbar a {
+    display: block;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 12px;
+}
+  
+.navbar a > i {
+    margin-right: 10px;
+}
+  
+.navbar a:hover {
+    background-color: #555;
+}

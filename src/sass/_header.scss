@@ -1,0 +1,60 @@
+/* Header */
+header {
+    margin-left: 20px; /* Điều chỉnh khoảng cách margin để phù hợp với trình duyệt */
+    padding: 20px;
+}
+  
+.top-bar {
+    width: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.top-bar-search {
+    height: 26px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 7px;
+    position: relative;
+    margin-left: 160px; 
+}
+  
+.top-bar-search button {
+    background-color: #333;
+    color: #ffffff;
+    padding: 4px;
+    right: 5px;
+    position: absolute;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+  
+.top-bar-search input {
+    width: 500px; 
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+  
+.top-bar-login-signup {
+    display: flex;
+    align-items: center;
+}
+  
+.top-bar-login-signup button {
+    color: #ccc;
+    background-color: #456c91;
+    margin-right: 20px; 
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: #093b69;
+}
+  
+.top-bar-login-signup button:hover {
+    background-color: #244d73;
+}

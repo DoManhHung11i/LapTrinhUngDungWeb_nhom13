@@ -1,9 +1,12 @@
 const express = require('express');
 const { engine } = require('express-handlebars');
 const path = require('path');
+const sass = require('sass');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname,'src', 'public')));
 
 //Kết nối tới database
 const db = require('./src/config/db');

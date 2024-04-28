@@ -1,0 +1,11 @@
+@import 'header';
+@import 'navbar';
+@import 'footer';
+
+
+body {
+    background: linear-gradient(to right, rgb(4, 1, 51), rgb(23, 43, 39) 90%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
