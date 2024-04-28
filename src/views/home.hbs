@@ -1,1 +1,16 @@
-<h1>Hello</h1>
+<div class="container">
+    <h1 style="font-size: medium"><a href="#" class="trending" style="color: hsl(307, 64%, 78%);">Trending Categories</a></h1>
+    <p style="color:beige;font-size: small;">The most popular podcasts overall now. Last updated an hour ago.</p>
+    <hr>
+    <div class="podcast-container">
+        {{#each podcasts}}
+        <a href="{{this.url}}">
+
+            <div class="podcast-item">
+                <img src="{{this.image}}" alt="{{this.title}}" class="podcast-image">
+                <p class="podcast-description">avc</p>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+</div>

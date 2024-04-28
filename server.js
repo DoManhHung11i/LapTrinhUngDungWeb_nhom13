@@ -6,6 +6,8 @@ const sass = require('sass');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const route = require('./src/routes')
+
 app.use(express.static(path.join(__dirname,'src', 'public')));
 
 //Kết nối tới database
@@ -24,9 +26,7 @@ app.set('view engine', 'hbs');
 //Đặt folder chứa các file view là folder views
 app.set('views', path.join(__dirname, 'src','views'));
 
-app.get('/', (req, res) => {
-    res.render('home');
-});
+route(app);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
