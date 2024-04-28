@@ -19,10 +19,10 @@ app.engine(
 app.set('view engine', 'hbs');
 
 //Đặt folder chứa các file view là folder views
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'src','views'));
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.render('home');
 });
 
 app.listen(PORT, () => {
