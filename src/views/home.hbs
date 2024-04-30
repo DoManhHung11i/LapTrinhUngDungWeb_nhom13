@@ -4,11 +4,11 @@
     <hr>
     <div class="podcast-container">
         {{#each podcasts}}
-        <a href="{{this.url}}">
+        <a href="/">
 
             <div class="podcast-item">
                 <img src="{{this.image}}" alt="{{this.title}}" class="podcast-image">
-                <p class="podcast-description">avc</p>
+                <p class="podcast-description">{{this.topic}}</p>
             </div>
         </a>
         {{/each}}

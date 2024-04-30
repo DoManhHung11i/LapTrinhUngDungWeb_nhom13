@@ -1,15 +1,16 @@
-const Podcast = require('../models/podcast');
+const podcasts = require('../models/podcasts');
+const Podcast = require('../models/podcasts');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 
-class HomeController{
-    get(req, res) {
-            
-        Podcast.find({})
+class HomeController {
+   home(req, res, next){
+    Podcast.find({}).limit(5)
         .then(podcasts => {
-            console.log(podcasts);
-            // Xử lý dữ liệu ở đây
+         podcasts = podcasts.map(podcast => podcast.toObject())
+         res.render('home', { podcasts });
         })
-        .catch(err => console.error('Error:', err));
-    }
+        .catch(next);
+   }
 }
+
 module.exports = new HomeController();
