@@ -1,35 +1,32 @@
 <div class="container">
-        <!-- SIGNUP -->
-        <div class="wrapper">
-            <h2 class="welcome" style="color: aliceblue;">welcome</h2>
-            <h1 class="healsoul_signup">SIGN UP FOR HEALSOUL</h1>
-            <form>
-                <label for="">NAME</label>
-                <input type="text" placeholder="Your first name...">
-    
-                <label for="">EMAIL</label>
-                <input type="text" placeholder="Email address...">
-    
-                <label for="">PASSWORD</label>
-                <input type="password" placeholder="Password... (8 characters minimum)">
-    
-                <label for="">CONFIRM PASSWORD</label>
-                <input type="password" placeholder="Confirm password...">
-            </form>
-            
-            
+    <!-- SIGNUP -->
+    <div class="wrapper">
+        <h2 class="welcome" style="color: aliceblue;">welcome</h2>
+        <h1 class="healsoul_signup">SIGN UP FOR HEALSOUL</h1>
+        <form id="signup-form" method="post" action="/register">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Your username...">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email...">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Your password...">
+
             <button type="submit" id="signup_button">SIGN UP</button>
-            <br>
-            <p id="or" style="color: aliceblue; font-size: 14px;">or</p>
-    
-            <button type="submit" id="apple_button">
-                <a href="https://appleid.apple.com/auth/authorize?response_type=code&client_id=fm.podbay.web-auth&redirect_uri=https%3A%2F%2Fpodbay.fm%2Fauth%2Fapple%2Fcallback&scope=openid+email&response_mode=form_post" target="_blank" style="color:aliceblue;"><i class="fa-brands fa-apple"></i> Continue with apple</a>
-            
-            </button>
-            <hr>
-            <p id="policy_terms" style="color: aliceblue;">View Healsoul's <a href="https://podbay.fm/privacy" style="color: aqua;"><u style="text-decoration:underline">Privacy Policy</u></a> and <a href="https://podbay.fm/terms" style="color: aqua;"><u style="text-decoration:underline">Terms of Use.</u></a></p>
-            
-            <p id="login" style="color: aliceblue;">Already have an account? <a href="login.html" style="color: aqua;"><u style="text-decoration: underline">Log in</u></a></p>
-                
-        </div>
+        </form>
+
+        <br>
+        <p id="or" style="color: aliceblue; font-size: 14px;">or</p>
+
+        <button type="submit" id="apple_button">
+            <a href="https://appleid.apple.com/auth/authorize?response_type=code&client_id=fm.podbay.web-auth&redirect_uri=https%3A%2F%2Fpodbay.fm%2Fauth%2Fapple%2Fcallback&scope=openid+email&response_mode=form_post" target="_blank" style="color:aliceblue;"><i class="fa-brands fa-apple"></i> Continue with apple</a>
+        </button>
+        <hr>
+        <p id="policy_terms" style="color: aliceblue;">View Healsoul's <a href="https://podbay.fm/privacy" style="color: aqua;"><u style="text-decoration:underline">Privacy Policy</u></a> and <a href="https://podbay.fm/terms" style="color: aqua;"><u style="text-decoration:underline">Terms of Use.</u></a></p>
+
+        <p id="login" style="color: aliceblue;">Already have an account? <a href="login.html" style="color: aqua;"><u style="text-decoration: underline">Log in</u></a></p>
     </div>
+</div>
+
+

@@ -1,4 +1,3 @@
-const podcasts = require('../models/podcasts');
 const Podcast = require('../models/podcasts');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 
@@ -17,6 +16,7 @@ class HomeController {
    signup(req, res, next) {
       res.render('signup');
    }
+
 }
 
 module.exports = new HomeController();

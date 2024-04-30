@@ -26,6 +26,12 @@ app.set('view engine', 'hbs');
 //Đặt folder chứa các file view là folder views
 app.set('views', path.join(__dirname, 'src','views'));
 
+app.use(
+    express.urlencoded({
+        extended: true,
+    }),
+);
+
 route(app);
 
 app.listen(PORT, () => {
