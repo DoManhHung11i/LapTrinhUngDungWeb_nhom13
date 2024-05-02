@@ -23,11 +23,11 @@ class AuthController {
     }
     
 
-    async login(req, res){
+    async Login(req, res){
         try {
             const { email, password } = req.body;
             const user = await User.findOne({ email });
-            if(!User) 
+            if(!user) 
                 res.status(404).json({ message: "User not found" });
             const isMatch = await bcrypt.compare(password, user.password);
             if(!isMatch)
