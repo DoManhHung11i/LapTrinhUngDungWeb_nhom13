@@ -16,6 +16,18 @@ class HomeController {
    signup(req, res, next) {
       res.render('signup');
    }
+   Discovery(req, res, next){
+      res.render('discovery');
+   }
+   MyPodcasts(req, res, next){
+      res.render('MyPodcasts');
+   }
+   MyQueue(req, res, next){
+      res.render('MyQueue');
+   }
+   Recently(req, res, next){
+      res.render('recently');
+   }
 
 }
 
