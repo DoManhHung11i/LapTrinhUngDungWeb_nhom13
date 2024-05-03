@@ -1,0 +1,137 @@
+.container_body_img{
+    width: 140px;
+    height: 140px;
+   }
+   
+   .container_body_img img{
+    width: 140px;
+    height: 140px;
+    border-radius: 4px;
+    cursor: pointer;
+   }
+   .container_body_img i{
+    padding: 50px;
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    opacity: 0;
+    transition: opacity 0s ease;
+   }
+   
+   .container_body_img a:hover{
+    opacity: 0.5;
+   }
+   .container_body_img img:hover{
+    opacity: 0.5;
+   }
+   
+   .container_body_img i:hover{
+    opacity: 1;
+   }
+   
+   .container_body-title{
+    position: absolute;
+    top: 0;
+    left: 180px;
+   }
+   
+   .container_body_feature-list{
+    padding: 0 0;
+    display: flex;
+    
+   }
+   .container_body_feature-item{
+    font-size: 14px;
+    width: 180px;
+    margin-right: 100px;
+    text-align: center;
+   }
+   .container_button:hover{
+     background-color: #244d73;
+   }
+   .container_body_review-list{
+     padding: 5px;
+     margin-top: 30px;
+     display: flex;
+   }
+   .container_body_review-item{
+     background-color: rgba(3, 2, 47, 0.5);
+     color: #fff;
+     padding: 10px;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 1.5em;
+     flex: 1;
+     border: 1px solid rgb(3, 2, 50);
+     margin-left: 8px;
+     border-radius: 10px;
+   }
+   
+   .container_body_review-title{
+     font-size: 16px;
+     font-weight: 600;
+     margin-bottom: 5px;
+   }
+   .container_body_review-content{
+     opacity: 0.8;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 1.5em;
+   }
+   .container_body_review-name{
+     font-size: 14px;
+     opacity: 0.6;
+   }
+   .container_body_review_next{
+     padding: 20px;
+     height: 2em;
+     text-align: center;
+     transition: transform 1.5s ease;
+   }
+   .container_body_review_next i{
+     font-size: 30px;
+     color: #fff;
+   }
+   
+   .container_body_review_next:hover{
+     transform: translateY(100%);
+   }
+   
+   .container_body_prev_next{
+     display: flex;
+     
+   }
+   .container_body_prev_next a{
+     text-decoration: none;
+     flex: 1;
+   }
+   .container_body_prev_next-item{
+     background-color: #010d17;
+     padding: 5px;
+     margin: 5px 5px 15px 5px;
+     border: 1px solid #010d17;
+     border-radius: 5px;
+     display: flex;
+   }
+   .container_body_prev_next img{
+     width: 60px;
+     height: 60px;
+     margin-right: 10px;
+   }
+   .container_body_pre_next-item-text-direct{
+     font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+     font-size: 10px;
+     color: #ccc;
+     margin-bottom: 3px;
+     font-weight: 600;
+     text-transform: uppercase;
+   }
+   .container_body_pre_next-item-text-title{
+     color: #fff;
+     font-weight: 500;
+     font-size: 14px;
+   }
+   
+   .container_body_prev_next .container_body_prev_next-item:hover{
+     background-color: rgba(43, 125, 241, 0.3);
+   }

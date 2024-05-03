@@ -6,27 +6,27 @@ class HomeController {
     Podcast.find({}).limit(5)
         .then(podcasts => {
          podcasts = podcasts.map(podcast => podcast.toObject())
-         res.render('home', { podcasts });
+         res.render('home', { podcasts, showFooter: true });
         })
         .catch(next);
    }
    login(req, res, next) {
-      res.render('login');
+      res.render('login', { showFooter: true });
    }
    signup(req, res, next) {
-      res.render('signup');
+      res.render('signup', { showFooter: true });
    }
    Discovery(req, res, next){
-      res.render('discovery');
+      res.render('discovery', { showFooter: true });
    }
    MyPodcasts(req, res, next){
-      res.render('MyPodcasts');
+      res.render('MyPodcasts', { showFooter: true });
    }
    MyQueue(req, res, next){
-      res.render('MyQueue');
+      res.render('MyQueue', { showFooter: true });
    }
    Recently(req, res, next){
-      res.render('recently');
+      res.render('recently', { showFooter: true });
    }
 
 }

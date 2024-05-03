@@ -1,14 +1,13 @@
 <div class="container">
     <div class="container_sidebar">
-        <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" alt="">
-          <p style="font-size: 18px; font-weight: 600; color: aliceblue;">Three</p>
-          <p style="color: #4DAEE8;">Wavland</p>
+        <img src="{{podcast.image}}" alt="">
+          <p style="font-size: 18px; font-weight: 600; color: aliceblue;">{{podcast.title}}</p>
+          <p style="color: #4DAEE8;">{{podcast.author}}</p>
           <button class="container_button"><span style="font-weight: 600;">+</span> Add to My Podcasts</button>
           <div class="container_sidebar-text">
             <details>
-              <summary> After midnight on July 6th, 2012, three teenage girls walked into the thick Appalachian woods somewhere along the Mason-Dixon county line. Hours later, under the glow of a nearly full moon, only two walked out. </summary>
-              <span>The very last time Dave and Mary Neese saw their only child Skylar was in a grainy black-and-white video. In it, she's sneaking out of her ground-floor bedroom in the middle of the night, her purse over her shoulder, her brown hair swinging as she hurries across the small parking lot to a waiting car. 
-                What happened to Skylar Neese has become gothic American lore: the odd girl out in a vicious teenage triangle. But in the ten years since that fateful night beneath the West Virginia stars, a fuller portrait of what happened has emerged. From award-winning journalists Justine Harman and Holly Millea comes a gripping 10-part series featuring Skylar's family, closest friends, and law enforcement who lived the case—and are still living it.</span>
+              <summary> Show Description </summary>
+              <span>{{podcast.description}}</span>
             </details>
             </div>  
           <p style="color: rgb(153, 153, 153); font-weight: 700;font-size: 12px;letter-spacing: 0.5px; margin-bottom: 5px; margin-left: 5px;">SHARE</p>
@@ -36,7 +35,7 @@
         <div class="episode">
             <div class="jsxepisode">
                 <div class="wrapp_art">
-                    <img src="{{../podcasts.image}}" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+                    <img src="{{../podcast.image}}" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
                     <div class="playing"></div>
                     <div class="pause">
                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
@@ -47,7 +46,7 @@
                 <div class="meta">
                     <div class="meta_top">
                         <div class="meta_title">
-                            <a class="episode_title" style="color:antiquewhite" href="/esposide/{{this.podcasd_id}}"><u>{{this.title}}</u></a>
+                            <a class="episode_title" style="color:antiquewhite" href="/podcast/{{this.podcast_id}}/{{this._id}}"><u>{{this.title}}</u></a>
                         </div>
                         <div class="meta_description">{{this.description}}</div>
                     </div>
