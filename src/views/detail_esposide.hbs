@@ -124,4 +124,34 @@
             </div>
             </a>
         </div>
+        <footer>
+          <div class="audio-player">
+            <audio controls>
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+              <button title="Play">⏯</button>
+              <button title="Pause">⏸</button>
+              <button title="Stop">⏹</button>
+            </div>
+            <div class="song-info">
+              <img src="{{podcast.image}}" alt="Song Image">
+              <h3>{{podcast.title}}</h3>
+            </div>
+          </div>
+        </footer>
+          
+            <script>
+              const audioPlayer = document.querySelector('.audio-player');
+              const navbar = document.querySelector('.navbar');
+          
+              window.addEventListener('scroll', () => {
+                if (window.scrollY > 0) {
+                  audioPlayer.classList.add('visible');
+                } else {
+                  audioPlayer.classList.remove('visible');
+                }
+              });
+            </script>
 </div>
