@@ -7,7 +7,8 @@ const commentSchema = new Schema({
     podcast_id: ObjectId,
     title: String, 
     content: String,
-    created_at: { type: Date, default: Date.now }
+    created_at: { type: Date, default: Date.now },
+    username: String
 });
 
 module.exports = mongoose.model('Comment', commentSchema);

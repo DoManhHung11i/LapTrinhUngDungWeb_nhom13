@@ -1,6 +1,7 @@
 const Podcast = require('../models/podcasts');
 const Esposide = require('../models/esposides');
 const Comment = require('../models/comments');
+const User = require('../models/users');
 const { ObjectId } = require('mongodb');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 
@@ -34,7 +35,26 @@ class PodcastController {
 
         const podcast = mongooseToObject(await Podcast.findById(podcastID));
         const comments = mutipleMongooseToObject(await Comment.find({ podcast_id: podcastID}));
-        res.render('Review', { podcast, comments });
+
+
+    const userIds = comments.map(comment => comment.userid);
+
+    const users = await User.find({ _id: { $in: userIds } });
+
+    const userMap = {};
+    users.forEach(user => {
+        userMap[user._id] = user;
+    });
+
+    comments.forEach(comment => {
+        const user = userMap[comment.userid];
+        console.log(user);
+        if (user) {
+            comment.username = user.username;
+        }
+    });
+    
+    res.render('Review', { podcast, comments });
     }
 }
 module.exports = new PodcastController();
