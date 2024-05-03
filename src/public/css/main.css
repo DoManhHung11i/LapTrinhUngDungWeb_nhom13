@@ -1000,6 +1000,60 @@ hr {
   margin: 0;
 }
 
+.container_body_review-item {
+  background-color: rgba(3, 2, 47, 0.5);
+  color: #fff;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5em;
+  flex: 1;
+  border: 1px solid rgb(255, 255, 255);
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.container_body_review_next {
+  padding: 20px;
+  height: 2em;
+  text-align: center;
+  transition: transform 1.5s ease;
+}
+
+.container_body_review_next i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.container_body_review-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.container_body_review-content {
+  opacity: 0.8;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.container_body_review-name {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.container_review {
+  padding: 20px;
+  margin-top: 10px;
+  width: 980px;
+  background-color: #000000;
+  position: absolute;
+  top: 40px;
+  left: 260px;
+  border-radius: 5px;
+}
+
 body {
   background: linear-gradient(to right, rgb(4, 1, 51), rgb(23, 43, 39) 90%);
   margin: 0;

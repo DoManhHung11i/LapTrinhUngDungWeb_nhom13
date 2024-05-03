@@ -25,39 +25,27 @@
         <ul class="container_headbar-list">
             <a href="playlist.html"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
             <a href="about.html"><li class="container_headbar-item">About</li></a>  
-            <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
+            <a href="review.html"><li class="container_headbar-item">Reviews</li></a>
             <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
             <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
           </ul>
     </div>
-    <div class="container_body">
-        {{#each esposides}}
-        <div class="episode">
-            <div class="jsxepisode">
-                <div class="wrapp_art">
-                    <img src="{{../podcast.image}}" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
-                    <div class="playing"></div>
-                    <div class="pause">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
-                        </svg>
-                    </div>
-                </div>
-        
-                <div class="meta">
-                    <div class="meta_top">
-                        <div class="meta_title">
-                            <a class="episode_title" style="color:antiquewhite" href="/podcast/{{this.podcast_id}}/{{this._id}}"><u>{{this.title}}</u></a>
+    <div class="container_review">
+        <form action="">
+            <fieldset style="border-radius: 5px;border: 0.5px solid #70b8ef">
+                <legend style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;font-size: 16px;margin: 4px;color: #ccc;font-weight: 600;text-transform: uppercase;">
+                    review
+                </legend>
+                <div class="container_body_review">
+                    {{#each comments}}
+                        <div class="container_body_review-item">
+                            <div class="container_body_review-title">{{this.title}}</div>
+                            <div class="container_body_review-content">{{this.content}}</div>
+                            <div class="container_body_review-name">User1</div>
                         </div>
-                        <div class="meta_description">{{this.description}}</div>
-                    </div>
+                    {{/each}}
                 </div>
-                <div class="infor_bar">
-                    <div class="published">{{this.release_date}}</div>
-                    <div class="duration">{{this.duration}}</div>
-                </div>
-                </div>
-            <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
-        </div>
-        {{/each}}
+            </fieldset>
+        </form>
     </div>
 </div>
