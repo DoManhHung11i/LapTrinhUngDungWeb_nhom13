@@ -25,7 +25,7 @@
         <ul class="container_headbar-list">
             <a href="playlist.html"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
             <a href="about.html"><li class="container_headbar-item">About</li></a>  
-            <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
+            <a href="review.html"><li class="container_headbar-item">Reviews</li></a>
             <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
             <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
           </ul>
@@ -125,15 +125,14 @@
             </a>
         </div>
         <footer>
-          <div class="audio-player">
-            <audio controls>
-              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          <div class="audio-player" data-audio-url="{{esposide.audio_url}}">
+            <audio id="audio-player" controls>
               Your browser does not support the audio element.
             </audio>
             <div class="controls">
-              <button title="Play">⏯</button>
-              <button title="Pause">⏸</button>
-              <button title="Stop">⏹</button>
+              <button id="play-btn" title="Play">⏯</button>
+              <button id="pause-btn" title="Pause">⏸</button>
+              <button id="stop-btn" title="Stop">⏹</button>
             </div>
             <div class="song-info">
               <img src="{{podcast.image}}" alt="Song Image">
@@ -141,7 +140,31 @@
             </div>
           </div>
         </footer>
-          
+            <script>
+              document.addEventListener("DOMContentLoaded", function() {
+                const playBtn = document.getElementById("play-btn");
+                const pauseBtn = document.getElementById("pause-btn");
+                const stopBtn = document.getElementById("stop-btn");
+                const audioPlayer = document.getElementById("audio-player");
+
+                const audioUrl = document.querySelector('.audio-player').getAttribute('data-audio-url');
+                // Set the source URL for the audio element
+                audioPlayer.src = audioUrl;
+
+                playBtn.addEventListener("click", function() {
+                  audioPlayer.play();
+                });
+
+                pauseBtn.addEventListener("click", function() {
+                  audioPlayer.pause();
+                });
+
+                stopBtn.addEventListener("click", function() {
+                  audioPlayer.pause();
+                  audioPlayer.currentTime = 0;
+                });
+              });
+            </script>
             <script>
               const audioPlayer = document.querySelector('.audio-player');
               const navbar = document.querySelector('.navbar');
