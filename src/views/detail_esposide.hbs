@@ -130,9 +130,10 @@
               Your browser does not support the audio element.
             </audio>
             <div class="controls">
-              <button id="play-btn" title="Play">⏯</button>
-              <button id="pause-btn" title="Pause">⏸</button>
-              <button id="stop-btn" title="Stop">⏹</button>
+              <button id="backward-btn" title="Backward 5s">⏪</button>
+              <button id="play-pause-btn" title="Play/Pause">▶️</button>
+              <button id="forward-btn" title="Forward 5s">⏩</button>
+              
             </div>
             <div class="song-info">
               <img src="{{podcast.image}}" alt="Song Image">
@@ -142,28 +143,33 @@
         </footer>
             <script>
               document.addEventListener("DOMContentLoaded", function() {
-                const playBtn = document.getElementById("play-btn");
-                const pauseBtn = document.getElementById("pause-btn");
-                const stopBtn = document.getElementById("stop-btn");
-                const audioPlayer = document.getElementById("audio-player");
+              const backwardBtn = document.getElementById("backward-btn");
+              const playPauseBtn = document.getElementById("play-pause-btn");
+              const forwardBtn = document.getElementById("forward-btn");
+              const audioPlayer = document.getElementById("audio-player");
 
-                const audioUrl = document.querySelector('.audio-player').getAttribute('data-audio-url');
-                // Set the source URL for the audio element
-                audioPlayer.src = audioUrl;
+              const audioUrl = document.querySelector('.audio-player').getAttribute('data-audio-url');
+              // Set the source URL for the audio element
+              audioPlayer.src = audioUrl;
 
-                playBtn.addEventListener("click", function() {
-                  audioPlayer.play();
-                });
-
-                pauseBtn.addEventListener("click", function() {
-                  audioPlayer.pause();
-                });
-
-                stopBtn.addEventListener("click", function() {
-                  audioPlayer.pause();
-                  audioPlayer.currentTime = 0;
-                });
+              backwardBtn.addEventListener("click", function() {
+                audioPlayer.currentTime -= 5; // Move backward 5 seconds
               });
+
+              playPauseBtn.addEventListener("click", function() {
+                if (audioPlayer.paused) {
+                  audioPlayer.play(); // If paused, play
+                  playPauseBtn.textContent = "⏸"; // Change button display to pause
+                } else {
+                  audioPlayer.pause(); // If playing, pause
+                  playPauseBtn.textContent = "▶️"; // Change button display to play
+                }
+              });
+
+              forwardBtn.addEventListener("click", function() {
+                audioPlayer.currentTime += 5; // Move forward 5 seconds
+              });
+            });
             </script>
             <script>
               const audioPlayer = document.querySelector('.audio-player');
@@ -177,4 +183,5 @@
                 }
               });
             </script>
+            
 </div>
