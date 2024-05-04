@@ -44,6 +44,30 @@
                             <div class="container_body_review-name" style="font-weight: bold; color: aqua; text-decoration:underline">{{this.username}}</div>
                         </div>
                     {{/each}}
+                <div class="container_comment" >
+                      <form action="" method="POST" id="commentForm">
+                        <fieldset style="border-radius: 5px; border: 0.5px solid #70b8ef">
+                          <legend style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 16px; margin: 4px; color: #ccc; font-weight: 600; text-transform: uppercase;"> Your Comment </legend>
+                          <div class="container_body_comment">
+                            <div class="form-group">
+                              <label for="commentUsername" style="color: white;">Your Name</label>
+                              <input type="text" id="commentTitle" name="commentTitle" style="width: 99%; padding: 5px; border-radius: 5px;color: white; " required>
+                            </div>
+                            <div class="form-group">
+                              <label for="commentTitle" style="color: white;">Title</label>
+                              <input type="text" id="commentUsername" name="commentUsername" style="width: 99%; padding: 5px; border-radius: 5px; color: white;" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="commentContent" style="color: white;">Content</label>
+                              <textarea id="commentContent" name="commentContent" rows="5" style="width: 99%; padding: 5px; border-radius: 5px; background-color: #000000;color: white;" required></textarea>
+                            </div>
+                            <button type="Post" class="button" style="margin :10px">
+                              <span style="font-weight: 600; color: #333; ">Post</span>
+                            </button>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
                 </div>
             </fieldset>
         </form>
