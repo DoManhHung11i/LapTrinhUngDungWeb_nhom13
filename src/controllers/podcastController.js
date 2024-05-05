@@ -15,7 +15,6 @@ class PodcastController {
             const podcast = mongooseToObject(await Podcast.findById(podcastID));
             const esposides = mutipleMongooseToObject(await Esposide.find({ podcast_id: podcastID }));
             
-
             res.render('esposide', { podcast, esposides });
     }
 
@@ -27,7 +26,24 @@ class PodcastController {
 
         const podcast = mongooseToObject(await Podcast.findById(podcastID));
         const esposide = mongooseToObject(await Esposide.findById(esposideID));
-        res.render('detail_esposide', { podcast, esposide });
+        const comments = mutipleMongooseToObject(await Comment.find({ podcast_id: podcastID}));
+
+        const userIds = comments.map(comment => comment.userid);
+        const users = await User.find({ _id: { $in: userIds } });
+        const userMap = {};
+        users.forEach(user => {
+            userMap[user._id] = user;
+        });
+        comments.forEach(comment => {
+            const user = userMap[comment.userid];
+            console.log(user);
+            if (user) {
+                comment.username = user.username;
+            }
+        });
+        const lastFourComments = comments.slice(-4);
+        
+        res.render('detail_esposide', { podcast, esposide, lastFourComments });
     }
     async Review(req, res){
         const podcastIDString = req.params.podcast_id;
@@ -37,24 +53,25 @@ class PodcastController {
         const comments = mutipleMongooseToObject(await Comment.find({ podcast_id: podcastID}));
 
 
-    const userIds = comments.map(comment => comment.userid);
+        const userIds = comments.map(comment => comment.userid);
 
-    const users = await User.find({ _id: { $in: userIds } });
+        const users = await User.find({ _id: { $in: userIds } });
 
-    const userMap = {};
-    users.forEach(user => {
-        userMap[user._id] = user;
-    });
+        const userMap = {};
+        users.forEach(user => {
+            userMap[user._id] = user;
+        });
 
-    comments.forEach(comment => {
-        const user = userMap[comment.userid];
-        console.log(user);
-        if (user) {
-            comment.username = user.username;
+        comments.forEach(comment => {
+            const user = userMap[comment.userid];
+            console.log(user);
+            if (user) {
+                comment.username = user.username;
+            }
+        });
+        
+        
+        res.render('Review', { podcast, comments });
         }
-    });
-    
-    res.render('Review', { podcast, comments });
-    }
 }
 module.exports = new PodcastController();

@@ -25,7 +25,7 @@
         <ul class="container_headbar-list">
             <a href="playlist.html"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
             <a href="about.html"><li class="container_headbar-item">About</li></a>  
-            <a href="review.html"><li class="container_headbar-item">Reviews</li></a>
+            <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
             <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
             <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
           </ul>
@@ -55,42 +55,25 @@
             </div>
             <form action="">
               <fieldset style="border-radius: 5px;border: 0.5px solid #70b8ef">
-                <legend style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;font-size: 16px;margin: 4px;color: #ccc;font-weight: 600;text-transform: uppercase;">
-                  review
-                </legend>
-                <div class="container_body_review">
-                  <div class="container_body_review-list">
-                      <div class="container_body_review-item">
-                        <div class="container_body_review-title">Well done</div>
-                        <div class="container_body_review-content">Excellent podcast. My arguement to how they missed they missed the first barrel is that in 1985 they didn’t have the resources they do now.</div>
-                        <div class="container_body_review-name">User1</div>
-                      </div>
-                      <div class="container_body_review-item">
-                        <div class="container_body_review-title">Old White Men with a badge at it again</div>
-                        <div class="container_body_review-content">This is an amazing podcast, season one is great , sad and heartbreaking. Season 2 ( I am on episode 3 )is sooo maddening and makes me wonder how is detective Kojac wannabe free to roam around , this is infuriating; also why the interrogation of suspects doesn’t have a advocate for the suspect?</div>
-                        <div class="container_body_review-name">User2</div>
-                      </div>
-                  </div>
-                  <div class="container_body_review-list">
-                      <div class="container_body_review-item">
-                        <div class="container_body_review-title">Amazing</div>
-                        <div class="container_body_review-content">Season one as so good and I can’t wait to listen to season two.</div>
-                        <div class="container_body_review-name">User3</div>
-                      </div>
-                      <div class="container_body_review-item">
-                        <div class="container_body_review-title">Excellent Show</div>
-                        <div class="container_body_review-content">Very well done show, Jason’s storytelling is fantastic, story itself very captivating, give it a shot!</div>
-                        <div class="container_body_review-name">User4</div>
-                      </div>
+                  <legend style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;font-size: 16px;margin: 4px;color: #ccc;font-weight: 600;text-transform: uppercase;">
+                      review
+                  </legend>
+                  <div class="container_body_review">
+                      {{#each lastFourComments}}
+                          <div class="container_body_review-item">
+                              <div class="container_body_review-title">{{this.title}}</div>
+                              <div class="container_body_review-content">{{this.content}}</div>
+                              <div class="container_body_review-name" style="font-weight: bold; color: aqua; text-decoration:underline">{{this.username}}</div>
+                          </div>
+                      {{/each}}
                   </div>
                   <a href="Bear-Brook_Review.html">
                     <div class="container_body_review_next">
                       <i class="fa-solid fa-angles-down"></i>
                     </div>
                   </a>
-                </div>
               </fieldset>
-            </form>
+          </form>
             <hr style="margin-top: 60px;">
             <div class="container_body_prev_next">
             <a href="Bear-Brook_esposide2.html">
