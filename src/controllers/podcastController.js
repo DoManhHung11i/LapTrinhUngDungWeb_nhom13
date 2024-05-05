@@ -14,6 +14,9 @@ class PodcastController {
 
             const podcast = mongooseToObject(await Podcast.findById(podcastID));
             const esposides = mutipleMongooseToObject(await Esposide.find({ podcast_id: podcastID }));
+            esposides.forEach(esposide => {
+                esposide.formattedDate = esposide.release_date.toDateString();
+            });
             
             res.render('esposide', { podcast, esposides });
     }
@@ -27,6 +30,8 @@ class PodcastController {
         const podcast = mongooseToObject(await Podcast.findById(podcastID));
         const esposide = mongooseToObject(await Esposide.findById(esposideID));
         const comments = mutipleMongooseToObject(await Comment.find({ podcast_id: podcastID}));
+
+        esposide.formattedDate = esposide.release_date.toDateString();
 
         const userIds = comments.map(comment => comment.userid);
         const users = await User.find({ _id: { $in: userIds } });
