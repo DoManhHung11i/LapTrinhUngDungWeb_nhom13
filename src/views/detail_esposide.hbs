@@ -2,7 +2,7 @@
     <div class="container_sidebar">
         <img src="{{podcast.image}}" alt="">
           <p style="font-size: 18px; font-weight: 600; color: aliceblue;">{{podcast.title}}</p>
-          <p style="color: #4DAEE8;">{{podcast.author}}</p>
+          <p style="color: #4DAEE8;">{{podcast.name_author}}</p>
           <button class="container_button"><span style="font-weight: 600;">+</span> Add to My Podcasts</button>
           <div class="container_sidebar-text">
             <details>
@@ -17,8 +17,8 @@
             <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
           </div>
           <div class="container_sidebar-footertext">
-            <p style="margin-bottom: 10px;">&copy 2024 Wavland</p>
-            <p>All content for Three is the property of Wavland and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
+            <p style="margin-bottom: 10px;">&copy 2024 {{podcast.name_author}}</p>
+            <p>All content for Three is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
           </div>
     </div>
     <div class="container_headbar">
@@ -67,7 +67,7 @@
                           </div>
                       {{/each}}
                   </div>
-                  <a href="Bear-Brook_Review.html">
+                  <a href="/podcast/{{podcast._id}}/reviews">
                     <div class="container_body_review_next">
                       <i class="fa-solid fa-angles-down"></i>
                     </div>

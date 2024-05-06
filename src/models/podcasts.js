@@ -6,7 +6,8 @@ const podcastSchema = new Schema({
     _id: ObjectId,
     title: String,
     description: String,
-    image: String
+    image: String,
+    name_author: String
 });
 
 module.exports = mongoose.model('Podcast', podcastSchema);
