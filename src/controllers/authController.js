@@ -44,7 +44,7 @@ class AuthController {
             res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000});
             res.status(201).json({ newUser });
         } catch (err) {
-            const errors = handleError(err);
+            const errors = handleErrors(err);
             res.status(500).json({ errors });
         }
     }

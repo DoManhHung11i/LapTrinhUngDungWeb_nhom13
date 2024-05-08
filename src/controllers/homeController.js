@@ -10,6 +10,10 @@ class HomeController {
         })
         .catch(next);
    }
+   logout(req, res, next){
+      res.cookie('jwt', '', {maxAge: 1});
+      res.redirect('/');
+   }
    login(req, res, next) {
       res.render('login', { showFooter: true });
    }
