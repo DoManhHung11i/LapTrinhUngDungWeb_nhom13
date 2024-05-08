@@ -1,0 +1,326 @@
+
+
+body {
+    background: linear-gradient(to right, rgb(4, 1, 51) , rgb(23, 43, 39) 90%);
+     /* background-color:hsla(238, 17%, 12%, 50); */
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+     background: linear-gradient(to bottom, rgb(4, 1, 51) 70%,  rgb(23, 43, 39) 90%);
+     /* background-color:hsl(233, 18%, 19%); */
+     height: 100vh;
+     width: 200px;
+     position: fixed;
+     top: 0;
+     left: 0;
+     border-right: 2px solid rgb(60, 58, 57);
+  }
+  
+  .navbar h1{
+     padding: 1rem 0;
+     margin-left:5%
+  }
+  
+  .navbar a {
+     display: block;
+     color: #fff;
+     padding: 10px;
+     text-decoration: none;
+     margin-top: 12px ;
+  }
+  .navbar a > i{
+     margin-right: 10px;
+  }
+  
+  .navbar a:hover {
+     background-color: #555;
+  }
+  
+  header{
+     margin-left: 200px;
+     padding: 20px;
+  }
+  .top-bar{
+     padding: 5px;
+     display: flex;
+     justify-content: space-between;
+  }
+  
+  .top-bar-search{
+     width: 680px;
+     height: 26px;
+     display: flex;
+     align-items: center;
+     background-color: #ffffff;
+     padding: 5px;
+     border-radius: 7px;
+     position: relative;
+  }
+  
+  .top-bar-search button{
+     background-color: #333;
+     color: #ffffff;
+     padding: 4px;
+     right: 5px;
+     position: absolute;
+     border-radius: 5px;
+     border: none;
+     cursor: pointer;
+  }
+  
+  .top-bar-search input{
+     width: 560px;
+     border: none;
+     outline: none;
+     margin-left: 10px;
+  
+  }
+  
+  .top-bar-login-signup{
+     display: flex;
+     align-items: center;
+  }
+  
+  .top-bar-login-signup button{
+     color: #ccc;
+     background-color: #456c91;
+     margin-right: 36px;
+     padding: 7px;
+     cursor: pointer;
+     border-radius: 8px;
+     border: #093b69;
+  }
+  
+  .top-bar-login-signup button:hover{
+     background-color: #244d73;
+  }
+
+  .container{
+    width: calc(100% - 240px);
+    margin: 25px 20px 0px 220px;
+    position: relative;
+   }
+   
+   .container_sidebar{
+     width: 240px;
+     height: 700px;
+     padding-right: 10px;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     position: sticky;
+    
+    
+    }
+    .container_sidebar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .container_sidebar::-webkit-scrollbar-track {
+      background-color: rgb(33, 35, 59);
+    }
+    
+    .container_sidebar::-webkit-scrollbar-thumb {
+      background-color: #3a2a76;
+      border-radius: 5px;
+    }
+   
+   .container_sidebar img{
+    width: 240px;
+    height: 240px;
+    border-radius: 3px;
+   }
+   
+   .container_sidebar p{
+    margin: 0 5px;
+   }
+   
+   .container_button{
+    width: 100%;
+    background-color: #456c91;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 12px;
+    text-align: left;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0);
+    border: none;
+   }
+   
+   .container_sidebar-text{
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 5px;
+    margin: 8px 4px;
+   }
+   
+   .container_sidebar-text:hover{
+    background-color: #090118;
+   }
+   
+   .container_sidebar-text details{
+    padding: 10px;
+    margin-bottom: 10px;
+   }
+   
+   .container_sidebar-text summary {
+    font-weight: 100;
+    margin-bottom: 5px;
+    cursor: pointer;
+   }
+   
+   .container_sidebar-socialIcons a{
+    text-decoration: none;
+    color: #fff;
+    margin: 5px;
+   }
+   .container_sidebar-socialIcons a i{
+    font-size: 1.2em;
+    opacity: 0.9;
+   }
+   .container_sidebar-socialIcons a:hover{
+    color: #4da3f3;
+    transition: 0.5s;
+   }
+   .container_sidebar-footertext{
+    margin-top: 10px;
+    padding: 4px;
+    line-height: 1.5em;
+    color: #fff;
+    font-size: 0.8em;
+   }
+   
+   .container_headbar{
+    width: 1020px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 260px;
+    background-color: #000;
+    border-radius: 5px;
+   }
+   
+   .container_headbar{
+    display: flex;
+    align-items: center;
+   }
+   .container_headbar-list{
+    padding-inline-start: 12px;
+    display: flex;
+   }
+   .container_headbar-list a{
+    text-decoration: none;
+   }
+   .container_headbar-item{
+    padding: 5px 10px;
+    margin: 0 7px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #ccc;
+    list-style-type: none;
+    border-radius: 4px;
+    border-left: 1px solid #fff;
+    cursor: pointer;
+   }
+   
+   .container_headbar-item:hover{
+    border: 1px solid #333; 
+    background-color: #333;
+   }
+   
+   /*Phan Calendar*/
+  .calendar {
+    width: 980px;
+    background-color: #18131a;
+    color: #fff;
+    padding: 20px 20px 30px 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    position: absolute;
+    top: 40px;
+    left: 260px;
+  }
+  
+  .month {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .month-header {
+    color: rgb(216, 102, 186);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .days-of-week {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .days-of-week span {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .week {
+    display: flex;
+    flex: 1;
+  }
+  
+  .day {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .day-number {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 15px;
+  }
+
+  .podcast-count{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .day a{
+    display: block;
+    background-color: #1b1919;
+    color: #fff;
+    text-decoration: none;
+    width: 120px;
+    height: 90px;
+  }
+  
+  .day .blank{
+    pointer-events: none;
+  }
+
+  .day .unavailable{
+    pointer-events: none;
+    color: #333;
+  }
+
+  .day a:hover{
+    color: #733095;
+    background-color: #5b5454;
+  }
+  /*Ket thuc phan Calendar*/

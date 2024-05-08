@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/playlist.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1><i style="color: hsl(307, 64%, 78%); font-size: 2.5rem;">HealSoul</i></h1>   
+        <a href="home.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="discovery.html"><i class="fa-solid fa-compass"></i>Discover</a>
+        <a href="MyPodcast.html"><i class="fa-solid fa-podcast"></i>My Podcasts</a>
+        <a href="queue.html"><i class="fa-solid fa-boxes-stacked"></i>My Queue</a>
+        <a href="Recent.html"><i class="fa-solid fa-clock"></i>Recently</a>
+      </div>
+      <header>
+        <div class="top-bar">
+            <div class="top-bar-list top-bar-search">
+              <input type="text" placeholder="Search podcasts...">
+              <button>Search</button>
+            </div>
+            <div class="top-bar-list top-bar-login-signup">
+              <a href="login.html"><button type="button" style="margin-right: 16px; padding: 7px 14px;">Log in</button></a>
+            <a href="signup.html"><button type="button">Sign up</button></a>
+            </div>
+        </div>
+      </header>
+      
+      <!-- phan body-->
+      <div class="container">
+        <div class="container_sidebar">
+          <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" alt="">
+          <p style="font-size: 18px; font-weight: 600; color: aliceblue;">Three</p>
+          <p style="color: #4DAEE8;">Wavland</p>
+          <button class="container_button"><span style="font-weight: 600;">+</span> Add to My Podcasts</button>
+          <div class="container_sidebar-text">
+            <details>
+              <summary> After midnight on July 6th, 2012, three teenage girls walked into the thick Appalachian woods somewhere along the Mason-Dixon county line. Hours later, under the glow of a nearly full moon, only two walked out. </summary>
+              <span>The very last time Dave and Mary Neese saw their only child Skylar was in a grainy black-and-white video. In it, she's sneaking out of her ground-floor bedroom in the middle of the night, her purse over her shoulder, her brown hair swinging as she hurries across the small parking lot to a waiting car. 
+                What happened to Skylar Neese has become gothic American lore: the odd girl out in a vicious teenage triangle. But in the ten years since that fateful night beneath the West Virginia stars, a fuller portrait of what happened has emerged. From award-winning journalists Justine Harman and Holly Millea comes a gripping 10-part series featuring Skylar's family, closest friends, and law enforcement who lived the case—and are still living it.</span>
+            </details>
+          </div>  
+          <p style="color: rgb(153, 153, 153); font-weight: 700;font-size: 12px;letter-spacing: 0.5px; margin-bottom: 5px; margin-left: 5px;">SHARE</p>
+          <div class="container_sidebar-socialIcons">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="container_sidebar-footertext">
+            <p style="margin-bottom: 10px;">&copy 2024 Wavland</p>
+            <p>All content for Three is the property of Wavland and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
+          </div>
+        </div>
+        
+        <div class="container_headbar">
+          <ul class="container_headbar-list">
+            <a href="playlist.html"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
+            <a href="about.html"><li class="container_headbar-item">About</li></a>  
+            <a href="review.html"><li class="container_headbar-item">Reviews</li></a>
+            <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
+            <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
+          </ul>
+        </div>
+        <div class="container_body">
+          <div class="episode">
+            <div class="jsxepisode">
+            <div class="wrapp_art">
+              <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+              <div class="playing"></div>
+            <div class="pause">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+              </svg>
+            </div>
+            </div>
+    
+            <div class="meta">
+              <div class="meta_top">
+                <div class="meta_title">
+                  <a class="episode_title" style="color:antiquewhite" href="Three_chap1.html"><u>Skylar Is Missing | Chapter 1</u></a>
+                </div>
+                <div class="meta_description">"Star City, West Virginia."</div>
+              </div>
+              </div>
+              <div class="infor_bar">
+                <div class="published">Feb 16</div>
+                <div class="duration">24m</div>
+              </div>
+            </div>
+          <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+           
+          </div>
+          <div class="episode">
+            <div class="jsxepisode">
+            <div class="wrapp_art">
+              <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+              <div class="playing"></div>
+            <div class="pause">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+              </svg>
+            </div>
+            </div>
+    
+            <div class="meta">
+              <div class="meta_top">
+                <div class="meta_title">
+                  <a class="episode_title" style="color:antiquewhite" href="Three_chap2.html"><u>The Day After | Chapter 2</u></a>
+                </div>
+                <div class="meta_description">"July 6,2012, the first day without Skylar, was complicated. After a strange summer, Shelia and Rachel return to University"</div>
+              </div>
+              </div>
+              <div class="infor_bar">
+                <div class="published">Feb 23</div>
+                <div class="duration">25m</div>
+              </div>
+            </div>
+          <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+           
+          </div>
+          <div class="episode">
+            <div class="jsxepisode">
+            <div class="wrapp_art">
+              <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+              <div class="playing"></div>
+            <div class="pause">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+              </svg>
+            </div>
+            </div>
+    
+            <div class="meta">
+              <div class="meta_top">
+                <div class="meta_title">
+                  <a class="episode_title" style="color:antiquewhite" href="Three_chap3.html"><u>Silent Snow, Secret Snow | Chapter 3</u></a>
+                </div>
+                <div class="meta_description">"As prosecutors build their case from Rachel's shocking confession, Shelia keeps up with her social calendar. Dave and Mary finally get some answers."</div>
+              </div>
+              </div>
+              <div class="infor_bar">
+                <div class="published">Mar 15</div>
+                <div class="duration">33min</div>
+              </div>
+            </div>
+          <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+          
+          </div>
+
+    
+          
+          <div class="episode">
+            <div class="jsxepisode">
+            <div class="wrapp_art">
+              <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+              <div class="playing"></div>
+            <div class="pause">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+              </svg>
+            </div>
+            </div>
+    
+            <div class="meta">
+              <div class="meta_top">
+                <div class="meta_title">
+                  <a class="episode_title" style="color:antiquewhite" href="Three_chap4.html"><u>Hunger Games | Chapter 4</u></a>
+                </div>
+                <div class="meta_description">"It's a bleak Christmas for the Neeses, who go to extreme lenghts to find their daughter."</div>
+              </div>
+              </div>
+              <div class="infor_bar">
+                <div class="published">Mar 20</div>
+                <div class="duration">25m</div>
+              </div>
+            </div>
+          <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+          </div>
+          <div class="episode">
+            <div class="jsxepisode">
+            <div class="wrapp_art">
+              <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+              <div class="playing"></div>
+            <div class="pause">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+              </svg>
+            </div>
+            </div>
+    
+            <div class="meta">
+              <div class="meta_top">
+                <div class="meta_title">
+                  <a class="episode_title" style="color:antiquewhite" href="Three_chap5.html"><u>"They Know" | Chapter 5</u></a>
+                </div>
+                <div class="meta_description">"A last ditch effort to extract information from Shelia goes awry; Rachel returns to the scence of the crime."</div>
+              </div>
+              </div>
+              <div class="infor_bar">
+                <div class="published">Mar 25</div>
+                <div class="duration">20m</div>
+              </div>
+            </div>
+          <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+           
+          </div>
+          <div class="episode">
+            <div class="jsxepisode">
+            <div class="wrapp_art">
+              <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+              <div class="playing"></div>
+            <div class="pause">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+              </svg>
+            </div>
+            </div>
+    
+            <div class="meta">
+              <div class="meta_top">
+                <div class="meta_title">
+                  <a class="episode_title" style="color:antiquewhite" href="Three_chap6.html"><u>Silent Snow, Secret Snow | Chapter 6</u></a>
+                </div>
+                <div class="meta_description">"As a law enforcement circle Sheila and Rachel, a group of digital vigilantes begin to kick up dust."</div>
+              </div>
+              </div>
+              <div class="infor_bar">
+                <div class="published">Mar 28</div>
+                <div class="duration">15m</div>
+              </div>
+            </div>
+          <div class="unit_wrapp">
+           
+          </div>
+          
+          
+
+        
+          
+
+          </div>
+          </div>
+          
+        
+
+          </div>
+        
+                
+      <!-- <footer>
+        <div class="footerContainer">
+          <div class="socialIcons">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div>
+               <div class="audio-player">
+              <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+              <div class="controls">
+                <button title="Play">⏯</button>
+                <button title="Pause">⏸</button>
+                <button title="Stop">⏹</button>
+              </div>
+              <div class="song-info">
+                <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" alt="Song Image">
+                <h3>Three</h3>
+              </div>
+            </div>
+      </footer>   -->
+</body>
+</html>
+
+

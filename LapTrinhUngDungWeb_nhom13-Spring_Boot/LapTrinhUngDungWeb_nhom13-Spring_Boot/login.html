@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1><i style="color: hsl(307, 64%, 78%); font-size: 2.5rem;">HealSoul</i></h1>   
+        <a href="home.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="discovery.html"><i class="fa-solid fa-compass"></i>Discover</a>
+        <a href="MyPodcast.html"><i class="fa-solid fa-podcast"></i>My Podcasts</a>
+        <a href="queue.html"><i class="fa-solid fa-boxes-stacked"></i>My Queue</a>
+        <a href="Recent.html"><i class="fa-solid fa-clock"></i>Recently</a>
+    </div>
+    <header>
+    <div class="top-bar">
+        <div class="top-bar-list top-bar-search">
+            <input type="text" placeholder="Search podcasts...">
+            <button>Search</button>
+        </div>
+        <div class="top-bar-list top-bar-login-signup">
+            <a href="login.html"><button type="button" style="margin-right: 16px; padding: 7px 14px;">Log in</button></a>
+            <a href="signup.html"><button type="button">Sign up</button></a>
+        </div>
+    </div>
+    </header>
+    <div class="container">
+            <!--LOGIN-->
+        <div class="wrapper">
+            <h2 class="welcomeback" style="color:aliceblue;">welcome back</h2>
+            <h1 class="healsoullogin">LOG IN TO HEALSOUL</h1>
+            <form>
+                <label for="">EMAIL</label>
+                <input type="text" placeholder="Email address">
+    
+                <label for="">PASSWORD</label>
+                <input type="password" placeholder="password">
+            </form>
+            
+            
+            <button type="submit" id="login_button">Log in</button>
+            <br>
+            <p id="or" style="color: aliceblue; font-size: 14px;">or</p>
+    
+            <button type="submit" id="apple_button">
+                <a href="https://appleid.apple.com/auth/authorize?response_type=code&client_id=fm.podbay.web-auth&redirect_uri=https%3A%2F%2Fpodbay.fm%2Fauth%2Fapple%2Fcallback&scope=openid+email&response_mode=form_post" target="_blank" style="color: aliceblue;"><i class="fa-brands fa-apple"></i> Continue with apple</a>
+            
+            </button>
+            <hr>
+            
+            <p id="signup" style="color: aliceblue;">Don't have an account yet?<a href="signup.html" style="color: aqua;"> <u style="text-decoration: underline;">Sign up for a free account</u></a></p>
+                
+        </div>
+    </div>
+</body>

@@ -1,0 +1,378 @@
+
+
+body {
+    background: linear-gradient(to right, rgb(4, 1, 51) , rgb(23, 43, 39) 90%);
+     /* background-color:hsla(238, 17%, 12%, 50); */
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+     background: linear-gradient(to bottom, rgb(4, 1, 51) 70%,  rgb(23, 43, 39) 90%);
+     /* background-color:hsl(233, 18%, 19%); */
+     height: 100vh;
+     width: 200px;
+     position: fixed;
+     top: 0;
+     left: 0;
+     border-right: 2px solid rgb(60, 58, 57);
+  }
+  
+  .navbar h1{
+     padding: 1rem 0;
+     margin-left:5%
+  }
+  
+  .navbar a {
+     display: block;
+     color: #fff;
+     padding: 10px;
+     text-decoration: none;
+     margin-top: 12px ;
+  }
+  .navbar a > i{
+     margin-right: 10px;
+  }
+  
+  .navbar a:hover {
+     background-color: #555;
+  }
+  
+  header{
+     margin-left: 200px;
+     padding: 20px;
+  }
+  .top-bar{
+     padding: 5px;
+     display: flex;
+     justify-content: space-between;
+  }
+  
+  .top-bar-search{
+     width: 680px;
+     height: 26px;
+     display: flex;
+     align-items: center;
+     background-color: #ffffff;
+     padding: 5px;
+     border-radius: 7px;
+     position: relative;
+  }
+  
+  .top-bar-search button{
+     background-color: #333;
+     color: #ffffff;
+     padding: 4px;
+     right: 5px;
+     position: absolute;
+     border-radius: 5px;
+     border: none;
+     cursor: pointer;
+  }
+  
+  .top-bar-search input{
+     width: 560px;
+     border: none;
+     outline: none;
+     margin-left: 10px;
+  
+  }
+  
+  .top-bar-login-signup{
+     display: flex;
+     align-items: center;
+  }
+  
+  .top-bar-login-signup button{
+     color: #ccc;
+     background-color: #456c91;
+     margin-right: 36px;
+     padding: 7px;
+     cursor: pointer;
+     border-radius: 8px;
+     border: #093b69;
+  }
+  
+  .top-bar-login-signup button:hover{
+     background-color: #244d73;
+  }
+
+  .container{
+    width: calc(100% - 240px);
+    margin: 25px 20px 0px 220px;
+    position: relative;
+   }
+   
+   .container_sidebar{
+     width: 240px;
+     height: 700px;
+     padding-right: 10px;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     position: sticky;
+    
+    
+    }
+    .container_sidebar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .container_sidebar::-webkit-scrollbar-track {
+      background-color: rgb(33, 35, 59);
+    }
+    
+    .container_sidebar::-webkit-scrollbar-thumb {
+      background-color: #3a2a76;
+      border-radius: 5px;
+    }
+   
+   .container_sidebar img{
+    width: 240px;
+    height: 240px;
+    border-radius: 3px;
+   }
+   
+   .container_sidebar p{
+    margin: 0 5px;
+   }
+   
+   .container_button{
+    width: 100%;
+    background-color: #456c91;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 12px;
+    text-align: left;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0);
+    border: none;
+   }
+   
+   .container_sidebar-text{
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 5px;
+    margin: 8px 4px;
+   }
+   
+   .container_sidebar-text:hover{
+    background-color: #090118;
+   }
+   
+   .container_sidebar-text details{
+    padding: 10px;
+    margin-bottom: 10px;
+   }
+   
+   .container_sidebar-text summary {
+    font-weight: 100;
+    margin-bottom: 5px;
+    cursor: pointer;
+   }
+   
+   .container_sidebar-socialIcons a{
+    text-decoration: none;
+    color: #fff;
+    margin: 5px;
+   }
+   .container_sidebar-socialIcons a i{
+    font-size: 1.2em;
+    opacity: 0.9;
+   }
+   .container_sidebar-socialIcons a:hover{
+    color: #4da3f3;
+    transition: 0.5s;
+   }
+   .container_sidebar-footertext{
+    margin-top: 10px;
+    padding: 4px;
+    line-height: 1.5em;
+    color: #fff;
+    font-size: 0.8em;
+   }
+   
+   .container_headbar{
+    width: 1020px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 260px;
+    background-color: #000;
+    border-radius: 5px;
+   }
+   
+   .container_headbar{
+    display: flex;
+    align-items: center;
+   }
+   .container_headbar-list{
+    padding-inline-start: 12px;
+    display: flex;
+   }
+   .container_headbar-list a{
+    text-decoration: none;
+   }
+   .container_headbar-item{
+    padding: 5px 10px;
+    margin: 0 7px;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #ccc;
+    list-style-type: none;
+    border-radius: 4px;
+    border-left: 1px solid #fff;
+    cursor: pointer;
+   }
+   
+   .container_headbar-item:hover{
+    border: 1px solid #333; 
+    background-color: #333;
+   }
+   /*SIGNUP*/
+
+.wrapper{
+    width:500px;
+    background-color:#000;
+    border-radius:20px;
+    padding:50px 50px ;
+    margin: 50px 0 50px 350px;
+}
+label{
+    display: block;
+    margin: 5px 15px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'GT America Expanded Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-weight: bold;
+    
+    
+}
+input{
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: inherit;
+    border: 1px solid hsl(236, 6%, 30%);
+    background: transparent;
+    color: hsl(242, 3%, 55%);
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+
+.welcome{
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    margin:0 5px 0 0;
+}
+.healsoul_signup{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-weight: 800;
+    background: linear-gradient(to bottom, #9B7DD9, #553793);
+    font-size: 36px;
+    padding: 5px 5px 0 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'GT America Expanded Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-weight: bold;
+    line-height: 1.2em;
+}
+#signup_button{
+    margin:10px 10px 0 0;
+    background: transparent;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: inherit;
+   
+    width: 100%;
+    height:50px;
+    
+    border: 1px solid hsl(236, 6%, 30%);
+    border-radius:10px;
+    
+    font-size: 14px;
+    font-weight: 500;
+
+    background: linear-gradient(to bottom, #40678c, #2c5378);
+    opacity: 0.9;
+    transition: opacity 0.1s; 
+}
+
+#signup_button:hover {
+    background-color: #111;
+    opacity: 10;      
+    cursor: pointer;        /*đổi trỏ chuột thành bàn tay khi hover*/
+}
+#apple_button{
+    margin:10px 10px 0 0;
+    background: transparent;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: inherit;
+   
+    width: 100%;
+    height:50px;
+    
+    border: 1px solid hsl(236, 6%, 30%);
+    border-radius:10px;
+    
+    font-size: 14px;
+    font-weight: 500;
+
+    background: #111;
+    opacity: 0.9;
+    transition: opacity 0.1s; 
+}
+
+#apple_button:hover {
+    background-color: #111;
+    opacity: 10;      
+    cursor: pointer;        /*đổi trỏ chuột thành bàn tay khi hover*/
+}
+
+button a {                  /*apple_button*/
+    text-decoration: none;
+}
+
+  
+#or{
+    display:flex;
+    justify-content:center;
+    margin-top: -10px;
+    opacity:0.9;
+}
+p{
+    padding: 10px 0 0 0;
+    text-align: center;
+    font-size: 14px;
+    opacity:0.7;
+    
+}
+p a {
+  opacity: 0.7;
+}
+p a:hover{
+  opacity: 2;
+  transition:0.5s;
+}
+
+hr{
+    margin: 10px 10px;
+}

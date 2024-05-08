@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Queue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/queue.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1><i style="color: hsl(307, 64%, 78%); font-size: 2.5rem;">HealSoul</i></h1>   
+        <a href="home.html"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="discovery.html"><i class="fa-solid fa-compass"></i>Discover</a>
+        <a href="MyPodcast.html"><i class="fa-solid fa-podcast"></i>My Podcasts</a>
+        <a href="queue.html"><i class="fa-solid fa-boxes-stacked"></i>My Queue</a>
+        <a href="Recent.html"><i class="fa-solid fa-clock"></i>Recently</a>
+    </div>
+    <header>
+    <div class="top-bar">
+        <div class="top-bar-list top-bar-search">
+            <input type="text" placeholder="Search podcasts...">
+            <button>Search</button>
+        </div>
+        <div class="top-bar-list top-bar-login-signup">
+          <a href="login.html"><button type="button" style="margin-right: 16px; padding: 7px 14px;">Log in</button></a>
+          <a href="signup.html"><button type="button">Sign up</button></a>
+        </div>
+    </div>
+    </header>
+    <div class="container">
+        <div class="container_sidebar">
+            <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" alt="">
+            <p style="font-weight: 700; font-size: 2.5rem; line-height: 3.8rem;color: rgb(199, 224, 219);">Three</p>
+            <p style="font-weight: 400; font-size: 14px; line-height: 1.8rem; color: rgb(163, 163, 168); font-family:Arial, Helvetica, sans-serif;">"They Know" | Chapter 5</p>
+            <a href="esposide.html" style="text-decoration: none;"><button class="container_button" style="margin: 5px; font-size: 20px; display: flex; align-items: center;"><i class="fa-solid fa-play"></i>  Play</button></a>
+            <div class="container_sidebar_button" style="margin-bottom: 155px;">
+                <button class="container_button" style="margin: 5px; font-size: 16px;"><i class="fa-solid fa-download"></i>  Download</button>
+                <button class="container_button" style="margin: 5px; font-size: 16px;"><i class="fa-solid fa-trash"></i>  Remove</button>
+            </div>
+        </div>
+        <div class="container_body">
+        
+              <div class="episode">
+                <div class="jsxepisode">
+                <div class="wrapp_art">
+                  <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+                  <div class="playing"></div>
+                <div class="pause">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                  </svg>
+                </div>
+                </div>
+        
+                <div class="meta">
+                  <div class="meta_top">
+                    <div class="meta_title">
+                      <a class="episode_title" style="color:antiquewhite" href="Three_chap5.html"><u>"They Know" | Chapter 5</u></a>
+                    </div>
+                    <div class="meta_description">"A last ditch effort to extract information from Shelia goes awry; Rachel returns to the scence of the crime."</div>
+                  </div>
+                  </div>
+                  <div class="infor_bar">
+                    <div class="published">Mar 25</div>
+                    <div class="duration">20m</div>
+                  </div>
+                </div>
+              <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+               
+              </div>
+              <div class="episode">
+                <div class="jsxepisode">
+                <div class="wrapp_art">
+                  <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+                  <div class="playing"></div>
+                <div class="pause">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                  </svg>
+                </div>
+                </div>
+        
+                <div class="meta">
+                  <div class="meta_top">
+                    <div class="meta_title">
+                      <a class="episode_title" style="color:antiquewhite" href="Three_chap6.html"><u>Silent Snow, Secret Snow | Chapter 6</u></a>
+                    </div>
+                    <div class="meta_description">"As a law enforcement circle Sheila and Rachel, a group of digital vigilantes begin to kick up dust."</div>
+                  </div>
+                  </div>
+                  <div class="infor_bar">
+                    <div class="published">Mar 28</div>
+                    <div class="duration">15m</div>
+                  </div>
+                </div>
+            <div class="episode">
+                <div class="jsxepisode">
+                <div class="wrapp_art">
+                  <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy8wM2Q4YjQ5My04N2ZjLTRiZDEtOTMxZi04YThlOWI5NDVkOGEvMmNjZTU2NTktZjY0Ny00MzY2LWIzMTgtNDZlNGI2N2FmY2ZhLzMwMDB4MzAwMC9jODE5MzZmNTM4MTA2NTUwYjgwNGU3ZTRmZTJjMjM2MzE5YmFiN2ZiYTM3OTQxYTZlOGY3ZTVjM2QzMDQ4Yjg4ZmM1YjIxODJmYjc5MGY3ZDQ0NmJkYzgyMDQwNjQ1NmM5NDI4N2YyNDVkYjg5ZDg2NTZjMTA1ZDU1MTFlYzNkZS5qcGVnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czExNS92NC8xYy9hYy8wNC8xY2FjMDQyMS00NDgzLWZmMDktNGY4MC0xOTcxMGQ5ZmVkYTQvbXphXzEyNDIxMzcxNjkyMTU4NTE2ODkxLmpwZWcvNjAweDYwMGJiLmpwZyJ9.lrjqdIr_wLJW3F9-FnrODEZ-dAee-u3QT0JVJQEg7AI.jpg?width=200&height=200" alt="daily" width="200" height="200" loading="lazy" class="jsx_art">
+                  <div class="playing"></div>
+                <div class="pause">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                  </svg>
+                </div>
+                </div>
+        
+                <div class="meta">
+                  <div class="meta_top">
+                    <div class="meta_title">
+                      <a class="episode_title" style="color:antiquewhite" href="DaiLy_Journey.html"><u>A Journey Through Putin’s Russia</u></a>
+                    </div>
+                    <div class="meta_description">Russians go to the polls today in the first presidential election since their country invaded Ukraine two years ago. The war was expected to carry a steep cost for President Vladimir V. Putin. Valerie Hopkins, who covers Russia for The Times, explains why the opposite has happened. Guest: Valerie Hopkins, an international correspondent for The New York Times.</div>
+                  </div>
+                  </div>
+                  <div class="infor_bar">
+                    <div class="published">Feb 16</div>
+                    <div class="duration">24m</div>
+                  </div>
+                </div>
+              <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+               
+              </div>
+              <div class="episode">
+                <div class="jsxepisode">
+                <div class="wrapp_art">
+                  <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2NvbnRlbnQucHJvZHVjdGlvbi5jZG4uYXJ0MTkuY29tL2ltYWdlcy81OC80ZS80Yy9kOC81ODRlNGNkOC1mZmQyLTQ2ZTAtODNjNi03MmFkOTFhNGI4NGEvYTRkMjg5Mjg5ZjEwOWIwYzc2NWU1ODQ4YTcyNjNhNmNmZTExYmQ3OGIyNDRhYTVhZTc1NTQ2ZTgwYjA5NjFlMDgyYjYzMjI0MWE1MTVlZGE0MDJmNDRjNzllMDliMGNmNjA4M2RjZDZiZTQzOTAwNTFjMzhiYTAxYTJiOWI4MGUuanBlZyIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czExNi92NC82Yy8xNy9hNC82YzE3YTRkZC00ZWZmLWY2YTEtMWY5Ny01YzcxMGM1MGVkY2IvbXphXzE1OTQwNzM2OTUxMDA1NDc0MzQ5LmpwZWcvNjAweDYwMGJiLmpwZyJ9.NsK5OqXMZ-Pt-6ixEoYY3ULZ8WDk3v9_Ei5w2qrkuUU.jpg?width=200&height=200" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+                  <div class="playing"></div>
+                <div class="pause">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                  </svg>
+                </div>
+                </div>
+        
+                <div class="meta">
+                  <div class="meta_top">
+                    <div class="meta_title">
+                      <a class="episode_title" style="color:antiquewhite" href="#"><u>Episode 546: Matthew Wales and the Society Murders</u></a>
+                    </div>
+                    <div class="meta_description">"July 6,2012, the first day without Skylar, was complicated. After a strange summer, Shelia and Rachel return to University"</div>
+                  </div>
+                  </div>
+                  <div class="infor_bar">
+                    <div class="published">Feb 23</div>
+                    <div class="duration">25m</div>
+                  </div>
+                </div>
+              <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+               
+              </div>
+              
+              <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+              
+              </div>
+              <div class="episode">
+                <div class="jsxepisode">
+                <div class="wrapp_art">
+                  <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9lZDY5MDY1OC01MTM0LTRlMGYtYTE4Mi1kNWY3MDc3MTkwZGYvZWI2NDliNzYtZWZkZC00ZGJjLWI5NDEtYTBkNTEzZjQ4NWFmLzMwMDB4MzAwMC9scG90bC10ZXh0LmpwZz9haWQ9cnNzX2ZlZWQiLCJmYWxsYmFjayI6Imh0dHBzOi8vaXM0LXNzbC5tenN0YXRpYy5jb20vaW1hZ2UvdGh1bWIvUG9kY2FzdHMxMjYvdjQvNWEvNGUvZDEvNWE0ZWQxY2QtNjQ3Ni1hNGY0LTRiZWQtZDZhNjgxZTEwYzk0L216YV8xMDE1ODg0ODI1MzQ5NjQ0Mjg1OC5qcGcvNjAweDYwMGJiLmpwZyJ9._XfQAEzxD_qtaS5njy-Xb87dJGoDrU_eNK75JPeYZBQ.jpg?width=400&height=400" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+                  <div class="playing"></div>
+                <div class="pause">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448512" height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                  </svg>
+                </div>
+                </div>
+        
+                <div class="meta">
+                  <div class="meta_top">
+                    <div class="meta_title">
+                      <a class="episode_title" style="color:antiquewhite" href="#"><u>Side Stories: Sky Poop</u></a>
+                    </div>
+                    <div class="meta_description">"It's a bleak Christmas for the Neeses, who go to extreme lenghts to find their daughter."</div>
+                  </div>
+                  </div>
+                  <div class="infor_bar">
+                    <div class="published">Mar 20</div>
+                    <div class="duration">25m</div>
+                  </div>
+                </div>
+              <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);"></div>
+        
+              <div class="unit_wrapp">
+               
+              </div>
+              
+        </div>
+    </div>
+</body>
