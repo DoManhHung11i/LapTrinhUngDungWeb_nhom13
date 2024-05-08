@@ -3,9 +3,17 @@ const User = require('../models/users');
 const jwt = require('jsonwebtoken');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 
-const handleError = (err) => {
+const handleErrors = (err) => {
     console.log(err.message, err.code);
     let errors = { username: '', email: '', password: ''};
+
+    //incorrect email
+    if(err.message === 'incorrect email'){
+        errors.email = 'that email is not registered';
+    }
+    if(err.message === 'incorrect password'){
+        errors.password = 'that password is incorrect';
+    }
 
     //duplicate error code
     if(err.code == 11000){
@@ -24,6 +32,7 @@ const handleError = (err) => {
     return errors;
 };
 
+
 class AuthController {
     async register(req, res){
         try {
@@ -36,7 +45,7 @@ class AuthController {
             res.status(201).json({ newUser });
         } catch (err) {
             const errors = handleError(err);
-            res.status(500).json({ errors: errors });
+            res.status(500).json({ errors });
         }
     }
 
@@ -45,14 +54,16 @@ class AuthController {
             const { email, password } = req.body;
             const user = await User.findOne({ email });
             if(!user) 
-                res.status(404).json({ message: "User not found" });
+                throw Error('incorrect email');
             const isMatch = await bcrypt.compare(password, user.password);
             if(!isMatch)
-                return res.status(401).json({ message: "Invalid credentials" });
-            res.status(200).json({ message: "Login successful" });
-        }catch (error) {
-            console.error("Error logging in:", error);
-            res.status(500).json({ message: "Internal server error" });
+                throw Error('incorrect password');
+            const token = createToken(user._id);
+            res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000});
+            res.status(200).json({ user });
+        }catch (err) {
+            const errors = handleErrors(err);
+            res.status(400).json({ errors });
         }
     }
 
