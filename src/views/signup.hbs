@@ -3,19 +3,21 @@
     <div class="wrapper">
         <h2 class="welcome" style="color: aliceblue;">welcome</h2>
         <h1 class="healsoul_signup">SIGN UP FOR HEALSOUL</h1>
-        <form id="signup-form" method="post" action="/register">
+        <form id="signup-form" >
             <label for="username">Username</label>
             <input type="text" id="username" name="username" placeholder="Your username...">
+            <div class="username error" style="color: aquamarine;"></div>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Your email...">
+            <div class="email error" style="color: aquamarine;"></div>
 
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="Your password...">
+            <div class="password error" style="color: aquamarine;"></div>
 
             <button type="submit" id="signup_button">SIGN UP</button>
         </form>
-
         <br>
         <p id="or" style="color: aliceblue; font-size: 14px;">or</p>
 
@@ -29,4 +31,33 @@
     </div>
 </div>
 
+<script>
+    const form = document.querySelector('form');
+    const usernameError = document.querySelector('.username.error');
+    const emailError = document.querySelector('.email.error');
+    const passwordError = document.querySelector('.password.error');
 
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = form.username.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        const res = await fetch('/register', {
+            method: 'post',
+            body: JSON.stringify({ username, email, password }),
+            headers:  {'Content-Type': 'application/json'}
+        })
+        const data = await res.json();
+        console.log(data);
+
+        if(data.errors){
+            usernameError.textContent = data.errors.username;
+            emailError.textContent = data.errors.email;
+            passwordError.textContent = data.errors.password;
+        }
+        if(data.newUser){
+            location.assign('/login');  
+        }
+    });
+</script>
