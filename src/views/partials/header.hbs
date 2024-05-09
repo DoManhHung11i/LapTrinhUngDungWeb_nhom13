@@ -7,10 +7,23 @@
         <div class="top-bar-list top-bar-login-signup">
             {{#if user}}
             <p>Welcome, {{user.username}}</p>
-            <a href="logout"><button type="button" style="margin-right: 16px; padding: 7px 14px;">Log out</button></a>
+            <button type="button" onclick="logout()" style="margin-right: 16px; padding: 7px 14px;">Log out</button>
+            <script>
+                function logout() {
+                    window.location.href = '/logout';
+                }
+            </script>
             {{else}}
-            <a href="login"><button type="button" style="margin-right: 16px; padding: 7px 14px;">Log in</button></a>
-            <a href="signup"><button type="button">Sign up</button></a>
+            <button type="button" onclick="login()" style="margin-right: 16px; padding: 7px 14px;">Log in</button>
+            <button type="button" onclick="signup()">Sign up</button>
+            <script>
+                function login() {
+                    window.location.href = '/login';
+                }
+                function signup() {
+                    window.location.href = '/signup';
+                }
+            </script>
             {{/if}}
         </div>
     </div>

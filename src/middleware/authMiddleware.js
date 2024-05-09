@@ -46,4 +46,17 @@ const checkUser = (req, res, next) => {
     }
 }
 
-module.exports = { requireAuth, checkUser };
+const getUserIdFromToken = async (token) => {
+    if (!token) {
+      return null; 
+    }
+  
+    try {
+      const decodedToken = await jwt.verify(token, 'secret key');
+      return decodedToken.id;
+    } catch (err) {
+      console.error('Error verifying JWT:', err.message);
+      return null; 
+    }
+  };
+module.exports = { requireAuth, checkUser, getUserIdFromToken };

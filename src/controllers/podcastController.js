@@ -4,6 +4,7 @@ const Comment = require('../models/comments');
 const User = require('../models/users');
 const { ObjectId } = require('mongodb');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
+const { getUserIdFromToken } = require('../middleware/authMiddleware');
 
 
 class PodcastController {
@@ -41,7 +42,6 @@ class PodcastController {
         });
         comments.forEach(comment => {
             const user = userMap[comment.userid];
-            console.log(user);
             if (user) {
                 comment.username = user.username;
             }
@@ -69,7 +69,6 @@ class PodcastController {
 
         comments.forEach(comment => {
             const user = userMap[comment.userid];
-            console.log(user);
             if (user) {
                 comment.username = user.username;
             }
@@ -77,6 +76,26 @@ class PodcastController {
         
         
         res.render('Review', { podcast, comments });
+        }
+
+        async Comment(req, res){
+           const { title, content } = req.body;
+           const podcastIDString = req.params.podcast_id;
+           const podcastID = new ObjectId(podcastIDString);
+           const userIDString = await getUserIdFromToken(req.cookies.jwt);
+           const userID = new ObjectId(userIDString);
+           const user = await User.findById(userID);
+           const username = user.username;
+
+           const comment = new Comment({
+                user_id: userID,
+                podcast_id: podcastID,
+                title: title,
+                content: content,
+                username: username
+           });
+            await comment.save();
+            res.redirect('/');
         }
 }
 module.exports = new PodcastController();
