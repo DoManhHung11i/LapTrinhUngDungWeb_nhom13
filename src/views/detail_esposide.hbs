@@ -47,7 +47,7 @@
             </div>
             <div class="container_body_feature">
               <ul class="container_body_feature-list" style="list-style-type: none;">
-                <li><button class="container_button container_body_feature-item" id="addToQueuebtn" data-esposide-id="{{esposide._id}}"><span style="font-weight: 600;">+</span> Add to My Queue</button></li>
+                <li><button class="container_button container_body_feature-item" id="addToQueuebtn" data-esposide-id="{{esposide._id}}" data-user-id="{{user._id}}">Add to My Queue</button></li>
                 <li><button class="container_button container_body_feature-item">Download</button></li>
                 <li><button class="container_button container_body_feature-item">Share</button></li>
               </ul>
@@ -123,6 +123,11 @@
             </div>
           </div>
         </footer>
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                updateButtonContent();
+            });
+          </script>
             <script>
               document.addEventListener("DOMContentLoaded", function() {
               const backwardBtn = document.getElementById("backward-btn");
@@ -167,26 +172,74 @@
             </script>
             <script>
               const addToQueueBtn = document.getElementById('addToQueuebtn');
-                addToQueueBtn.addEventListener('click', function() {
-                  if(checkAuth()){
-                    const esposideId = addToQueueBtn.getAttribute('data-esposide-id');
-                    fetch('/podcast/add-to-queue', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ esposideId })
-                    })
+              const esposideId = addToQueueBtn.getAttribute('data-esposide-id');
+              async function updateButtonContent(){
+                const userId = addToQueueBtn.getAttribute('data-user-id');
+                if(!userId){
+                  addToQueueBtn.textContent = "Add to queue";
+                }
+                else{
+                  const res = await fetch(`/podcast/check-queue`, {
+                    method: 'post',
+                    body: JSON.stringify({ esposideId, userId }),
+                    headers:  {'Content-Type': 'application/json'}
+                  });
+                  const data = await res.json();
+                  if(data.found){
+                    addToQueueBtn.textContent = "Remove from queue";
                   }
                   else{
+                    addToQueueBtn.textContent = "Add to queue";
+                  }
+                }
+              }
+            </script>
+            <script>
+                addToQueueBtn.addEventListener('click', async function() {
+                  const userId = addToQueueBtn.getAttribute('data-user-id');
+                  const esposideId = addToQueueBtn.getAttribute('data-esposide-id');
+                  if(userId){
+                    const res = await fetch(`/podcast/check-queue`, {
+                      method: 'post',
+                      body: JSON.stringify({ esposideId, userId }),
+                      headers:  {'Content-Type': 'application/json'}
+                    });
+                    const data = await res.json();
+                    console.log(data);
+                    if(data.found){
+                      const res =  await fetch('/podcast/remove-from-queue', {
+                          method: 'POST',
+                          headers: {
+                              'Content-Type': 'application/json'
+                          },
+                          body: JSON.stringify({ esposideId, userId })
+                      });
+                      const data = await res.json();
+                      console.log(data);
+                      if(data.deleted){
+                        addToQueueBtn.textContent = "Add to queue";
+                      }
+                    }
+                    else {
+                      const res = await fetch('/podcast/add-to-queue', {
+                                  method: 'POST',
+                                  headers: {
+                                      'Content-Type': 'application/json'
+                                  },
+                                  body: JSON.stringify({ esposideId, userId })
+                              });
+                      const data = await res.json();
+                      console.log(data);
+                      if(data.saved){
+                          addToQueueBtn.textContent = "Remove from queue";
+                      }
+                    }
+                  }  
+                  else{
+                    alert("Login to use this feature");
                     window.location.href = '/login';
                   }
                 });
-              function checkAuth() {
-                  
-              }
-
             </script>
-
 
 </div>

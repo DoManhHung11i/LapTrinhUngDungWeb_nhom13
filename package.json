@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --inspect server.js",
-    "node-sass": "sass --watch src/sass/main.scss   src/public/css/main.css"
+    "node-sass": "sass --watch src/sass/main.scss   src/public/css/main.css",
+    "build": "node app.js"
   },
   "keywords": [],
   "author": "",
