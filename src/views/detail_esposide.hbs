@@ -3,7 +3,6 @@
         <img src="{{podcast.image}}" alt="">
           <p style="font-size: 18px; font-weight: 600; color: aliceblue;">{{podcast.title}}</p>
           <p style="color: #4DAEE8;">{{podcast.name_author}}</p>
-          <button class="container_button"><span style="font-weight: 600;">+</span> Add to My Podcasts</button>
           <div class="container_sidebar-text">
             <details>
               <summary> Show Description </summary>
@@ -48,7 +47,7 @@
             </div>
             <div class="container_body_feature">
               <ul class="container_body_feature-list" style="list-style-type: none;">
-                <li><button class="container_button container_body_feature-item"><span style="font-weight: 600;">+</span> Add to My Queue</button></li>
+                <li><button class="container_button container_body_feature-item" id="addToQueuebtn" data-esposide-id="{{esposide._id}}"><span style="font-weight: 600;">+</span> Add to My Queue</button></li>
                 <li><button class="container_button container_body_feature-item">Download</button></li>
                 <li><button class="container_button container_body_feature-item">Share</button></li>
               </ul>
@@ -166,5 +165,28 @@
                 }
               });
             </script>
-            
+            <script>
+              const addToQueueBtn = document.getElementById('addToQueuebtn');
+                addToQueueBtn.addEventListener('click', function() {
+                  if(checkAuth()){
+                    const esposideId = addToQueueBtn.getAttribute('data-esposide-id');
+                    fetch('/podcast/add-to-queue', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ esposideId })
+                    })
+                  }
+                  else{
+                    window.location.href = '/login';
+                  }
+                });
+              function checkAuth() {
+                  
+              }
+
+            </script>
+
+
 </div>

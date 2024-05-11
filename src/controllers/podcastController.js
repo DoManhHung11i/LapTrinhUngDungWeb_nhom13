@@ -2,9 +2,10 @@ const Podcast = require('../models/podcasts');
 const Esposide = require('../models/esposides');
 const Comment = require('../models/comments');
 const User = require('../models/users');
+const Favorite = require('../models/favorites');
 const { ObjectId } = require('mongodb');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
-const { getUserIdFromToken } = require('../middleware/authMiddleware');
+const { getUserIdFromToken, requireAuth } = require('../middleware/authMiddleware');
 
 
 class PodcastController {
@@ -96,6 +97,10 @@ class PodcastController {
            });
             await comment.save();
             res.redirect('/');
+        }
+
+        AddToQueue(req, res){
+            console.log(req.body);
         }
 }
 module.exports = new PodcastController();

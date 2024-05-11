@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/users');
+const { mongooseToObject } = require('../until/mongoose');
 
 const requireAuth = (req, res, next) => {
     const token = req.cookies.jwt;
@@ -34,7 +35,7 @@ const checkUser = (req, res, next) => {
             }
             else {
                 console.log(decodedToken);
-                let user = await User.findById(decodedToken.id);
+                let user = mongooseToObject(await User.findById(decodedToken.id));
                 res.locals.user = user;
                 next();
             }

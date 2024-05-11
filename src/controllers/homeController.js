@@ -21,7 +21,15 @@ class HomeController {
       res.render('signup', { showFooter: true });
    }
    Discovery(req, res, next){
-      res.render('discovery', { showFooter: true });
+      //res.render('discovery', { showFooter: true });
+      const user = res.locals.user;
+
+    // Kiểm tra xem người dùng đã đăng nhập hay chưa
+    if (user) {
+        res.send(`Xin chào, ${user.username}!`); // Hiển thị tên người dùng nếu đã đăng nhập
+    } else {
+        res.send('Xin chào khách thăm!'); // Hiển thị tin nhắn chào mừng nếu chưa đăng nhập
+    }
    }
    MyPodcasts(req, res, next){
       res.render('MyPodcasts', { showFooter: true });
