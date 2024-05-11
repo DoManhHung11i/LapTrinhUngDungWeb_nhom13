@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="container_sidebar">
+        <img src="https://cdn-images.podbay.fm/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwczovL2ltYWdlLnNpbXBsZWNhc3RjZG4uY29tL2ltYWdlcy9hMWE4N2I2Ny0yODY1LTQyMzQtYTA4Ny1iMzQyYWEzMGMzNTgvNmNiZGQzYmMtZTlmNy00MTQ1LWE0ZTktNTM4MTRlMWVlMDIyLzMwMDB4MzAwMC9zaG93LWNvdmVyLXRocmVlLTEuanBnP2FpZD1yc3NfZmVlZCIsImZhbGxiYWNrIjoiaHR0cHM6Ly9pczEtc3NsLm16c3RhdGljLmNvbS9pbWFnZS90aHVtYi9Qb2RjYXN0czEyNi92NC80Ny82NC9jNC80NzY0YzRhZi1lNzdlLTU4MGMtMWIxMi0yYzM0ZTYwYTZmYTQvbXphXzEyMzQxNDAxOTI1NTQ0MTk0OTkzLmpwZy82MDB4NjAwYmIuanBnIn0.sb8_Re1nykurmft-lcI1HtjPtY1XXNeKrbMHPgJSAZ4.jpg?width=400&height=400" alt="">
+        <p style="font-weight: 700; font-size: 2.5rem; line-height: 3.8rem;color: rgb(199, 224, 219);">Three</p>
+        <p style="font-weight: 400; font-size: 14px; line-height: 1.8rem; color: rgb(163, 163, 168); font-family:Arial, Helvetica, sans-serif;">"They Know" | Chapter 5</p>
+        <a href="#" style="text-decoration: none;"><button class="container_button" style="margin: 5px; font-size: 20px; display: flex; align-items: center;"><i class="fa-solid fa-play" style="margin-right: 5px;"></i>  Play</button></a>
+        <div class="container_sidebar_button" style="margin-bottom: 155px;">
+            <button class="container_button" style="margin: 5px; font-size: 16px;"><i class="fa-solid fa-download"></i>  Download</button>
+            <button class="container_button" style="margin: 5px; font-size: 16px;"><i class="fa-solid fa-trash"></i>  Remove</button>
+        </div>
+    </div>
+    <div class="container_body">
+        {{#each esposidesObjects}}
+        <div class="episode">
+            <div class="jsxepisode">
+                <div class="wrapp_art">
+                    <img src="{{this.image}}" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+                    <div class="playing"></div>
+                    <div class="pause">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"  height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                        </svg>
+                    </div>
+                </div>
+        
+                <div class="meta">
+                    <div class="meta_top">
+                        <div class="meta_title">
+                            <a class="episode_title" style="color:antiquewhite" href="/podcast/{{this.podcast_id}}/{{this._id}}"><u>{{this.title}}</u></a>
+                        </div>
+                        <div class="meta_description">{{this.description}}</div>
+                    </div>
+                </div>
+                <div class="infor_bar">
+                    <div class="duration">{{this.duration}}</div>
+                </div>
+                </div>
+            <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+        </div>
+        {{/each}}
+    </div>
+</div>

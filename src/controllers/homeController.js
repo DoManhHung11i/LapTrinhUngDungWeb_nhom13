@@ -1,4 +1,8 @@
 const Podcast = require('../models/podcasts');
+const Esposide = require('../models/esposides');
+const Comment = require('../models/comments');
+const User = require('../models/users');
+const Favorite = require('../models/favorites');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 
 class HomeController {
@@ -34,8 +38,29 @@ class HomeController {
    MyPodcasts(req, res, next){
       res.render('MyPodcasts', { showFooter: true });
    }
-   MyQueue(req, res, next){
-      res.render('MyQueue', { showFooter: true });
+   async MyQueue(req, res, next){
+      
+      const user = res.locals.user;
+      const favorites = await Favorite.find({ userID: user._id });
+      const esposides = [];
+      for (const favorite of favorites) {
+            const esposide = await Esposide.findById(favorite.esposideID);
+            esposides.push(esposide);
+      }
+      const esposidesObjects = mutipleMongooseToObject(esposides);
+      for (const esposideObject of esposidesObjects) {
+         const podcast = await Podcast.findById(esposideObject.podcast_id);
+         if (podcast) {
+             esposideObject.podcastTitle = podcast.title;
+             esposideObject.image = podcast.image;
+             esposideObject.name_author = podcast.name_author;
+         } else {
+             esposideObject.podcastTitle = "123";
+             esposideObject.image = "123";
+             esposideObject.name_author = "123";
+         }
+     }
+     res.render('MyQueue', { esposidesObjects });
    }
    Recently(req, res, next){
       res.render('recently', { showFooter: true });
