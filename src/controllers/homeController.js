@@ -54,10 +54,6 @@ class HomeController {
              esposideObject.podcastTitle = podcast.title;
              esposideObject.image = podcast.image;
              esposideObject.name_author = podcast.name_author;
-         } else {
-             esposideObject.podcastTitle = "123";
-             esposideObject.image = "123";
-             esposideObject.name_author = "123";
          }
      }
      res.render('MyQueue', { esposidesObjects });
