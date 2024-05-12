@@ -57,7 +57,7 @@ class HomeController {
    }
    async MyQueue(req, res, next){   
       const user = res.locals.user;
-      const favorites = await Favorite.find({ userID: user._id });
+      const favorites = await Favorite.find({ userID: user._id }).sort( { add_at: 1 });
       const esposides = [];
       for (const favorite of favorites) {
             const esposide = await Esposide.findById(favorite.esposideID);
