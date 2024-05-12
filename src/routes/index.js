@@ -1,5 +1,4 @@
 const homeRouter = require('./home');
-const authRouter = require('./auth');
 const podcastRouter = require('./podcast');
 const { requireAuth, checkUser } = require('../middleware/authMiddleware');
 

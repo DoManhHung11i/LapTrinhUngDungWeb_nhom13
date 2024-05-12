@@ -77,7 +77,7 @@ header {
 .user-options {
     display: none; /* Ẩn danh sách tùy chọn ban đầu */
     position: absolute;
-    top: 25px;
+    top: 1px;
     right: 100px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -91,10 +91,6 @@ header {
     margin: 0;
 }
 
-// .user-options ul li {
-//     padding: 10px 20px; /* Thêm padding cho các mục trong danh sách */
-//     transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu nền */
-// }
 
 .user-options ul li:hover {
     background-color: #f0f0f0; /* Màu nền khi hover */
