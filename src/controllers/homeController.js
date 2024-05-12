@@ -19,6 +19,9 @@ class HomeController {
       res.cookie('jwt', '', {maxAge: 1});
       res.redirect('/');
    }
+   ChangePassword(req, res){
+      res.render('ChangePassword', { showFooter: true });
+   }
    login(req, res, next) {
       res.render('login', { showFooter: true });
    }

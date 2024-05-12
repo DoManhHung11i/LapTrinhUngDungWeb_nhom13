@@ -67,6 +67,30 @@ class AuthController {
         }
     }
 
+    async ChangePassword(req, res){
+        const currentUser = res.locals.user;
+        const { password, newPassword, authPassword } = req.body;
+        const user = await User.findById(currentUser._id);
+        const isMatch = await bcrypt.compare(password, user.password);
+        if(!isMatch){
+            res.json({ error: "Password is Incorrect" });
+        }
+        else{
+            if(newPassword.length < 8){
+                res.json({ error: "Minimum password length is 8 characters" })
+            }
+            else{
+                if(newPassword !== authPassword){
+                    res.json({ error: "Authentication password is incorrect" })
+                }
+                else{
+                    user.password = newPassword;
+                    await user.save();
+                    res.json({ success: "Password updated successfully" });
+                }
+            }
+        }
+    }
     
 };
 
