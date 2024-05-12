@@ -80,7 +80,7 @@ input{
 
 }
 
-#login_button, #signup_button:hover {
+#login_button, #signup_button,#CmtBtn:hover {
     background-color: #111;
     opacity: 10;      
     cursor: pointer;        /*đổi trỏ chuột thành bàn tay khi hover*/
@@ -142,5 +142,15 @@ transition:0.5s;
 
 hr{
     margin: 10px 10px;
+}
+#CmtBtn{
+    height: 32px; 
+    width: 60px;
+    margin :10px; 
+    background: linear-gradient(to bottom, #40678c, #2c5378); 
+    opacity: 0.9; 
+    transition: opacity 0.1s;
+    border: 1px solid hsl(236, 6%, 30%); 
+    border-radius:10px;
 }
 
