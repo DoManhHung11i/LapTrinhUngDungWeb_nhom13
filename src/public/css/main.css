@@ -84,7 +84,7 @@ header {
   right: 100px;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -95,7 +95,8 @@ header {
 }
 
 .user-options ul li:hover {
-  background-color: #f0f0f0; /* Màu nền khi hover */
+  border-radius: 8px;
+  background-color: #00ffdd; /* Màu nền khi hover */
 }
 
 .user-options ul li a {
