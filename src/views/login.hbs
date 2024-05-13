@@ -1,3 +1,55 @@
+<<<<<<< HEAD
+<div class="container">
+        <!--LOGIN-->
+        <div class="wrapper">
+            <h2 class="welcomeback" style="color:aliceblue;">welcome back</h2>
+            <h1 class="healsoullogin">LOG IN TO HEALSOUL</h1>
+            <form id="login-form">
+                <label for="email">EMAIL</label>
+                <input id="email" type="text" name="email" placeholder="Email address">
+                <div class="email error" style="color: red; font-size: 14px; margin-top: 5px; font-style: italic;"></div>
+
+                <label for="password">PASSWORD</label>
+                <input id="password" type="password" name="password" placeholder="password">
+                <div class="password error" style="color: red; font-size: 14px; margin-top: 5px; font-style: italic;"></div>
+                <button type="submit" id="login_button">Log in</button>
+            </form>
+            <br>
+            <p id="or" style="color: aliceblue; font-size: 14px;">or</p>
+            <button type="submit" id="apple_button">
+                <a href="https://appleid.apple.com/auth/authorize?response_type=code&client_id=fm.podbay.web-auth&redirect_uri=https%3A%2F%2Fpodbay.fm%2Fauth%2Fapple%2Fcallback&scope=openid+email&response_mode=form_post" target="_blank" style="color: aliceblue;"><i class="fa-brands fa-apple"></i> Continue with apple</a>
+            </button>
+            <hr>
+            <p id="signup" style="color: aliceblue;">Don't have an account yet?<a href="/signup" style="color: aqua;"> <u style="text-decoration: underline;">Sign up for a free account</u></a></p>   
+        </div>
+</div>
+<script>
+    const form = document.querySelector('form');
+    const emailError = document.querySelector('.email.error');
+    const passwordError = document.querySelector('.password.error');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = form.email.value;
+        const password = form.password.value;
+
+        const res = await fetch('/Login', {
+            method: 'post',
+            body: JSON.stringify({ email, password }),
+            headers:  {'Content-Type': 'application/json'}
+        })
+        const data = await res.json();
+        console.log(data);
+
+        if(data.errors){
+            emailError.textContent = data.errors.email;
+            passwordError.textContent = data.errors.password;
+        }
+        if(data.user){
+            location.assign('/');  
+        }
+    });
+=======
 <div class="container">
         <!--LOGIN-->
         <div class="wrapper">
@@ -48,4 +100,5 @@
             location.assign('/');  
         }
     });
+>>>>>>> b1ca706f7aaab9cde5794f1db8777a182aac2907
 </script>
