@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --inspect server.js",
-    "node-sass": "sass --watch src/sass/main.scss   src/public/css/main.css"
+    "node-sass": "sass --watch src/sass/main.scss   src/public/css/main.css",
+    "build": "npm run node-sass && webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +25,8 @@
     "body-parser": "^1.20.2",
     "nodemon": "^3.1.0",
     "sass": "^1.75.0",
-    "validator": "^13.11.0"
+    "validator": "^13.11.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   }
 }
