@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import 'header';
 @import 'navbar';
 @import 'footer';
@@ -47,3 +48,22 @@ body {
         margin-left: 0;
     }
   }
+=======
+@import 'header';
+@import 'navbar';
+@import 'footer';
+@import 'home';
+@import 'login';
+@import 'signup';
+@import 'esposide';
+@import 'detail_esposide';
+@import 'review';
+@import 'changePassword';
+
+body {
+    background: linear-gradient(to right, rgb(4, 1, 51), rgb(23, 43, 39) 90%);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+>>>>>>> b1ca706f7aaab9cde5794f1db8777a182aac2907

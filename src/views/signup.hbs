@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
     <!-- SIGNUP -->
     <div class="wrapper">
@@ -61,3 +62,68 @@
         }
     });
 </script>
+=======
+<div class="container">
+    <!-- SIGNUP -->
+    <div class="wrapper">
+        <h2 class="welcome" style="color: aliceblue;">welcome</h2>
+        <h1 class="healsoul_signup">SIGN UP FOR HEALSOUL</h1>
+        <form id="signup-form" >
+            <label for="username" style="color: aliceblue;">Username</label>
+            <input type="text" id="username" name="username" placeholder="Your username...">
+            <div class="username error" style="color: red; font-size: 14px; margin-top: 5px; font-style: italic;"></div>
+
+            <label for="email" style="color: aliceblue;">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email...">
+            <div class="email error" style="color: red; font-size: 14px; margin-top: 5px; font-style: italic;"></div>
+
+            <label for="password" style="color: aliceblue;">Password</label>
+            <input type="password" id="password" name="password" placeholder="Your password...">
+            <div class="password error" style="color: red; font-size: 14px; margin-top: 5px; font-style: italic;"></div>
+
+            <button type="submit" id="signup_button">SIGN UP</button>
+        </form>
+        <br>
+        <p id="or" style="color: aliceblue; font-size: 14px;">or</p>
+
+        <button type="submit" id="apple_button">
+            <a href="https://appleid.apple.com/auth/authorize?response_type=code&client_id=fm.podbay.web-auth&redirect_uri=https%3A%2F%2Fpodbay.fm%2Fauth%2Fapple%2Fcallback&scope=openid+email&response_mode=form_post" target="_blank" style="color:aliceblue;"><i class="fa-brands fa-apple"></i> Continue with apple</a>
+        </button>
+        <hr>
+        <p id="policy_terms" style="color: aliceblue;">View Healsoul's <a href="https://podbay.fm/privacy" style="color: aqua;"><u style="text-decoration:underline">Privacy Policy</u></a> and <a href="https://podbay.fm/terms" style="color: aqua;"><u style="text-decoration:underline">Terms of Use.</u></a></p>
+
+        <p id="login" style="color: aliceblue;">Already have an account? <a href="/login" style="color: aqua;"><u style="text-decoration: underline">Log in</u></a></p>
+    </div>
+</div>
+
+<script>
+    const form = document.querySelector('form');
+    const usernameError = document.querySelector('.username.error');
+    const emailError = document.querySelector('.email.error');
+    const passwordError = document.querySelector('.password.error');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const username = form.username.value;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        const res = await fetch('/register', {
+            method: 'post',
+            body: JSON.stringify({ username, email, password }),
+            headers:  {'Content-Type': 'application/json'}
+        })
+        const data = await res.json();
+        console.log(data);
+
+        if(data.errors){
+            usernameError.textContent = data.errors.username;
+            emailError.textContent = data.errors.email;
+            passwordError.textContent = data.errors.password;
+        }
+        if(data.newUser){
+            location.assign('/login');  
+        }
+    });
+</script>
+>>>>>>> b1ca706f7aaab9cde5794f1db8777a182aac2907

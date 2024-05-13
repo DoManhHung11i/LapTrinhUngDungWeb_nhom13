@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Header */
 header {
     margin-left: 20px; /* Điều chỉnh khoảng cách margin để phù hợp với trình duyệt */
@@ -59,3 +60,118 @@ header {
 .top-bar-login-signup button:hover {
     background-color: #244d73;
 }
+=======
+/* Header */
+header {
+    margin-left: 20px; /* Điều chỉnh khoảng cách margin để phù hợp với trình duyệt */
+    padding: 20px;
+}
+  
+.top-bar {
+    width: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.top-bar-search {
+    height: 26px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 7px;
+    position: relative;
+    margin-left: 160px; 
+}
+  
+.top-bar-search button {
+    background-color: #333;
+    color: #ffffff;
+    padding: 4px;
+    right: 5px;
+    position: absolute;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+  
+.top-bar-search input {
+    width: 80%; 
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+  
+.top-bar-login-signup {
+    display: flex;
+    align-items: center;
+}
+  
+.top-bar-login-signup button {
+    color: #ccc;
+    background-color: #456c91;
+    margin-right: 20px; 
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: #093b69;
+}
+  
+.top-bar-login-signup button:hover {
+    background-color: #244d73;
+}
+.user-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    border-radius: 50%; /* Tạo hình tròn */
+    background-color:  #2c5378; /* Màu nền của vòng tròn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-icon-wrapper:hover {
+    background-color: #40678c; /* Màu nền khi hover */
+}
+.user-options {
+    display: none; /* Ẩn danh sách tùy chọn ban đầu */
+    position: absolute;
+    top: 1px;
+    right: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.user-options ul li:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+}
+
+.user-options ul li a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.user-options ul li p {
+    margin: 0;
+    padding: 10px 20px; /* Thêm padding cho tên người dùng */
+    border-bottom: 1px solid #ccc; /* Thêm đường viền dưới cho tên người dùng */
+}
+
+.user-options.show {
+    display: block;
+}
+>>>>>>> b1ca706f7aaab9cde5794f1db8777a182aac2907

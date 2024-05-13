@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
     <div class="container_sidebar">
         <img src="{{podcast.image}}" alt="">
@@ -60,3 +61,81 @@
         {{/each}}
     </div>
 </div>
+=======
+<div class="container">
+    <div class="container_sidebar">
+        <img src="{{podcast.image}}" alt="">
+        <p style="font-size: 18px; font-weight: 600; color: aliceblue; text-align: left;">{{podcast.title}}</p>
+        <p style="color: #4DAEE8; text-align: left;">{{podcast.name_author}}</p>
+        <div class="container_sidebar-text">
+        <details>
+            <summary onclick="toggleDescription(event)"> Show Description </summary>
+            <span id="description" style="display: none;">{{podcast.description}}</span>
+        </details>
+        </div>  
+        <p style="color: rgb(153, 153, 153); font-weight: 700;font-size: 12px;letter-spacing: 0.5px; margin-bottom: 5px; margin-left: 5px;  ">SHARE</p>
+        <div class="container_sidebar-socialIcons">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="container_sidebar-footertext">
+        <p style="margin-bottom: 10px;">&copy 2024 {{podcast.name_author}}</p>
+        <p>All content for Three is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
+        </div>
+    </div>
+    <div class="container_headbar">
+        <ul class="container_headbar-list">
+            <a href="/podcast/{{podcast._id}}"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
+            <a href="about.html"><li class="container_headbar-item">About</li></a>  
+            <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
+            <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
+            <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
+          </ul>
+    </div>
+    <div class="container_body">
+        {{#each esposides}}
+        <div class="episode">
+            <div class="jsxepisode">
+                <div class="wrapp_art">
+                    <img src="{{../podcast.image}}" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+                    <div class="playing"></div>
+                    <div class="pause">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"  height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                        </svg>
+                    </div>
+                </div>
+        
+                <div class="meta">
+                    <div class="meta_top">
+                        <div class="meta_title">
+                            <a class="episode_title" style="color:antiquewhite" href="/podcast/{{this.podcast_id}}/{{this._id}}"><u>{{this.title}}</u></a>
+                        </div>
+                        <div class="meta_description">{{this.description}}</div>
+                    </div>
+                </div>
+                <div class="infor_bar">
+                    <div class="published">{{this.formattedDate}}</div>
+                    <div class="duration">{{this.duration}}</div>
+                </div>
+                </div>
+            <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+        </div>
+        {{/each}}
+    </div>
+</div>
+<script>
+    function toggleDescription(event) {
+        var summary = event.target;
+        var description = summary.nextElementSibling;
+
+        if (description.style.display === "none") {
+            description.style.display = "block";
+            summary.innerText = "";
+        } else {
+            description.style.display = "none";
+            summary.innerText = "Show Description";
+        }
+    }
+</script>
+>>>>>>> b1ca706f7aaab9cde5794f1db8777a182aac2907

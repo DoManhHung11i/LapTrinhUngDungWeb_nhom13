@@ -1,28 +1,28 @@
 <div class="container">
     <div class="container_sidebar">
         <img src="{{podcast.image}}" alt="">
-          <p style="font-size: 18px; font-weight: 600; color: aliceblue;">{{podcast.title}}</p>
-          <p style="color: #4DAEE8;">{{podcast.name_author}}</p>
-          <div class="container_sidebar-text">
-            <details>
-              <summary> Show Description </summary>
-              <span>{{podcast.description}}</span>
-            </details>
-            </div>  
-          <p style="color: rgb(153, 153, 153); font-weight: 700;font-size: 12px;letter-spacing: 0.5px; margin-bottom: 5px; margin-left: 5px;">SHARE</p>
-          <div class="container_sidebar-socialIcons">
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          </div>
-          <div class="container_sidebar-footertext">
-            <p style="margin-bottom: 10px;">&copy 2024 {{podcast.name_author}}</p>
-            <p>All content for Three is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
-          </div>
+        <p style="font-size: 18px; font-weight: 600; color: aliceblue; text-align: left;">{{podcast.title}}</p>
+        <p style="color: #4DAEE8; text-align: left;">{{podcast.name_author}}</p>
+        <div class="container_sidebar-text">
+          <details>
+            <summary onclick="toggleDescription(event)"> Show Description </summary>
+            <span id="description" style="display: none;">{{podcast.description}}</span>
+          </details>
+          </div>  
+        <p style="color: rgb(153, 153, 153); font-weight: 700;font-size: 12px;letter-spacing: 0.5px; margin-bottom: 5px; margin-left: 5px;">SHARE</p>
+        <div class="container_sidebar-socialIcons">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="container_sidebar-footertext">
+          <p style="margin-bottom: 10px;">&copy 2024 {{podcast.name_author}}</p>
+          <p>All content for Three is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
+        </div>
     </div>
     <div class="container_headbar">
         <ul class="container_headbar-list">
-            <a href="playlist.html"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
+            <a href="/podcast/{{podcast._id}}"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
             <a href="about.html"><li class="container_headbar-item">About</li></a>  
             <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
             <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
@@ -39,16 +39,13 @@
             <div class="container_body-title">
               <p>
                 <strong style="color: #fff;">{{esposide.title}}</strong>
-                <p style="color: #333; font-size: 14px; font-weight: 600;">{{esposide.formattedDate}}</p>
+                <p style="color: #706f6f; font-size: 14px; font-weight: 600;  text-align: left;">{{esposide.formattedDate}}</p>
               </p>
-              <div class="container_body_musicPlayer">
-                <!-- <i class="fa-solid fa-volume-low"></i> -->
-              </div>
             </div>
             <div class="container_body_feature">
               <ul class="container_body_feature-list" style="list-style-type: none;">
-                <li><button class="container_button container_body_feature-item" id="addToQueuebtn" data-esposide-id="{{esposide._id}}"><span style="font-weight: 600;">+</span> Add to My Queue</button></li>
-                <li><button class="container_button container_body_feature-item">Download</button></li>
+                <li><button class="container_button container_body_feature-item" id="addToQueuebtn" data-esposide-id="{{esposide._id}}" data-user-id="{{user._id}}" data-action="addToQueue">Add to My Queue</button></li>
+                <li><button class="container_button container_body_feature-item" id="addToMyPodcastbtn" data-esposide-id="{{esposide._id}}" data-user-id="{{user._id}}" data-action="addToMyPodcast">Add To My Podcast</button></li>
                 <li><button class="container_button container_body_feature-item">Share</button></li>
               </ul>
             </div>
@@ -123,36 +120,11 @@
             </div>
           </div>
         </footer>
-            <script>
-              document.addEventListener("DOMContentLoaded", function() {
-              const backwardBtn = document.getElementById("backward-btn");
-              const playPauseBtn = document.getElementById("play-pause-btn");
-              const forwardBtn = document.getElementById("forward-btn");
-              const audioPlayer = document.getElementById("audio-player");
-
-              const audioUrl = document.querySelector('.audio-player').getAttribute('data-audio-url');
-              // Set the source URL for the audio element
-              audioPlayer.src = audioUrl;
-
-              backwardBtn.addEventListener("click", function() {
-                audioPlayer.currentTime -= 5; // Move backward 5 seconds
-              });
-
-              playPauseBtn.addEventListener("click", function() {
-                if (audioPlayer.paused) {
-                  audioPlayer.play(); // If paused, play
-                  playPauseBtn.textContent = "⏸"; // Change button display to pause
-                } else {
-                  audioPlayer.pause(); // If playing, pause
-                  playPauseBtn.textContent = "▶️"; // Change button display to play
-                }
-              });
-
-              forwardBtn.addEventListener("click", function() {
-                audioPlayer.currentTime += 5; // Move forward 5 seconds
-              });
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                updateButtonContent();
             });
-            </script>
+          </script>
             <script>
               const audioPlayer = document.querySelector('.audio-player');
               const navbar = document.querySelector('.navbar');
@@ -165,28 +137,18 @@
                 }
               });
             </script>
-            <script>
-              const addToQueueBtn = document.getElementById('addToQueuebtn');
-                addToQueueBtn.addEventListener('click', function() {
-                  if(checkAuth()){
-                    const esposideId = addToQueueBtn.getAttribute('data-esposide-id');
-                    fetch('/podcast/add-to-queue', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ esposideId })
-                    })
-                  }
-                  else{
-                    window.location.href = '/login';
-                  }
-                });
-              function checkAuth() {
-                  
-              }
-
-            </script>
-
-
 </div>
+<script>
+    function toggleDescription(event) {
+        var summary = event.target;
+        var description = summary.nextElementSibling;
+
+        if (description.style.display === "none") {
+            description.style.display = "block";
+            summary.innerText = "";
+        } else {
+            description.style.display = "none";
+            summary.innerText = "Show Description";
+        }
+    }
+</script>
