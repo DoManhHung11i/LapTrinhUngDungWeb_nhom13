@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+{
+  "name": "laptrinhweb-nhom13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect server.js",
+    "node-sass": "sass --watch src/sass/main.scss   src/public/css/main.css",
+    "build": "npm run node-sass && webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2"
+  },
+  "devDependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "nodemon": "^3.1.0",
+    "sass": "^1.75.0",
+    "validator": "^13.11.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
+=======
 {
   "name": "laptrinhweb-nhom13",
   "version": "1.0.0",
@@ -28,3 +62,4 @@
     "validator": "^13.11.0"
   }
 }
+>>>>>>> b1ca706f7aaab9cde5794f1db8777a182aac2907

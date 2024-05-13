@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+<header>
+    <div class="top-bar">
+        <div class="top-bar-list top-bar-search">
+            <input type="text" placeholder="Search podcasts...">
+            <button>Search</button>
+        </div>
+        <div class="top-bar-list top-bar-login-signup">
+            {{#if user}}
+            <p>Welcome, {{user.username}}</p>
+            <button type="button" onclick="logout()" style="margin-right: 16px; padding: 7px 14px;">Log out</button>
+            <script>
+                function logout() {
+                    window.location.href = '/logout';
+                }
+            </script>
+            {{else}}
+            <button type="button" onclick="login()" style="margin-right: 16px; padding: 7px 14px;">Log in</button>
+            <button type="button" onclick="signup()">Sign up</button>
+            <script>
+                function login() {
+                    window.location.href = '/login';
+                }
+                function signup() {
+                    window.location.href = '/signup';
+                }
+            </script>
+            {{/if}}
+        </div>
+    </div>
+</header>
+=======
 <header>
     <div class="top-bar">
         <div class="top-bar-list top-bar-search" >
@@ -49,3 +81,4 @@
     });
 
 </script>
+>>>>>>> b1ca706f7aaab9cde5794f1db8777a182aac2907
