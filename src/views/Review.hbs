@@ -1,74 +1,3 @@
-<<<<<<< HEAD
-<div class="container">
-    <div class="container_sidebar">
-        <img src="{{podcast.image}}" alt="">
-          <p style="font-size: 18px; font-weight: 600; color: aliceblue;">{{podcast.title}}</p>
-          <p style="color: #4DAEE8;">{{podcast.name_author}}</p>
-          <div class="container_sidebar-text">
-            <details>
-              <summary> Show Description </summary>
-              <span>{{podcast.description}}</span>
-            </details>
-            </div>  
-          <p style="color: rgb(153, 153, 153); font-weight: 700;font-size: 12px;letter-spacing: 0.5px; margin-bottom: 5px; margin-left: 5px;">SHARE</p>
-          <div class="container_sidebar-socialIcons">
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          </div>
-          <div class="container_sidebar-footertext">
-            <p style="margin-bottom: 10px;">&copy 2024 {{podcast.name_author}}</p>
-            <p>All content for Three is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
-          </div>
-    </div>
-    <div class="container_headbar">
-        <ul class="container_headbar-list">
-            <a href="/podcast/{{podcast._id}}"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
-            <a href="about.html"><li class="container_headbar-item">About</li></a>  
-            <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
-            <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
-            <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
-          </ul>
-    </div>
-    <div class="container_review">
-        <form action="">
-            <fieldset style="border-radius: 5px;border: 0.5px solid #70b8ef">
-                <legend style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;font-size: 16px;margin: 4px;color: #ccc;font-weight: 600;text-transform: uppercase;">
-                    review
-                </legend>
-                <div class="container_body_review">
-                    {{#each comments}}
-                        <div class="container_body_review-item">
-                            <div class="container_body_review-title">{{this.title}}</div>
-                            <div class="container_body_review-content">{{this.content}}</div>
-                            <div class="container_body_review-name" style="font-weight: bold; color: aqua; text-decoration:underline">{{this.username}}</div>
-                        </div>
-                    {{/each}}
-            </fieldset>
-        </form>
-        <div class="container_comment" >
-              <form id="commentForm" method="POST" action="/podcast/{{podcast._id}}/comment">
-                <fieldset style="border-radius: 5px; border: 0.5px solid #70b8ef">
-                  <legend style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 16px; margin: 4px; color: #ccc; font-weight: 600; text-transform: uppercase;"> Your Comment </legend>
-                  <div class="container_body_comment">
-                    <div class="form-group">
-                      <label for="title" style="color: white;">Title</label>
-                      <input type="text" id="commentTitle" name="title" style="width: 99%; padding: 5px; border-radius: 5px; color: white;" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="content" style="color: white;">Content</label>
-                      <textarea id="commentContent" name="content" rows="5" style="width: 99%; padding: 5px; border-radius: 5px; background-color: #000000;color: white;" required></textarea>
-                    </div>
-                    <button type="Post" class="button" style="margin :10px">
-                      <span style="font-weight: 600; color: #333; ">Post</span>
-                    </button>
-                  </div>
-                </fieldset>
-              </form>
-            </div>
-        </div>
-    </div>
-=======
 <div class="container">
     <div class="container_sidebar">
         <img src="{{podcast.image}}" alt="">
@@ -138,5 +67,4 @@
             </div>
         </div>
     </div>
->>>>>>> b1ca706f7aaab9cde5794f1db8777a182aac2907
 </div>
