@@ -84,7 +84,7 @@ header {
   right: 100px;
   background-color: #fff;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -95,8 +95,7 @@ header {
 }
 
 .user-options ul li:hover {
-  border-radius: 8px;
-  background-color: #00ffdd; /* Màu nền khi hover */
+  background-color: #f0f0f0; /* Màu nền khi hover */
 }
 
 .user-options ul li a {
@@ -436,36 +435,6 @@ hr {
   background-color: #111;
   opacity: 10;
   cursor: pointer; /*đổi trỏ chuột thành bàn tay khi hover*/
-}
-
-#change-password-button{
-  margin:10px 10px 0 0;
-  background: transparent;
-
-  /* display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align: inherit; */
- 
-  width: 100%;
-  height:50px;
-  
-  border: 1px solid hsl(236, 6%, 30%);
-  border-radius:10px;
-  
-  font-size: 14px;
-  font-weight: 500;
-
-  background: linear-gradient(to bottom, #40678c, #2c5378);
-  opacity: 0.9;
-  transition: opacity 0.1s; 
-
-}
-
-#change-password-button:hover {
-  background-color: #111;
-  opacity: 10;      
-  cursor: pointer;        /*đổi trỏ chuột thành bàn tay khi hover*/
 }
 
 #apple_button {
@@ -1231,33 +1200,32 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/*# sourceMappingURL=main.css.map */
-#change-password-button{
-    margin:10px 10px 0 0;
-    background: transparent;
-
-    // display:flex;
-    // justify-content:center;
-    // align-items:center;
-    // text-align: inherit;
-   
+@media only screen and (max-width: 46.25em) {
+  .navbar,
+  .navbar h1,
+  .navbar-links,
+  .navbar a,
+  .navbar a > i,
+  .navbar a:hover {
+    display: none;
+  }
+  .container {
+    margin-left: 20px;
+  }
+  .top-bar-search {
+    margin-left: 0;
+  }
+  .top-bar-search button {
+    display: none;
+  }
+  .top-bar-search input {
     width: 100%;
-    height:50px;
-    
-    border: 1px solid hsl(236, 6%, 30%);
-    border-radius:10px;
-    
-    font-size: 14px;
-    font-weight: 500;
-
-    background: linear-gradient(to bottom, #40678c, #2c5378);
-    opacity: 0.9;
-    transition: opacity 0.1s; 
-
+    margin-left: 0;
+  }
+  footer {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 
-#change-password-button:hover {
-    background-color: #111;
-    opacity: 10;      
-    cursor: pointer;        /*đổi trỏ chuột thành bàn tay khi hover*/
-}
+/*# sourceMappingURL=main.css.map */
