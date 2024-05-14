@@ -14,6 +14,10 @@ document.addEventListener('click', async function(event) {
               userId = button.getAttribute('data-user-id');
               esposideId = button.getAttribute('data-esposide-id');
               action = button.getAttribute('data-action');                              
+          } else if (button.id === 'shareBtn'){
+            // Code for 'Share' button
+            openShareModal();
+            return; // Exit early to prevent further execution
           }
           if(userId){
             const res = await fetch(`/podcast/check-QueueOrMyPodcast`, {
@@ -69,3 +73,38 @@ document.addEventListener('click', async function(event) {
         }
     }
 });
+
+function openShareModal() {
+  var modalOverlay = document.getElementById('modalOverlay');
+    var modal = document.getElementById('shareModal');
+    modalOverlay.style.display = 'block';
+    modal.style.display = 'block';
+    // Set the current page URL as the value of the input field
+    document.getElementById('shareUrl').value = window.location.href;
+    document.documentElement.style.overflow = 'hidden';
+}
+
+function closeShareModal() {
+  var modalOverlay = document.getElementById('modalOverlay');
+    var modal = document.getElementById('shareModal');
+    modalOverlay.style.display = 'none';
+    modal.style.display = 'none';
+    document.documentElement.style.overflow = 'auto';
+}
+
+function copyUrl() {
+  var shareUrlInput = document.getElementById('shareUrl');
+  shareUrlInput.select();
+  document.execCommand('copy');
+  alert('URL copied to clipboard');
+}
+
+function shareOnFacebook() {
+  var url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href);
+  window.open(url, '_blank');
+}
+
+function shareOnTwitter() {
+  var url = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href);
+  window.open(url, '_blank');
+}

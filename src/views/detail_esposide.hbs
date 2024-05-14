@@ -46,8 +46,24 @@
               <ul class="container_body_feature-list" style="list-style-type: none;">
                 <li><button class="container_button container_body_feature-item" id="addToQueuebtn" data-esposide-id="{{esposide._id}}" data-user-id="{{user._id}}" data-action="addToQueue">Add to My Queue</button></li>
                 <li><button class="container_button container_body_feature-item" id="addToMyPodcastbtn" data-esposide-id="{{esposide._id}}" data-user-id="{{user._id}}" data-action="addToMyPodcast">Add To My Podcast</button></li>
-                <li><button class="container_button container_body_feature-item">Share</button></li>
+                <li><button class="container_button container_body_feature-item" id="shareBtn">Share</button></li>
               </ul>
+            </div>
+            <div id="modalOverlay" class="modal-overlay"></div>
+            <div id="shareModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeShareModal()">&times;</span> <!-- Add onclick attribute -->
+                <p>Share a link to {{esposide.title}}</p>
+                <input type="text" id="shareUrl" readonly>
+                <br>
+                <button id="copyBtn" onclick="copyUrl()">Copy URL</button>
+                <p>Or share on:</p>
+                <div class="container_sidebar-socialIcons">
+                  <a href="#" onclick="shareOnFacebook()"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" onclick="shareOnTwitter()"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#" onclick="shareOnFacebook()"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+              </div>
             </div>
             <form action="">
               <fieldset style="border-radius: 5px;border: 0.5px solid #70b8ef">
