@@ -1,0 +1,92 @@
+/*Phan Calendar*/
+.calendar {
+    width: 980px;
+    background-color: #18131a;
+    color: #fff;
+    padding: 20px 20px 30px 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    position: absolute;
+    top: 40px;
+    left: 260px;
+  }
+  
+  .month {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .month-header {
+    color: rgb(216, 102, 186);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .days-of-week {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  
+  .days-of-week span {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .week {
+    display: flex;
+    flex: 1;
+  }
+  
+  .day {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .day-number {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 15px;
+  }
+
+  .podcast-count{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+  
+  .day a{
+    display: block;
+    background-color: #1b1919;
+    color: #fff;
+    text-decoration: none;
+    width: 120px;
+    height: 90px;
+  }
+  
+  .day .blank{
+    pointer-events: none;
+  }
+
+  .day .unavailable{
+    pointer-events: none;
+    color: #333;
+  }
+
+  .day a:hover{
+    color: #733095;
+    background-color: #5b5454;
+  }
+  /*Ket thuc phan Calendar*/

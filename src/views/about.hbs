@@ -1,0 +1,69 @@
+ 
+<div class="container">
+    <div class="container_sidebar">
+        <img src="{{podcast.image}}" alt="">
+          <p style="font-size: 18px; font-weight: 600; color: aliceblue;">{{podcast.title}}</p>
+          <p style="color: #4DAEE8;">{{podcast.name_author}}</p>
+          <div class="container_sidebar-text">
+            <details>
+              <summary> Show Description </summary>
+              <span>{{podcast.description}}</span>
+            </details>
+            </div>  
+          <p style="color: rgb(153, 153, 153); font-weight: 700;font-size: 12px;letter-spacing: 0.5px; margin-bottom: 5px; margin-left: 5px;">SHARE</p>
+          <div class="container_sidebar-socialIcons">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <div class="container_sidebar-footertext">
+            <p style="margin-bottom: 10px;">&copy 2024 {{podcast.name_author}}</p>
+            <p>All content for Three is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
+          </div>
+    </div>
+    <div class="container_headbar">
+        <ul class="container_headbar-list">
+            <a href="/podcast/{{podcast._id}}"><li class="container_headbar-item">Episodes</li></a>
+            <a href="/podcast/{{podcast._id}}/about"><li class="container_headbar-item"  style="border: 1px solid #333; background-color: #333;">About</li></a>  
+            <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
+            <a href="/podcast/calendar"><li class="container_headbar-item">Calendar</li></a>
+          </ul>
+    </div>
+    <div class="container_about">
+        <div class="container_about_detail">
+            <strong style="font-size: 25px; position: absolute; left: 20px;">{{podcast.title}}</strong>
+            <p style="margin-top: 5px; color: rgb(77, 174, 232);line-height: 0; text-align: left;">{{podcast.name_author}}</p>
+            <p style="text-align: left;">{{podcast.description}}</p>
+        </div>
+        <div class="container_about_intro">
+            <div class="container_about_intro-list">
+                <div class="container_about_intro-item">
+                    <p style="font-weight: 600;">Available episodes</p>
+                    <p>7</p>
+                </div>
+                <hr  class="thin-hr">
+                <div class="container_about_intro-item">
+                    <p style="font-weight: 600;">Typical release rate</p>
+                    <p>Weekly</p>
+                </div>
+                <hr class="thin-hr">
+                <div class="container_about_intro-item">
+                    <p style="font-weight: 600;">Latest episode</p>
+                    <p>March 15</p>
+                </div>
+            </div>
+            <p style="font-size: 12px; color: rgb(204, 204, 204); font-family: GT America Expanded Bold -apple-system, BlinkMacSystemFont, Segoe UI Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,Segoe UI Symbol; font-weight: bold; text-transform: uppercase;">PODCAST PRIVACY INFORMATION</p>
+            <div class="container_about_intro-list">
+                <div class="container_about_intro-item">
+                    <p style="font-weight: 600;">Simplecast</p>
+                    <p>Stats, Dynamic Audio</p>
+                </div>
+            </div>
+            <div class="container_about_intro-policy">
+                <p><span style="font-weight: bold;">Stats:</span> This service collects and aggregates basic information about its listenership, like total download numbers and downloads by date or region.</p>
+                <p><span style="font-weight: bold;">Dynamic Audio:</span>Dynamic Audio: This service may insert dynamic audio (usually for targeted advertising) into episodes on a per-download or per-stream basis. This could be as basic as factoring in the date or the user's overall region, or when used with Tracking, could be based on more personal user data.</p>
+                <p>All content for {{podcast.title}} is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
+            </div>
+        </div>
+    </div> 
+</div>

@@ -23,10 +23,9 @@
     <div class="container_headbar">
         <ul class="container_headbar-list">
             <a href="/podcast/{{podcast._id}}"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
-            <a href="about.html"><li class="container_headbar-item">About</li></a>  
+            <a href="/podcast/{{podcast._id}}/about"><li class="container_headbar-item">About</li></a>  
             <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
-            <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
-            <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
+            <a href="/podcast/calendar"><li class="container_headbar-item">Calendar</li></a>
           </ul>
     </div>
     <div class="container_body">
@@ -45,7 +44,7 @@
                 <div class="meta">
                     <div class="meta_top">
                         <div class="meta_title">
-                            <a class="episode_title" style="color:antiquewhite" href="/podcast/{{this.podcast_id}}/{{this._id}}"><u>{{this.title}}</u></a>
+                            <a class="episode_title" style="color:antiquewhite" href="/podcast/{{this.podcast_id}}/{{this._id}}" data-esposide-id="{{this._id}}" data-user-id="{{../user._id}}"><u>{{this.title}}</u></a>
                         </div>
                         <div class="meta_description">{{this.description}}</div>
                     </div>

@@ -247,168 +247,6 @@ hr {
   font-size: 1.3em;
 }
 
-.container {
-  width: auto;
-  margin: 35px 20px 0px 205px;
-  position: relative;
-}
-
-.podcast-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.podcast-container a {
-  text-decoration: none;
-}
-
-.podcast-item {
-  width: 15%;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 4px 0 rgba(75, 17, 106, 0.2);
-  transition: box-shadow 0.3s;
-  cursor: pointer;
-}
-
-.podcast-item:hover {
-  box-shadow: 0 8px 16px 0 rgba(75, 17, 106, 0.2);
-}
-
-.podcast-image {
-  width: 150px;
-  height: 150px;
-  object-fit: contain;
-  border-radius: 5px;
-}
-
-.podcast-title {
-  padding: 5px;
-  text-align: center;
-  background-color: #f2f2f2;
-}
-
-.podcast-description {
-  width: 150px;
-  padding: 5px;
-  color: azure;
-}
-
-.recent {
-  display: block;
-  box-sizing: border-box;
-}
-
-.list_container {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.recent_title {
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 49px;
-  background: linear-gradient(rgb(100, 56, 105), rgb(17, 73, 74) 90%);
-  z-index: 100;
-  padding: 10px 20px 5px;
-  box-shadow: rgba(23, 24, 38, 0.5) 0px 5px 5px;
-  margin-bottom: 10px;
-  user-select: none;
-}
-
-.titlelist {
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.subtitle {
-  margin-top: 3px;
-  color: rgb(163, 168, 165);
-  font-size: 14px;
-  margin-bottom: 10px;
-  max-width: calc(100% - 85px);
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.controltitle {
-  bottom: 12px;
-  right: 12px;
-  position: absolute;
-  display: flex;
-}
-
-.listwrapp {
-  margin: 0px -20px;
-}
-
-.listlistwrapp {
-  height: 255.1px;
-  position: relative;
-  scrollbar-width: none !important;
-}
-
-.jscontent {
-  margin-left: 202px;
-  padding: 30px 20px;
-  height: calc(100% - 60px);
-  position: relative;
-}
-
-.decorlist {
-  position: relative;
-  height: auto;
-  width: auto;
-  will-change: transform;
-  direction: ltr;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.art-wrapper {
-  border-radius: 3px;
-  background: rgb(31, 32, 56);
-  position: relative;
-}
-
-.artreal {
-  display: block;
-  opacity: 1;
-  width: 183.9px;
-  height: 183.9px;
-  border-radius: 3px;
-}
-
-.textforart {
-  margin-top: 8px;
-  display: flex;
-}
-
-.arttitle {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--page-text-color);
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin-bottom: 2px;
-  cursor: pointer;
-}
-
-.authorofart {
-  font-size: 12px;
-  font-weight: 600;
-  color: rgb(77, 174, 232);
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  cursor: pointer;
-}
-
 .healsoullogin {
   margin: 0;
   padding: 0;
@@ -1154,6 +992,243 @@ hr {
   margin: 0;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Ensure it's above other content */
+  display: none; /* Initially hidden */
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it's above the overlay */
+  width: 40%; /* Full width */
+  height: 50%; /* Full height */
+  display: none; /* Initially hidden */
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #012233;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #fff;
+}
+
+.modal-content p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(17, 97, 100);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container_sidebar-socialIcons a {
+  display: inline-block; /* Ensure proper alignment */
+  margin: 0 10px;
+}
+
+.modal-content #copyBtn {
+  background-color: #456c91;
+  color: #fff;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.modal-content #copyBtn:hover {
+  background-color: #385673;
+  cursor: pointer;
+}
+
+.container {
+  width: auto;
+  margin: 35px 20px 0px 205px;
+  position: relative;
+}
+
+.podcast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.podcast-container a {
+  text-decoration: none;
+}
+
+.podcast-item {
+  width: 15%;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px 0 rgba(75, 17, 106, 0.2);
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.podcast-item:hover {
+  box-shadow: 0 8px 16px 0 rgba(75, 17, 106, 0.2);
+}
+
+.podcast-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.podcast-title {
+  padding: 5px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.podcast-description {
+  width: 150px;
+  padding: 5px;
+  color: azure;
+}
+
+.recent {
+  display: block;
+  box-sizing: border-box;
+}
+
+.list_container {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.recent_title {
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 49px;
+  background: linear-gradient(rgb(100, 56, 105), rgb(17, 73, 74) 90%);
+  z-index: 100;
+  padding: 10px 20px 5px;
+  box-shadow: rgba(23, 24, 38, 0.5) 0px 5px 5px;
+  margin-bottom: 10px;
+  user-select: none;
+}
+
+.titlelist {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.subtitle {
+  margin-top: 3px;
+  color: rgb(163, 168, 165);
+  font-size: 14px;
+  margin-bottom: 10px;
+  max-width: calc(100% - 85px);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.controltitle {
+  bottom: 12px;
+  right: 12px;
+  position: absolute;
+  display: flex;
+}
+
+.listwrapp {
+  margin: 0px -20px;
+}
+
+.listlistwrapp {
+  height: 255.1px;
+  position: relative;
+  scrollbar-width: none !important;
+}
+
+.jscontent {
+  margin-left: 202px;
+  padding: 30px 20px;
+  height: calc(100% - 60px);
+  position: relative;
+}
+
+.decorlist {
+  position: relative;
+  height: auto;
+  width: auto;
+  will-change: transform;
+  direction: ltr;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.art-wrapper {
+  border-radius: 3px;
+  background: rgb(31, 32, 56);
+  position: relative;
+}
+
+.artreal {
+  display: block;
+  opacity: 1;
+  width: 183.9px;
+  height: 183.9px;
+  border-radius: 3px;
+}
+
+.textforart {
+  margin-top: 8px;
+  display: flex;
+}
+
+.arttitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--page-text-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.authorofart {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(77, 174, 232);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  cursor: pointer;
+}
+
 .container_body_review-item {
   background-color: rgba(3, 2, 47, 0.5);
   color: #fff;
@@ -1208,6 +1283,141 @@ hr {
   border-radius: 5px;
 }
 
+.container_about {
+  padding: 20px 20px 0 20px;
+  margin-top: 10px;
+  width: 980px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 40px;
+  left: 260px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.container_about_detail {
+  padding-right: 10px;
+  font-size: 16px;
+  color: rgb(204, 204, 204);
+  white-space: pre-wrap;
+  line-height: 1.4em;
+  flex: 2;
+}
+
+.container_about_intro {
+  padding-left: 10px;
+  color: rgb(204, 204, 204);
+  flex: 1;
+}
+
+.container_about_intro-item {
+  background-color: hsl(240, 3%, 7%);
+  color: rgb(204, 204, 204);
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container_about_intro-policy {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+/*Phan Calendar*/
+.calendar {
+  width: 980px;
+  background-color: #18131a;
+  color: #fff;
+  padding: 20px 20px 30px 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  position: absolute;
+  top: 40px;
+  left: 260px;
+}
+
+.month {
+  display: flex;
+  flex-direction: column;
+}
+
+.month-header {
+  color: rgb(216, 102, 186);
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.days-of-week {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.days-of-week span {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.week {
+  display: flex;
+  flex: 1;
+}
+
+.day {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.day-number {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.podcast-count {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.day a {
+  display: block;
+  background-color: #1b1919;
+  color: #fff;
+  text-decoration: none;
+  width: 120px;
+  height: 90px;
+}
+
+.day .blank {
+  pointer-events: none;
+}
+
+.day .unavailable {
+  pointer-events: none;
+  color: #333;
+}
+
+.day a:hover {
+  color: #733095;
+  background-color: #5b5454;
+}
+
+/*Ket thuc phan Calendar*/
 body {
   background: linear-gradient(to right, rgb(4, 1, 51), rgb(23, 43, 39) 90%);
   margin: 0;

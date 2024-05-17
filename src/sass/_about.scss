@@ -1,0 +1,38 @@
+.container_about{
+    padding: 20px 20px 0 20px;
+    margin-top: 10px;
+    width: 980px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 40px;
+    left: 260px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.container_about_detail{
+    padding-right:  10px;
+    font-size: 16px;
+    color: rgb(204, 204, 204);
+    white-space: pre-wrap;
+    line-height: 1.4em;
+    flex: 2;
+}
+.container_about_intro{
+    padding-left: 10px;
+    color: rgb(204, 204, 204);
+    flex: 1;
+}
+.container_about_intro-item{
+    background-color: hsl(240, 3%, 7%);
+    color: rgb(204, 204, 204);
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+.container_about_intro-policy{
+    font-size: 12px;
+    line-height: 1.5em;
+}

@@ -34,12 +34,12 @@
     <a href="" style="text-decoration: none;"><h1 style="color:hsl(307, 64%, 78%);font-size: medium;text-align:left" class="trending">Listen Recently</h1></a>
     <hr>
     <div class="podcast-container">
-        {{#each podcasts}}
+        {{#each esposidesObjects}}
         <a href="/">
 
             <div class="podcast-item">
                 <img src="{{this.image}}" alt="{{this.title}}" class="podcast-image">
-                <p class="podcast-description">{{this.topic}}</p>
+                <p class="podcast-description">{{this.title}}</p>
             </div>
         </a>
         {{/each}}

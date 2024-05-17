@@ -224,3 +224,78 @@
   .audio-player .song-info h3 {
     margin: 0;
   }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Ensure it's above other content */
+    display: none; /* Initially hidden */
+  }
+  
+  /* Modal styles */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it's above the overlay */
+    width: 40%; /* Full width */
+    height: 50%; /* Full height */
+    display: none; /* Initially hidden */
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #012233;
+    margin:auto;
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .modal-content p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: rgb(17, 97, 100);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .container_sidebar-socialIcons a {
+    display: inline-block; /* Ensure proper alignment */
+    margin: 0 10px;
+  }
+
+  .modal-content #copyBtn{
+    background-color: #456c91;
+    color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .modal-content #copyBtn:hover{
+    background-color: #385673;
+    cursor: pointer;
+  }
+

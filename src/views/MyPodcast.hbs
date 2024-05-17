@@ -18,7 +18,7 @@
             </div>
             <div class="textforart">
               <div class="textinner" style="flex: 1 1 auto;">
-                <a aria-label="{{this.title}}" class="arttitle" style="color: rgb(235, 218, 89);" href="/podcast/{{this.podcast_id}}/{{this._id}}">{{this.title}}</a>
+                <a aria-label="{{this.title}}" class="arttitle episode_title" style="color: rgb(235, 218, 89); max-width: 200px; display: block; word-wrap: break-word;" href="/podcast/{{this.podcast_id}}/{{this._id}}" data-esposide-id="{{this._id}}" data-user-id="{{../user._id}}">{{this.title}}</a>
                 <div class="authorofart" style="color: rgb(51, 212, 174);">{{this.name_author}}</div>
               </div>
             </div>

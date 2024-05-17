@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="container_body_recently">
+        {{#each esposidesObjects}}
+        <div class="episode">
+            <div class="jsxepisode">
+                <div class="wrapp_art">
+                    <img src="{{this.image}}" alt="three" width="200" height="200" loading="lazy" class="jsx_art">
+                    <div class="playing"></div>
+                    <div class="pause">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0"  height="1em" width="1em" xmlns="http:www.w3.org/2000/svg"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path>
+                        </svg>
+                    </div>
+                </div>
+        
+                <div class="meta">
+                    <div class="meta_top">
+                        <div class="meta_title">
+                            <a class="episode_title" style="color:antiquewhite" href="/podcast/{{this.podcast_id}}/{{this._id}}" data-esposide-id="{{this._id}}" data-user-id="{{../user._id}}"><u>{{this.title}}</u></a>
+                        </div>
+                        <div class="meta_description">{{this.description}}</div>
+                    </div>
+                </div>
+                <div class="infor_bar">
+                    <div class="duration">{{this.duration}}</div>
+                </div>
+                </div>
+            <div class="unit_wrapp" style="border-bottom: 2px solid rgb(7, 70, 75);">
+                    <p>{{esposides.timePassed}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<script>
+   
+</script>

@@ -4,6 +4,7 @@ const Comment = require('../models/comments');
 const User = require('../models/users');
 const Favorite = require('../models/favorites');
 const MyPodcast = require('../models/myPodcasts');
+const RecentlyPodcast = require('../models/recentlyPodcasts');
 const { ObjectId } = require('mongodb');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 const { getUserIdFromToken, requireAuth } = require('../middleware/authMiddleware');
@@ -12,7 +13,7 @@ const { getUserIdFromToken, requireAuth } = require('../middleware/authMiddlewar
 
 class PodcastController {
     async Esposides(req, res, next) {
-
+            const user = res.locals.user;
             const podcastIDString = req.params.podcast_id;
             const podcastID = new ObjectId(podcastIDString);
 
@@ -22,7 +23,7 @@ class PodcastController {
                 esposide.formattedDate = esposide.release_date.toDateString();
             });
             
-            res.render('esposide', { podcast, esposides });
+            res.render('esposide', { podcast, esposides, user });
     }
 
     async DetailEsposide(req, res){
@@ -79,6 +80,17 @@ class PodcastController {
         
         res.render('Review', { podcast, comments });
         }
+        
+        async About(req, res){
+            const podcastIDString = req.params.podcast_id;
+            const podcastID = new ObjectId(podcastIDString);
+
+            const podcast = mongooseToObject(await Podcast.findById(podcastID));
+            res.render('about', {podcast}   );
+        }
+        Calendar(req, res){
+            res.render('calendar');
+        }
 
         async Comment(req, res){
            const { title, content } = req.body;
@@ -97,7 +109,8 @@ class PodcastController {
                 username: username
            });
             await comment.save();
-            res.redirect('/');
+            const dynamicURL = `/podcast/${podcastIDString}/reviews`;
+            res.redirect(dynamicURL);
         }
 
         async checkQueueOrMyPodcast(req, res) {
@@ -164,24 +177,43 @@ class PodcastController {
             if(action === 'addToQueue'){
                 const result = await Favorite.deleteOne({ esposideID: esposideID, userID: userID });
                 if (result.deletedCount > 0) {
-                    // Nếu xóa thành công
                     res.status(200).json({ deleted: true, message: 'Esposide removed from queue' });
                 } else {
-                    // Nếu không tìm thấy esposide trong queue để xóa
                     res.status(404).json({ deleted: false, message: 'Esposide not found in queue' });
                 }
             }
             else if (action === 'addToMyPodcast'){
                 const result = await MyPodcast.deleteOne({ esposideID: esposideID, userID: userID });
                 if (result.deletedCount > 0) {
-                    // Nếu xóa thành công
                     res.status(200).json({ deleted: true, message: 'Esposide removed from MyPodcast' });
                 } else {
-                    // Nếu không tìm thấy esposide trong queue để xóa
                     res.status(404).json({ deleted: false, message: 'Esposide not found in MyPodcast' });
                 }
             }
             
+        }
+        
+        async AddToRecently(req, res){
+            const { esposideId, userId } = req.body;
+            const esposideIdString = esposideId.toString();
+            const userIdString = userId.toString();
+            const esposideID = new ObjectId(esposideIdString);
+            const userID = new ObjectId(userIdString);
+            const esposide = await  RecentlyPodcast.findOne({ userID: userID, esposideID: esposideID });
+            if(!esposide){
+                const recentlyPodcast = new RecentlyPodcast({
+                    userID: userID,
+                    esposideID: esposideID
+                });                   
+                await recentlyPodcast.save();
+                res.status(200).json({ saved: true });
+            }
+            else{
+               const esposideUpdate = esposide;
+               const update = { $set: { add_at: Date.now() }};
+               await RecentlyPodcast.updateOne( esposideUpdate, update);
+               res.status(200).json({ updated: true });
+            }
         }
 }
 module.exports = new PodcastController();

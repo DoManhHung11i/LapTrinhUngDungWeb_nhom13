@@ -4,16 +4,28 @@ const Comment = require('../models/comments');
 const User = require('../models/users');
 const Favorite = require('../models/favorites');
 const MyPodcast = require('../models/myPodcasts');
+const RecentlyPodcast = require('../models/recentlyPodcasts');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 
 class HomeController {
-   home(req, res, next){
-    Podcast.find({}).limit(5)
-        .then(podcasts => {
-         podcasts = podcasts.map(podcast => podcast.toObject())
-         res.render('home', { podcasts, showFooter: true });
-        })
-        .catch(next);
+   async home(req, res, next){
+      const podcasts = mutipleMongooseToObject(await Podcast.find({}).limit(5));
+      const recentlyPodcasts = mutipleMongooseToObject(await RecentlyPodcast.find({}).limit(5));
+      const esposides = [];
+      for (const recentlyPodcast of recentlyPodcasts) {
+            const esposide = await Esposide.findById(recentlyPodcast.esposideID);
+            esposides.push(esposide);
+      }
+      const esposidesObjects = mutipleMongooseToObject(esposides);
+      for (const esposideObject of esposidesObjects) {
+         const podcast = await Podcast.findById(esposideObject.podcast_id);
+         if (podcast) {
+             esposideObject.podcastTitle = podcast.title;
+             esposideObject.image = podcast.image;
+             esposideObject.name_author = podcast.name_author;
+         }
+     }
+      res.render('home', { podcasts, esposidesObjects, showFooter: true });
    }
    logout(req, res, next){
       res.cookie('jwt', '', {maxAge: 1});
@@ -27,17 +39,6 @@ class HomeController {
    }
    signup(req, res, next) {
       res.render('signup', { showFooter: true });
-   }
-   Discovery(req, res, next){
-      //res.render('discovery', { showFooter: true });
-      const user = res.locals.user;
-
-    // Kiểm tra xem người dùng đã đăng nhập hay chưa
-    if (user) {
-        res.send(`Xin chào, ${user.username}!`); // Hiển thị tên người dùng nếu đã đăng nhập
-    } else {
-        res.send('Xin chào khách thăm!'); // Hiển thị tin nhắn chào mừng nếu chưa đăng nhập
-    }
    }
    async MyPodcasts(req, res, next){
       const user = res.locals.user;
@@ -75,10 +76,31 @@ class HomeController {
              esposideObject.name_author = podcast.name_author;
          }
      }
-     res.render('MyQueue', { esposidesObjects });
+     //res.json(esposidesObjects)
+      res.render('MyQueue', { esposidesObjects });
    }
-   Recently(req, res, next){
-      res.render('recently', { showFooter: true });
+   async Recently(req, res, next){
+      const user = res.locals.user;
+      const recentlyPodcasts = await RecentlyPodcast.find({ userID: user._id }).sort( { add_at: -1 });
+      const esposides = [];
+      for (const recentlyPodcast of recentlyPodcasts) {
+            const esposide = await Esposide.findById(recentlyPodcast.esposideID);
+            const currentTime = new Date();
+            const timeDifference = Math.abs(currentTime - recentlyPodcast.add_at) / 36e5; 
+            esposide.timePassed = timeDifference.toFixed(2); 
+            esposides.push(esposide);
+      }
+      const esposidesObjects = mutipleMongooseToObject(esposides);
+      for (const esposideObject of esposidesObjects) {
+         const podcast = await Podcast.findById(esposideObject.podcast_id);
+         if (podcast) {
+             esposideObject.podcastTitle = podcast.title;
+             esposideObject.image = podcast.image;
+             esposideObject.name_author = podcast.name_author;
+         }
+     }
+
+      res.render('recently', { esposidesObjects });
    }
 
 }

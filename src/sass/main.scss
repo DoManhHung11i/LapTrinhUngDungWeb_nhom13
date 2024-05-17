@@ -1,12 +1,14 @@
 @import 'header';
 @import 'navbar';
 @import 'footer';
-@import 'home';
 @import 'login';
 @import 'signup';
 @import 'esposide';
 @import 'detail_esposide';
+@import 'home';
 @import 'review';
+@import 'about';
+@import 'calendar';
 
 body {
     background: linear-gradient(to right, rgb(4, 1, 51), rgb(23, 43, 39) 90%);
