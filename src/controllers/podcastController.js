@@ -164,20 +164,16 @@ class PodcastController {
             if(action === 'addToQueue'){
                 const result = await Favorite.deleteOne({ esposideID: esposideID, userID: userID });
                 if (result.deletedCount > 0) {
-                    // Nếu xóa thành công
                     res.status(200).json({ deleted: true, message: 'Esposide removed from queue' });
                 } else {
-                    // Nếu không tìm thấy esposide trong queue để xóa
                     res.status(404).json({ deleted: false, message: 'Esposide not found in queue' });
                 }
             }
             else if (action === 'addToMyPodcast'){
                 const result = await MyPodcast.deleteOne({ esposideID: esposideID, userID: userID });
                 if (result.deletedCount > 0) {
-                    // Nếu xóa thành công
                     res.status(200).json({ deleted: true, message: 'Esposide removed from MyPodcast' });
                 } else {
-                    // Nếu không tìm thấy esposide trong queue để xóa
                     res.status(404).json({ deleted: false, message: 'Esposide not found in MyPodcast' });
                 }
             }
