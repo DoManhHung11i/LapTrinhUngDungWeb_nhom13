@@ -105,3 +105,28 @@ function shareOnTwitter() {
   var url = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href);
   window.open(url, '_blank');
 }
+
+//Add To Recently Podcast
+document.addEventListener("DOMContentLoaded", () => {
+  const esposides = document.querySelectorAll(".episode_title");
+  
+  esposides.forEach(esposide => {
+      esposide.addEventListener('click', async (event) => {
+
+          const userId = esposide.getAttribute('data-user-id');
+          const esposideId = esposide.getAttribute('data-esposide-id');
+
+          if(userId){
+              const res = await fetch('/podcast/AddToRecently', {
+                  method: 'POST',
+                  body: JSON.stringify({ esposideId, userId }),
+                  headers: {'Content-Type': 'application/json'}
+              });
+          }
+          else{
+              alert("Login to use this feature");
+              window.location.href = '/login';
+          }
+      });
+  });
+});

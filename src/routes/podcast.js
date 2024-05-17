@@ -4,6 +4,7 @@ const PodcastController = require('../controllers/podcastController');
 const { requireAuth, checkUser } = require('../middleware/authMiddleware');
 const podcastController = require('../controllers/podcastController');
 
+router.post('/AddToRecently', podcastController.AddToRecently);
 router.post('/remove-from-QueueOrMyPodcast', podcastController.RemoveFromQueueOrMyPodcast);
 router.post('/add-to-QueueOrMyPodcast', podcastController.AddToQueueOrMyPodcast);
 router.post('/check-QueueOrMyPodcast', podcastController.checkQueueOrMyPodcast);

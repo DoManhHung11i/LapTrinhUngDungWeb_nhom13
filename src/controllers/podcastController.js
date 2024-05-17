@@ -4,6 +4,7 @@ const Comment = require('../models/comments');
 const User = require('../models/users');
 const Favorite = require('../models/favorites');
 const MyPodcast = require('../models/myPodcasts');
+const RecentlyPodcast = require('../models/recentlyPodcasts');
 const { ObjectId } = require('mongodb');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 const { getUserIdFromToken, requireAuth } = require('../middleware/authMiddleware');
@@ -12,7 +13,7 @@ const { getUserIdFromToken, requireAuth } = require('../middleware/authMiddlewar
 
 class PodcastController {
     async Esposides(req, res, next) {
-
+            const user = res.locals.user;
             const podcastIDString = req.params.podcast_id;
             const podcastID = new ObjectId(podcastIDString);
 
@@ -22,7 +23,7 @@ class PodcastController {
                 esposide.formattedDate = esposide.release_date.toDateString();
             });
             
-            res.render('esposide', { podcast, esposides });
+            res.render('esposide', { podcast, esposides, user });
     }
 
     async DetailEsposide(req, res){
@@ -189,6 +190,29 @@ class PodcastController {
                 }
             }
             
+        }
+        
+        async AddToRecently(req, res){
+            const { esposideId, userId } = req.body;
+            const esposideIdString = esposideId.toString();
+            const userIdString = userId.toString();
+            const esposideID = new ObjectId(esposideIdString);
+            const userID = new ObjectId(userIdString);
+            const esposide = await  RecentlyPodcast.findOne({ userID: userID, esposideID: esposideID });
+            if(!esposide){
+                const recentlyPodcast = new RecentlyPodcast({
+                    userID: userID,
+                    esposideID: esposideID
+                });                   
+                await recentlyPodcast.save();
+                res.status(200).json({ saved: true });
+            }
+            else{
+               const esposideUpdate = esposide;
+               const update = { $set: { add_at: Date.now() }};
+               await RecentlyPodcast.updateOne( esposideUpdate, update);
+               res.status(200).json({ updated: true });
+            }
         }
 }
 module.exports = new PodcastController();
