@@ -25,6 +25,6 @@
     "body-parser": "^1.20.2",
     "nodemon": "^3.1.0",
     "sass": "^1.75.0",
-    "validator": "^13.11.0"
+    "validator": "^13.12.0"
   }
 }
