@@ -1,0 +1,90 @@
+/* Footer */
+footer {
+    background-color: #000000;
+    padding: 50px 30px 20px; /* Điều chỉnh khoảng cách padding để phù hợp với trình duyệt */
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 1.5em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footerNav ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    margin: 30px;
+}
+
+.footerNav ul li {
+    display: flex;
+    color: white;
+    font-size: 2em;
+}
+
+.footerNav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5px;
+    font-size: 0.5em;
+    opacity: 0.7;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+hr {
+    margin: 10px 0px;
+}
+
+.footerBottom {
+    background-color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-size: 1.3em;
+}

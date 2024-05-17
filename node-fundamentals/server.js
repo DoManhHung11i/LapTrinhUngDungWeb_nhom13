@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const route = require('./routes')
+const route = require('./src/routes')
 
 app.use(express.static(path.join(__dirname,'src', 'public')));
 
@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname,'src', 'public')));
 app.use(bodyParser.json());
 
 //Kết nối tới database
-const db = require('./config/db');
+const db = require('./src/config/db');
 db.connect();
 
 //cấu hình handlebars

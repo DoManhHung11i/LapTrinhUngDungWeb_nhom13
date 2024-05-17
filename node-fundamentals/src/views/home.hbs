@@ -1,0 +1,48 @@
+<div class="container">
+    <h1 style="font-size: medium"><a href="#" class="trending" style="color: hsl(307, 64%, 78%);">Trending Categories</a></h1>
+    <p style="color:beige;font-size: small;">The most popular podcasts overall now. Last updated an hour ago.</p>
+    <hr>
+    <div class="podcast-container">
+        {{#each podcasts}}
+        <a href="/podcast/{{this._id}}">
+
+            <div class="podcast-item">
+                <img src="{{this.image}}" alt="{{this.title}}" class="podcast-image">
+                <p class="podcast-description">{{this.topic}}</p>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+    <br><br><br>
+
+    <h1 style="font-size: medium"><a href="#" class="trending" style="color: hsl(307, 64%, 78%);">Popular Author</a></h1>
+    <p style="color:beige;font-size: small;">People who inspire through their confessions</p>
+    <hr>
+    <div class="podcast-container">
+        {{#each podcasts}}
+        <a href="/">
+
+            <div class="podcast-item">
+                <img src="{{this.image}}" alt="{{this.title}}" class="podcast-image">
+                <p class="podcast-description">{{this.topic}}</p>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+    <br><br><br>
+
+    <a href="" style="text-decoration: none;"><h1 style="color:hsl(307, 64%, 78%);font-size: medium;text-align:left" class="trending">Listen Recently</h1></a>
+    <hr>
+    <div class="podcast-container">
+        {{#each esposidesObjects}}
+        <a href="/">
+
+            <div class="podcast-item">
+                <img src="{{this.image}}" alt="{{this.title}}" class="podcast-image">
+                <p class="podcast-description">{{this.title}}</p>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+    
+</div>
