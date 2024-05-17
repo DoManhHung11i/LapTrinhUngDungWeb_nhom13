@@ -109,7 +109,8 @@ class PodcastController {
                 username: username
            });
             await comment.save();
-            res.redirect('/');
+            const dynamicURL = `/podcast/${podcastIDString}/reviews`;
+            res.redirect(dynamicURL);
         }
 
         async checkQueueOrMyPodcast(req, res) {

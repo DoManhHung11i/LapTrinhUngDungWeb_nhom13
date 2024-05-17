@@ -8,13 +8,24 @@ const RecentlyPodcast = require('../models/recentlyPodcasts');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 
 class HomeController {
-   home(req, res, next){
-    Podcast.find({}).limit(5)
-        .then(podcasts => {
-         podcasts = podcasts.map(podcast => podcast.toObject())
-         res.render('home', { podcasts, showFooter: true });
-        })
-        .catch(next);
+   async home(req, res, next){
+      const podcasts = mutipleMongooseToObject(await Podcast.find({}).limit(5));
+      const recentlyPodcasts = mutipleMongooseToObject(await RecentlyPodcast.find({}).limit(5));
+      const esposides = [];
+      for (const recentlyPodcast of recentlyPodcasts) {
+            const esposide = await Esposide.findById(recentlyPodcast.esposideID);
+            esposides.push(esposide);
+      }
+      const esposidesObjects = mutipleMongooseToObject(esposides);
+      for (const esposideObject of esposidesObjects) {
+         const podcast = await Podcast.findById(esposideObject.podcast_id);
+         if (podcast) {
+             esposideObject.podcastTitle = podcast.title;
+             esposideObject.image = podcast.image;
+             esposideObject.name_author = podcast.name_author;
+         }
+     }
+      res.render('home', { podcasts, esposidesObjects, showFooter: true });
    }
    logout(req, res, next){
       res.cookie('jwt', '', {maxAge: 1});
