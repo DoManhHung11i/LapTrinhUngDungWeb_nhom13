@@ -123,10 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
                   headers: {'Content-Type': 'application/json'}
               });
           }
-          else{
-              alert("Login to use this feature");
-              window.location.href = '/login';
-          }
       });
   });
 });

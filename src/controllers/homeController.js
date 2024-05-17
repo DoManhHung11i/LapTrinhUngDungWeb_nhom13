@@ -65,8 +65,8 @@ class HomeController {
              esposideObject.name_author = podcast.name_author;
          }
      }
-     
-     res.render('MyQueue', { esposidesObjects });
+     //res.json(esposidesObjects)
+      res.render('MyQueue', { esposidesObjects });
    }
    async Recently(req, res, next){
       const user = res.locals.user;
