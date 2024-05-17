@@ -3,7 +3,6 @@ async function updateButtonContent() {
     console.log(containers);
     containers.forEach(container => {
         const button = container;
-        console.log(button);
         if (button) {
             let userId, esposideId, action;
             if (button.id === 'addToQueuebtn' || button.id === 'addToMyPodcastbtn') {

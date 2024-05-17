@@ -79,6 +79,17 @@ class PodcastController {
         
         res.render('Review', { podcast, comments });
         }
+        
+        async About(req, res){
+            const podcastIDString = req.params.podcast_id;
+            const podcastID = new ObjectId(podcastIDString);
+
+            const podcast = mongooseToObject(await Podcast.findById(podcastID));
+            res.render('about', {podcast}   );
+        }
+        Calendar(req, res){
+            res.render('calendar');
+        }
 
         async Comment(req, res){
            const { title, content } = req.body;

@@ -26,7 +26,6 @@ document.addEventListener('click', async function(event) {
               headers:  {'Content-Type': 'application/json'}
             });
             const data = await res.json();
-            console.log(data);
             if(data.found){
               const res =  await fetch('/podcast/remove-from-QueueOrMyPodcast', {
                   method: 'POST',
@@ -36,7 +35,6 @@ document.addEventListener('click', async function(event) {
                   body: JSON.stringify({ esposideId, userId, action })
               });
               const data = await res.json();
-              console.log(data);
               if(data.deleted){
                 if(data.message === 'Esposide removed from queue'){
                   button.textContent = 'Add to Queue';
@@ -55,7 +53,6 @@ document.addEventListener('click', async function(event) {
                           body: JSON.stringify({ esposideId, userId, action })
                       });
               const data = await res.json();
-              console.log(data);
               if(data.saved){
                 if(data.message === 'Esposide added to queue'){
                   button.textContent = 'Remove From Queue';

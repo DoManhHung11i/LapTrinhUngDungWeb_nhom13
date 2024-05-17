@@ -23,10 +23,9 @@
     <div class="container_headbar">
         <ul class="container_headbar-list">
             <a href="/podcast/{{podcast._id}}"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Episodes</li></a>
-            <a href="about.html"><li class="container_headbar-item">About</li></a>  
+            <a href="/podcast/{{podcast._id}}/about"><li class="container_headbar-item">About</li></a>  
             <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item">Reviews</li></a>
-            <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
-            <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
+            <a href="/podcast/calendar"><li class="container_headbar-item">Calendar</li></a>
           </ul>
     </div>
     <div class="container_body">
@@ -86,39 +85,6 @@
                   </a>
               </fieldset>
           </form>
-            <hr style="margin-top: 60px;">
-            <div class="container_body_prev_next">
-            <a href="Bear-Brook_esposide2.html">
-              <div class="container_body_prev_next-item">
-                <div class="container_body_pre_next-item-img">
-                  <img src="{{podcast.image}}" alt="">
-                </div>
-              <div class="container_body_prev_next-item-text">
-                <div class="container_body_pre_next-item-text-direct">
-                  <p>previous</p>
-                </div>
-                <div class="container_body_pre_next-item-text-title">
-                  <p>Episode 2: The Pursuit</p>
-                </div>
-              </div>
-            </div>
-            </a>
-            <a href="Bear-Brook_Bonus.html">
-              <div class="container_body_prev_next-item">
-              <div class="container_body_pre_next-item-img">
-                <img src="{{podcast.image}}" alt="">
-              </div>
-              <div class="container_body_prev_next-item-text">
-                <div class="container_body_pre_next-item-text-direct">
-                  <p>next</p>
-                </div>
-                <div class="container_body_pre_next-item-text-title">
-                  <p>Bonus: ‘Crime Story’</p>
-                </div>
-              </div>
-            </div>
-            </a>
-        </div>
         <footer>
           <div class="audio-player" data-audio-url="{{esposide.audio_url}}">
             <audio id="audio-player" controls>

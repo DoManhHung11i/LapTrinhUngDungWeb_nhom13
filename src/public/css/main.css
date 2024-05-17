@@ -1139,6 +1139,81 @@ hr {
   margin: 0;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 999; /* Ensure it's above other content */
+  display: none; /* Initially hidden */
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it's above the overlay */
+  width: 40%; /* Full width */
+  height: 50%; /* Full height */
+  display: none; /* Initially hidden */
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #012233;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #fff;
+}
+
+.modal-content p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(17, 97, 100);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container_sidebar-socialIcons a {
+  display: inline-block; /* Ensure proper alignment */
+  margin: 0 10px;
+}
+
+.modal-content #copyBtn {
+  background-color: #456c91;
+  color: #fff;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.modal-content #copyBtn:hover {
+  background-color: #385673;
+  cursor: pointer;
+}
+
 .container_body_review-item {
   background-color: rgba(3, 2, 47, 0.5);
   color: #fff;
@@ -1193,41 +1268,146 @@ hr {
   border-radius: 5px;
 }
 
+.container_about {
+  padding: 20px 20px 0 20px;
+  margin-top: 10px;
+  width: 980px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 40px;
+  left: 260px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.container_about_detail {
+  padding-right: 10px;
+  font-size: 16px;
+  color: rgb(204, 204, 204);
+  white-space: pre-wrap;
+  line-height: 1.4em;
+  flex: 2;
+}
+
+.container_about_intro {
+  padding-left: 10px;
+  color: rgb(204, 204, 204);
+  flex: 1;
+}
+
+.container_about_intro-item {
+  background-color: hsl(240, 3%, 7%);
+  color: rgb(204, 204, 204);
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container_about_intro-policy {
+  font-size: 12px;
+  line-height: 1.5em;
+}
+
+/*Phan Calendar*/
+.calendar {
+  width: 980px;
+  background-color: #18131a;
+  color: #fff;
+  padding: 20px 20px 30px 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  position: absolute;
+  top: 40px;
+  left: 260px;
+}
+
+.month {
+  display: flex;
+  flex-direction: column;
+}
+
+.month-header {
+  color: rgb(216, 102, 186);
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.days-of-week {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.days-of-week span {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.week {
+  display: flex;
+  flex: 1;
+}
+
+.day {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.day-number {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.podcast-count {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.day a {
+  display: block;
+  background-color: #1b1919;
+  color: #fff;
+  text-decoration: none;
+  width: 120px;
+  height: 90px;
+}
+
+.day .blank {
+  pointer-events: none;
+}
+
+.day .unavailable {
+  pointer-events: none;
+  color: #333;
+}
+
+.day a:hover {
+  color: #733095;
+  background-color: #5b5454;
+}
+
+/*Ket thuc phan Calendar*/
 body {
   background: linear-gradient(to right, rgb(4, 1, 51), rgb(23, 43, 39) 90%);
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-}
-
-#change-password-button{
-  margin:10px 10px 0 0;
-  background: transparent;
-
-  /* display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align: inherit; */
- 
-  width: 100%;
-  height:50px;
-  
-  border: 1px solid hsl(236, 6%, 30%);
-  border-radius:10px;
-  
-  font-size: 14px;
-  font-weight: 500;
-
-  background: linear-gradient(to bottom, #40678c, #2c5378);
-  opacity: 0.9;
-  transition: opacity 0.1s; 
-
-}
-
-#change-password-button:hover {
-  background-color: #111;
-  opacity: 10;      
-  cursor: pointer;        /*đổi trỏ chuột thành bàn tay khi hover*/
 }
 
 @media only screen and (max-width: 46.25em) {
@@ -1256,81 +1436,6 @@ body {
     margin-top: 0;
     margin-left: 0;
   }
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: 999; /* Ensure it's above other content */
-  display: none; /* Initially hidden */
-}
-
-/* Modal styles */
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000; /* Ensure it's above the overlay */
-  width: 40%; /* Full width */
-  height: 50%; /* Full height */
-  display: none; /* Initially hidden */
-  justify-content: center;
-  border-radius: 10px;
-}
-
-/* Modal content */
-.modal-content {
-  background-color: #012233;
-  margin:auto;
-  padding: 10px;
-  border: 1px solid #888;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
-  color: #fff;
-}
-
-.modal-content p{
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Close button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: rgb(17, 97, 100);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.container_sidebar-socialIcons a {
-  display: inline-block; /* Ensure proper alignment */
-  margin: 0 10px;
-}
-
-.modal-content #copyBtn{
-  background-color: #456c91;
-  color: #fff;
-  padding: 5px;
-  border-radius: 8px;
-}
-
-.modal-content #copyBtn:hover{
-  background-color: #385673;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

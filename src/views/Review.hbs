@@ -17,16 +17,15 @@
           </div>
           <div class="container_sidebar-footertext">
             <p style="margin-bottom: 10px;">&copy 2024 {{podcast.name_author}}</p>
-            <p>All content for Three is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
+            <p style="text-align: left;">All content for Three is the property of {{podcast.name_author}} and is served directly from their servers with no modification, redirects, or rehosting. The podcast is not affiliated with or endorsed by Podbay in any way.</p>
           </div>
     </div>
     <div class="container_headbar">
         <ul class="container_headbar-list">
             <a href="/podcast/{{podcast._id}}"><li class="container_headbar-item">Episodes</li></a>
-            <a href="about.html"><li class="container_headbar-item">About</li></a>  
+            <a href="/podcast/{{podcast._id}}/about"><li class="container_headbar-item">About</li></a>  
             <a href="/podcast/{{podcast._id}}/reviews"><li class="container_headbar-item" style="border: 1px solid #333; background-color: #333;">Reviews</li></a>
-            <a href="calendar.html"><li class="container_headbar-item">Calendar</li></a>
-            <a href="#"><li class="container_headbar-item">Claim And Verify</li></a>
+            <a href="/podcast/calendar"><li class="container_headbar-item">Calendar</li></a>
           </ul>
     </div>
     <div class="container_review">

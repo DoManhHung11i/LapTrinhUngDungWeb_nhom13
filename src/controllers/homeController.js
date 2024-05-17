@@ -28,17 +28,6 @@ class HomeController {
    signup(req, res, next) {
       res.render('signup', { showFooter: true });
    }
-   Discovery(req, res, next){
-      //res.render('discovery', { showFooter: true });
-      const user = res.locals.user;
-
-    // Kiểm tra xem người dùng đã đăng nhập hay chưa
-    if (user) {
-        res.send(`Xin chào, ${user.username}!`); // Hiển thị tên người dùng nếu đã đăng nhập
-    } else {
-        res.send('Xin chào khách thăm!'); // Hiển thị tin nhắn chào mừng nếu chưa đăng nhập
-    }
-   }
    async MyPodcasts(req, res, next){
       const user = res.locals.user;
       const myPodcasts = await MyPodcast.find({ userID: user._id });
