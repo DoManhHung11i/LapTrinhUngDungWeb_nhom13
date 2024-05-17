@@ -1,4 +1,42 @@
-/* Navbar */
+// /* Navbar */
+// .navbar {
+//   background: linear-gradient(to bottom, rgb(4, 1, 51) 70%, rgb(23, 43, 39) 90%);
+//   height: 100vh;
+//   width: 200px;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   border-right: 2px solid rgb(60, 58, 57);
+// }
+
+// .navbar h1 {
+//   padding: 1rem 0;
+//   margin-left: 5%;
+// }
+
+// .navbar a {
+//   display: block;
+//   color: #fff;
+//   padding: 10px;
+//   text-decoration: none;
+//   margin-top: 12px;
+// }
+
+// .navbar a > i {
+//   margin-right: 10px;
+// }
+
+// .navbar a:hover {
+//   background-color: #555;
+// }
+
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .navbar {
   background: linear-gradient(to bottom, rgb(4, 1, 51) 70%, rgb(23, 43, 39) 90%);
   height: 100vh;
@@ -7,6 +45,9 @@
   top: 0;
   left: 0;
   border-right: 2px solid rgb(60, 58, 57);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .navbar h1 {
@@ -29,3 +70,63 @@
 .navbar a:hover {
   background-color: #555;
 }
+
+/* Responsive styles */
+// .hamburger {
+//   display: none;
+//   font-size: 24px;
+//   cursor: pointer;
+//   color: #fff;
+//   position: absolute;
+//   top: 20px;
+//   right: 20px;
+// }
+
+// #checkbox_toggle {
+//   display: none;
+// }
+
+// .menu {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// @media (max-width: 768px) {
+//   .navbar {
+//     height: auto;
+//     width: 100%;
+//     position: relative;
+//   }
+
+//   .navbar h1 {
+//     margin: 0;
+//   }
+
+//   .navbar a {
+//     margin: 0;
+//     padding: 15px;
+//   }
+
+//   .navbar .menu {
+//     display: none;
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+
+//   .hamburger {
+//     display: block;
+//   }
+
+//   #checkbox_toggle:checked + .hamburger + .menu {
+//     display: flex;
+//   }
+
+//   .navbar .menu a {
+//     padding: 10px;
+//     text-align: left;
+//     width: 100%;
+//     border-top: 1px solid #444;
+//   }
+// }
