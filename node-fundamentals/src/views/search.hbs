@@ -1,0 +1,35 @@
+
+<div class="container">
+   
+    <p style="color:beige;font-size: small;">Top episodes for result</p>
+ 
+    <hr>
+    <div class="podcast-container">
+        {{#each esposidesObjects }}
+            <div class="inlinelist podcast-item" style="height: 100%; width: 250px;">
+          <div class="previewlist" style="margin-left: 10px;margin-bottom: 20px;">
+            <div draggable="true" class="artpod" style="width: 183.1px; position: relative;">
+              <a class="jsx" href="#">
+                <div class="art-wrapper">
+                  <img height="400" width="400" src="{{this.image}}" loading="lazy" alt="{{this.title}}" class="artreal">
+                </div>
+              </a>
+            </div>
+            <div class="textforart">
+              <div class="textinner" style="flex: 1 1 auto;">
+                <a class="arttitle" aria-label="{{this.title}}"  style="color: rgb(235, 218, 89);" href="/podcast/{{this.podcast_id}}/{{this._id}}">{{this.title}}</a>
+                <div class="authorofart" style="color: rgb(51, 212, 174);">{{this.name_author}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/each}} 
+       
+    </div>
+    <br><br><br>
+
+
+
+    
+    
+

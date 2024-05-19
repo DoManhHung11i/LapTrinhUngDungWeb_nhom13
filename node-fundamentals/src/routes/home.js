@@ -16,6 +16,7 @@ router.get('/Recently',requireAuth , HomeController.Recently);
 router.get('/MyQueue',requireAuth, HomeController.MyQueue);
 router.get('/MyPodcasts', requireAuth, HomeController.MyPodcasts);
 router.get('/', HomeController.home);
+router.get('/search', HomeController.Search);
 
 
 

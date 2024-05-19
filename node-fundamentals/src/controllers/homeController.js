@@ -5,6 +5,7 @@ const User = require('../models/users');
 const Favorite = require('../models/favorites');
 const MyPodcast = require('../models/myPodcasts');
 const RecentlyPodcast = require('../models/recentlyPodcasts');
+const Searches = require('../models/searches');
 const { mutipleMongooseToObject, mongooseToObject } = require('../until/mongoose');
 
 class HomeController {
@@ -26,7 +27,22 @@ class HomeController {
          }
      }
       res.render('home', { podcasts, esposidesObjects, showFooter: true });
-   }
+   }//search
+   async Search(req, res, next) {
+      const esposides = await Esposide.find({});
+      const esposidesObjects = mutipleMongooseToObject(esposides);
+      for (const esposideObject of esposidesObjects) {
+          const podcast = await Podcast.findById(esposideObject.podcast_id);
+      if (podcast) {
+           esposideObject.podcastTitle = podcast.title;
+           esposideObject.image = podcast.image;
+           esposideObject.name_author = podcast.name_author;
+    }
+}
+   res.render('search', { esposidesObjects});
+   
+}
+   
    logout(req, res, next){
       res.cookie('jwt', '', {maxAge: 1});
       res.redirect('/');
