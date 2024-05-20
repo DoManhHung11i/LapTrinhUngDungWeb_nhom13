@@ -3,8 +3,11 @@ const router = express.Router();
 const HomeController = require('../controllers/homeController');
 const AuthController = require('../controllers/authController');
 const { requireAuth, checkUser } = require('../middleware/authMiddleware');
+const homeController = require('../controllers/homeController');
 
 router.get('*', checkUser);
+router.get('/Search-Autocomplete', homeController.SearchAutocomplete);
+router.get('/autocomplete', homeController.AutoComplete);
 router.post('/change-password', AuthController.ChangePassword);
 router.get('/change-password', requireAuth, HomeController.ChangePassword);
 router.post('/register', AuthController.register);

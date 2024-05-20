@@ -118,6 +118,50 @@ class HomeController {
       res.render('recently', { esposidesObjects });
    }
 
+   async AutoComplete(req, res, next){
+      try {
+         const term = req.query["term"];
+         const regex = new RegExp(term, 'i');
+ 
+         const data = await Esposide.find({ title: regex }, { 'title': 1 }).exec();
+ 
+         const result = [];
+         if (data && data.length) {
+             data.forEach(esposide => {  
+                           
+                 result.push({
+                     id: esposide._id,
+                     label: esposide.title
+                 });
+             });
+         }
+         res.json(result);
+     } catch (err) {
+         res.status(500).send({ message: "Internal Server Error", error: err });
+     }
+   }
+
+   async SearchAutocomplete(req, res){
+      try {
+         const term = req.query["term"];
+         const regex = new RegExp(term, 'i');
+ 
+         const episodes = await Esposide.find({ title: regex }, { 'title': 1, 'podcast_id': 1 }).exec();
+ 
+         if (episodes && episodes.length > 0) {
+             const episode = episodes[0]; 
+             const podcast_id = episode.podcast_id;
+             const episode_id = episode._id;
+             res.json({ podcast_id, episode_id });
+         } else {
+             res.json({ message: 'No results found' });
+         }
+     } catch (err) {
+         console.error("Database query error: ", err);
+         res.status(500).send({ message: "Internal Server Error", error: err });
+     }
+   }
+
 }
 
 module.exports = new HomeController();

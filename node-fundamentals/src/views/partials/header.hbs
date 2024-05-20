@@ -2,7 +2,7 @@
     <div class="top-bar">
         <div class="top-bar-list top-bar-search" >
             <input id="search_input" type="text" placeholder="Search podcasts...">
-            <button>Search</button>
+            <button id="search_button">Search</button>
         </div>
         <div class="top-bar-list top-bar-login-signup">
             {{#if user}}
@@ -48,4 +48,51 @@
         }
     });
 
+    $(function(){
+        $('#search_input').autocomplete({
+            source: function(req, res){
+                $.ajax({
+                    url: '/autocomplete',
+                    dataType: 'json',
+                    type: 'GET', 
+                    data: req, 
+                    success: function(data){
+                        res(data);
+                    },
+                    error: function(err){
+                        console.log(err.status);
+                    }
+                });
+            },
+            minLength: 1,
+            select: function(event, ui){
+                if(ui.item){
+                    $('#search_input').val(ui.item.label);
+                }
+            }
+        });
+    });
+
+    $('#search_button').click(function() {
+        const searchTerm = $('#search_input').val();
+        if (searchTerm) {
+            $.ajax({
+                url: '/Search-Autocomplete',
+                dataType: 'json',
+                type: 'GET',
+                data: { term: searchTerm },
+                success: function(data) {
+                    if (data.podcast_id && data.episode_id) {
+                        const url = `/podcast/${data.podcast_id}/${data.episode_id}`;
+                        window.location.href = url;
+                    } else {
+                        alert('No results found');
+                    }                   
+                },
+                error: function(err){
+                    console.log(err.status);
+                }
+            });
+        }
+    });
 </script>

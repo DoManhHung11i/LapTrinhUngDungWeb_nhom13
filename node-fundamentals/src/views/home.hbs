@@ -20,7 +20,7 @@
     <hr>
     <div class="podcast-container">
         {{#each podcasts}}
-        <a href="/">
+        <a href="/podcast/{{this._id}}">
 
             <div class="podcast-item">
                 <img src="{{this.image}}" alt="{{this.title}}" class="podcast-image">
@@ -35,7 +35,7 @@
     <hr>
     <div class="podcast-container">
         {{#each esposidesObjects}}
-        <a href="/">
+        <a href="/podcast/{{this.podcast_id}}/{{this._id}}">
 
             <div class="podcast-item">
                 <img src="{{this.image}}" alt="{{this.title}}" class="podcast-image">
