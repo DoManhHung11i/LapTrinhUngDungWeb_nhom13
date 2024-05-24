@@ -52,7 +52,7 @@ class PodcastController {
         });
         const lastFourComments = comments.slice(-4);
         
-        res.render('detail_esposide', { podcast, esposide, lastFourComments });
+        res.render('detail_esposide', { podcast, esposide, lastFourComments, nobar: true });
     }
     async Review(req, res){
         const podcastIDString = req.params.podcast_id;

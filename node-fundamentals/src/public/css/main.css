@@ -755,11 +755,12 @@ hr {
 .container_body_img {
   width: 140px;
   height: 140px;
+  
 }
 
 .container_body_img img {
-  width: 140px;
-  height: 140px;
+  width: 170px;
+  height: 170px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -788,7 +789,7 @@ hr {
 .container_body-title {
   position: absolute;
   top: 0;
-  left: 180px;
+  left: 200px;
 }
 
 .container_body_feature-list {
@@ -799,6 +800,7 @@ hr {
 .container_body_feature-item {
   font-size: 14px;
   width: 180px;
+  margin-top: 30px;
   margin-right: 100px;
   text-align: center;
 }
@@ -1561,6 +1563,33 @@ body {
   .top-bar-search button {
     display: none;
   }
+}
+
+.detail_audio-player{
+  display: flex;
+}
+
+.detail_controls{
+  align-items: center;
+  display: flex;
+  align-content: space-between;
+  left: 10px;
+  justify-items: left;
+}
+
+.detail_controls button{
+  margin-right: 60px;
+  margin-left: 10px;
+  background-color: transparent;
+  padding: 0px;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.detail_controls button:hover{
+  color: rgb(147, 35, 151);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

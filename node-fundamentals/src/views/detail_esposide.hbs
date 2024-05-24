@@ -1,3 +1,4 @@
+<div class="detail"></div>
 <div class="container">
     <div class="container_sidebar">
         <img src="{{podcast.image}}" alt="">
@@ -36,10 +37,20 @@
               </a>
             </div>
             <div class="container_body-title">
-              <p>
-                <strong style="color: #fff;">{{esposide.title}}</strong>
-                <p style="color: #706f6f; font-size: 14px; font-weight: 600;  text-align: left;">{{esposide.formattedDate}}</p>
-              </p>
+              <p style="color: #fff; font-weight: bold; text-align: left;">{{esposide.title}}</p>
+              <p style="color: #706f6f; font-size: 14px; font-weight: 600;  text-align: left;">{{esposide.formattedDate}}</p>
+              <div class="detail_audio-player" detail_data-audio-url="{{esposide.audio_url}}">
+                <audio id="detail_audio-player" controls>
+                    Your browser does not support the audio element.
+                </audio>
+              </div>
+              <br>
+              <div class="detail_controls">
+                  <button id="detail_backward-btn" title="Backward 15s">◀◀ 15</button>
+                  <button id="detail_play-pause-btn" title="Play/Pause">▶</button>
+                  <button id="detail_forward-btn" title="Forward 15s">15 ▶▶</button>
+                  <h3 style="display: none;">{{esposide.title}}</h3>
+              </div>
             </div>
             <div class="container_body_feature">
               <ul class="container_body_feature-list" style="list-style-type: none;">
@@ -85,30 +96,17 @@
                   </a>
               </fieldset>
           </form>
-        <footer>
-          <div class="audio-player" data-audio-url="{{esposide.audio_url}}">
-            <audio id="audio-player" controls>
-              Your browser does not support the audio element.
-            </audio>
-            <div class="controls">
-              <button id="backward-btn" title="Backward 5s">⏪</button>
-              <button id="play-pause-btn" title="Play/Pause">▶️</button>
-              <button id="forward-btn" title="Forward 5s">⏩</button>
-              
-            </div>
-            <div class="song-info">
-              <img src="{{podcast.image}}" alt="Song Image">
-              <h3>{{podcast.title}}</h3>
-            </div>
-          </div>
-        </footer>
           <script>
             document.addEventListener("DOMContentLoaded", function() {
                 updateButtonContent();
+                const audioData = JSON.parse(sessionStorage.getItem('audioData'));
+                if(audioData){
+                  sessionStorage.removeItem('audioData');
+                }
             });
           </script>
-            <script>
-              const audioPlayer = document.querySelector('.audio-player');
+            {{!-- <script>
+               const audioPlayer = document.querySelector('.audio-player');
               const navbar = document.querySelector('.navbar');
           
               window.addEventListener('scroll', () => {
@@ -117,8 +115,8 @@
                 } else {
                   audioPlayer.classList.remove('visible');
                 }
-              });
-            </script>
+              }); 
+            </script> --}}
 </div>
 <script>
     function toggleDescription(event) {

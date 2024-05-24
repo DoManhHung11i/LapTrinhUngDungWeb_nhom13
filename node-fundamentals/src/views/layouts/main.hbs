@@ -24,14 +24,22 @@
 
         {{> navbar}}
 
+        
         {{{body}}}
+       
 
         {{#if showFooter}}
             {{>footer}}
         {{/if}}
+        {{#unless nobar}}
+            {{#if audioData}}
+                {{> audioplay}}
+            {{/if}}
+        {{/unless}}
         <script src="/js/AddPodcast.js"></script>
         <script src="/js/UpdateBtnContent.js"></script>
         <script src="/js/PlayPodcast.js"></script>
         <script src="/js/search.js"></script>
+        <script src="/js/Audiobar.js"></script>
 </body>
 </html>
