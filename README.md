@@ -58,9 +58,12 @@ Tính năng nâng cao:
 ## Plus Points
 - Deploy
 - Google page speed (green):
+
 ![image](https://github.com/DoManhHung11i/LapTrinhUngDungWeb_nhom13/assets/145156126/0975d615-80c7-41a5-8ee1-4cdfb0ddfac9)
+
 - SEO score > 90
 - Video Seminar: https://www.youtube.com/watch?v=Z78JTE1XZHg
+
 ![image](https://github.com/DoManhHung11i/LapTrinhUngDungWeb_nhom13/assets/145156126/4da8b9c6-76ea-4899-a878-130a2fac0e63)
 
 
