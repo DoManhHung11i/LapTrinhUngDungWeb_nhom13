@@ -2,7 +2,7 @@
 # NHOM13-LTWeb
 ![image](https://github.com/HaotapIT/NHOM13-LTWeb/assets/145156126/bf780d0b-3929-4e0f-9295-bade41a27250)
 # HealSoul Podcast
-Trang web podcast HealSoul chữa lành tâm hồn được thiết kế nhằm cung cấp nguồn tài nguyên và nội dung âm thanh chất lượng cao để giúp người nghe cải thiện tâm trạng và tinh thần.
+Trang web podcast HealSoul chữa lành tâm hồn được thiết kế nhằm cung cấp nội dung âm thanh chất lượng cao để giúp người nghe cải thiện tâm trạng và tinh thần.
 # Domain Deploy
 https://healingsoul.onrender.com/
 
