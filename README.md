@@ -28,7 +28,7 @@ Hướng dẫn cài đặt và set up môi trường chạy dự án
 ```
 Cài đặt môi trường Node.js: https://nodejs.org/
 ```bash
- nmp install <> --save-dev
+ nmp i
 ```
 
     
