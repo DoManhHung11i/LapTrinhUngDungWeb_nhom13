@@ -26,6 +26,7 @@ Hướng dẫn cài đặt và set up môi trường chạy dự án
 ```bash
  git clone https://github.com/DoManhHung11i/LapTrinhUngDungWeb_nhom13.git
 ```
+Cài đặt môi trường Node.js: https://nodejs.org/
 ```bash
  nmp install <> --save-dev
 ```
